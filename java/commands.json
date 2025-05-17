@@ -1,0 +1,4 @@
+{
+    "build": ["javac", "Player.java"],
+    "run": ["java", "Player"]
+}
