@@ -12,7 +12,6 @@ struct PokerStrategy;
 
 impl BaseBot for PokerStrategy {
     fn handle_new_round(&mut self, _game_state: &GameState, _round_state: &RoundState, _active: usize) {
-        // No initialization needed for this simple strategy
     }
 
     fn handle_round_over(&mut self, _game_state: &GameState, terminal_state: &TerminalState, active: usize) {
@@ -40,7 +39,7 @@ impl BaseBot for PokerStrategy {
         
         let mut rng = rand::thread_rng();
         
-        // Strategy implementation
+        // strategy implementation
         if legal_actions.contains(&PokerMove::Raise(0)) {
             let (min_raise, max_raise) = round_state.raise_bounds();
             if rng.gen::<f64>() < 0.4 {

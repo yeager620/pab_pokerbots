@@ -70,7 +70,7 @@ impl RoundState {
             actions.insert(PokerMove::Fold);
             
             if !bets_forbidden {
-                actions.insert(PokerMove::Raise(0)); // Amount will be set later
+                actions.insert(PokerMove::Raise(0)); // amt set later
             }
         } else {
             let raises_forbidden = continue_cost == self.stacks[active] || self.stacks[1 - active] == 0;
