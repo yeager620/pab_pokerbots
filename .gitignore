@@ -1,2 +1,7 @@
+/private/.venv/
+
+/public/../.idea/
+/public/rust/target
+
+.DS_Store
 .idea/
-rust/target
