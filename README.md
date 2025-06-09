@@ -2,10 +2,10 @@
 
 The repo is organized to support bots written in a handful of popular languages:
 
-- `python/`: Python base implementation
+- `python/`: Python base implementation (IN PROGRESS)
 - `java/`: Java base implementation (TODO)
 - `cpp/`: C++ base implementation (TODO)
-- `rust/`: Rust implementation (TODO)
+- `rust/`: Rust implementation (IN PROGRESS)
 
 ## Python Implementation
 

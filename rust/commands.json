@@ -1,0 +1,4 @@
+{
+  "build": "cd rust && cargo build --release",
+  "run": "cd rust && cargo run --release -- --host {host} {port}"
+}
