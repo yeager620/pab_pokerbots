@@ -1,10 +1,11 @@
 # Poker at Berkeley PokerBots
 
-The framework is organized to support bots written in different programming languages:
+The repo is organized to support bots written in a handful of popular languages:
 
-- `python/`: Python implementation
-- `java/`: Java implementation (TODO)
-- `cpp/`: C++ implementation (TODO)
+- `python/`: Python base implementation
+- `java/`: Java base implementation (TODO)
+- `cpp/`: C++ base implementation (TODO)
+- `rust/`: Rust implementation (TODO)
 
 ## Python Implementation
 
@@ -33,3 +34,4 @@ TODO: add docs
 ## Example Strategy
 
 The default implementation includes a simple randomized strategy
+- TODO: unit test this
