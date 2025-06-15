@@ -15,11 +15,8 @@ pub struct EngineClient<T: BaseBot> {
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
 pub struct Args {
-    /// Host to connect to
     #[arg(long, default_value = "localhost")]
     pub host: String,
-
-    /// Port to connect to
     pub port: u16,
 }
 
