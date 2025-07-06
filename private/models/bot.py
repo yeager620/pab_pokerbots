@@ -1,0 +1,1 @@
+# This file has been removed - bot models are now in core.py

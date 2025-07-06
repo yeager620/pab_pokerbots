@@ -1,0 +1,1 @@
+# This file has been removed - database setup is now in core.py

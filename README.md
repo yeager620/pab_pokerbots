@@ -27,6 +27,7 @@ contains templates and API for participants ("mini-SDKs"):
 - `rust/` (in progress)
 - `java/` (in progress)
 - `cpp/` (in progress)
+- `csharp/` (in progress)
 
 Each mini-sdk should include:
 - Bot templates with required methods
