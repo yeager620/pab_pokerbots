@@ -124,30 +124,30 @@ class TestEndToEndWorkflow:
             )
             assert bot.status == BotStatus.ACTIVE
             bots.append(bot)
-            print(f"✅ Bot {bot.name} submitted successfully (ID: {bot.id})")
+            print(f"Bot {bot.name} submitted successfully (ID: {bot.id})")
         
 
-        print("\n🏆 Creating tournament...")
+        print("\nCreating tournament...")
         tournament = await tournament_manager.create_tournament(
             db_session,
             name="Test Tournament",
             max_participants=4
         )
         assert tournament.status == TournamentStatus.OPEN
-        print(f"✅ Tournament '{tournament.name}' created (ID: {tournament.id})")
+        print(f"Tournament '{tournament.name}' created (ID: {tournament.id})")
         
 
-        print("\n📝 Registering bots...")
+        print("\nRegistering bots...")
         for bot in bots:
             success = await tournament_manager.register_bot(db_session, tournament.id, bot.id)
             assert success
-            print(f"✅ Bot {bot.name} registered")
+            print(f"Bot {bot.name} registered")
         
 
-        print("\n🚀 Starting tournament...")
+        print("\nStarting tournament...")
         result = await tournament_manager.start_tournament(db_session, tournament.id)
         assert result["success"]
-        print(f"✅ Tournament started: {result['message']}")
+        print(f"Tournament started: {result['message']}")
         
 
         print("\n⏳ Waiting for tournament completion...")
@@ -161,36 +161,36 @@ class TestEndToEndWorkflow:
             wait_time += 1
         
         assert tournament.status == TournamentStatus.COMPLETED, "Tournament should complete"
-        print("✅ Tournament completed!")
+        print("Tournament completed!")
         
 
-        print("\n📊 Checking results...")
+        print("\nChecking results...")
         
 
         standings = await tournament_manager.get_tournament_standings(db_session, tournament.id)
         assert len(standings) == 4
         assert standings[0]["rank"] == 1
-        print(f"🏆 Winner: {standings[0]['bot_name']}")
+        print(f"Winner: {standings[0]['bot_name']}")
         
 
         matches = await tournament_manager.get_tournament_matches(db_session, tournament.id)
         completed_matches = [m for m in matches if m["status"] == "completed"]
         assert len(completed_matches) >= 3
-        print(f"✅ {len(completed_matches)} matches completed")
+        print(f"{len(completed_matches)} matches completed")
         
 
         leaderboard = await analytics.get_leaderboard(db_session, limit=10)
         assert len(leaderboard) == 4
         assert all(bot["matches_played"] > 0 for bot in leaderboard)
-        print("✅ Leaderboard updated with new ratings")
+        print("Leaderboard updated with new ratings")
         
 
         global_stats = await analytics.get_global_stats(db_session)
         assert global_stats["total_bots"] == 4
         assert global_stats["total_matches"] >= 3
-        print(f"📈 Global stats: {global_stats}")
+        print(f"Global stats: {global_stats}")
         
-        print("\n🎉 End-to-end test completed successfully!")
+        print("\nEnd-to-end test completed successfully!")
     
     @pytest.mark.asyncio
     async def test_bot_submission_validation(
@@ -342,7 +342,7 @@ class TestProductionReadiness:
 
 
 async def run_integration_test():
-    print("🧪 Running manual integration test...")
+    print("Running manual integration test...")
     
 
 

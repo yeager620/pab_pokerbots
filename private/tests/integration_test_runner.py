@@ -220,13 +220,13 @@ if __name__ == "__main__":
                         print("  Tournament completed!")
                         break
                     elif tournament.status in [TournamentStatus.OPEN]:
-                        print("  ⚠️  Tournament still in preparation...")
+                        print("  Warning: Tournament still in preparation...")
                     
                     await asyncio.sleep(5)
                     wait_time += 5
                 
                 if tournament.status != TournamentStatus.COMPLETED:
-                    print(f"  ⚠️  Tournament did not complete in time (status: {tournament.status.value})")
+                    print(f"  Warning: Tournament did not complete in time (status: {tournament.status.value})")
 
                 
 
@@ -245,7 +245,7 @@ if __name__ == "__main__":
                 try:
                     matches = await tournament_manager.get_tournament_matches(db, tournament.id)
                     completed_matches = [m for m in matches if m["status"] == "completed"]
-                    print(f"  ⚔️  Matches: {len(completed_matches)} completed out of {len(matches)} total")
+                    print(f"  Matches: {len(completed_matches)} completed out of {len(matches)} total")
                     for match in completed_matches[-3:]:
                         winner = match["winner_name"] or "No winner"
                         print(f"    {match['bot1_name']} vs {match['bot2_name']} → Winner: {winner}")
@@ -255,7 +255,7 @@ if __name__ == "__main__":
 
                 try:
                     leaderboard = await analytics.get_leaderboard(db, limit=5)
-                    print(f"  📈 Updated leaderboard (top {len(leaderboard)}):")
+                    print(f"  Updated leaderboard (top {len(leaderboard)}):")
                     for entry in leaderboard:
                         print(f"    {entry['rank']}. {entry['bot_name']} - Rating: {entry['rating']}, WR: {entry['win_rate']}%")
                 except Exception as e:
