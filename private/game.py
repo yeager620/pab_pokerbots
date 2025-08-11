@@ -348,10 +348,10 @@ class PokerGame:
         """Finish hand at showdown."""
         self.hand_finished = True
         
-        strength0, desc0 = self.evaluator.evaluate_hand(
+        strength0, _ = self.evaluator.evaluate_hand(
             self.state.hole_cards[0], self.state.community_cards
         )
-        strength1, desc1 = self.evaluator.evaluate_hand(
+        strength1, _ = self.evaluator.evaluate_hand(
             self.state.hole_cards[1], self.state.community_cards
         )
         if strength0 > strength1:
@@ -387,7 +387,6 @@ class PokerGame:
                 self.match_winner = 0
         
         return not self.is_finished
-    
 
 
 class BotRunner:
@@ -480,7 +479,6 @@ class MatchRunner:
             game_log = []
             detailed_log = []
             
-            hands_played = 0
             max_hands = 100
             
             detailed_log.append({
@@ -647,7 +645,7 @@ class MatchRunner:
                 "match_id": match_id,
                 "winner_id": match.winner_id,
                 "scores": [match.bot1_score, match.bot2_score],
-                "hands_played": hands_played
+                "hands_played": game.hands_played
             }
             
             return result
