@@ -1,5 +1,5 @@
 # Poker at Berkeley PokerBots Competition
-## [EY] updated 6/9/25
+## [EY] updated 8/11/25
 
 Infra for running a poker bot competition;
 participants can create and submit bots that compete against each other in poker tournaments
@@ -73,7 +73,7 @@ Contains the competition infrastructure and unified API backend:
 
 > **Important**: contributors / pab board should use uv and not pip or venv for package management and virtual environments (pls)
 
-## Usage
+## dsk usage
 
 ### Creating a Bot
 
@@ -93,19 +93,40 @@ class MyPokerBot(BaseBot):
         return CheckAction() # example action
 ```
 
-### Testing Your Bot
+### TODO: add testing docs
 
-####  TODO: add testing docs
+## Infra and API usage:
 
-tentative heads up match example:
-
+### bot submission 
 ```bash
-python -m private.engine.test_match --bot1 path/to/your/bot --bot2 public/python/bot_main.py
+curl -X POST "http://localhost:8000/bots" \
+  -F "name=MyBot" \
+  -F "language=python" \
+  -F "version=1.0" \
+  -F "user_id=user123" \
+  -F "bot_file=@bot.zip"
 ```
 
-## License
+### tournament running
+```bash
+curl -X POST "http://localhost:8000/tournaments" \
+  -F "name=Weekly Tournament" \
+  -F "max_participants=8"
 
-[uhh probably add this at some point]
+curl -X POST "http://localhost:8000/tournaments/1/register" \
+  -F "bot_id=1"
+
+curl -X POST "http://localhost:8000/tournaments/1/start"
+```
+
+### Viewing Results
+```bash
+# Leaderboard
+curl "http://localhost:8000/leaderboard"
+
+# Tournament standings
+curl "http://localhost:8000/tournaments/1/standings"
+```
 
 ## Acknowledgments
 
