@@ -1,9 +1,4 @@
 
-"""
-Quick test script for the poker bot infrastructure.
-Run this to verify everything works before production deployment.
-"""
-
 import asyncio
 import sys
 import os
@@ -16,7 +11,6 @@ from tests.integration_test_runner import IntegrationTestRunner
 
 
 async def run_quick_test():
-    """Run a quick test with minimal setup."""
     print("Running quick infrastructure test...")
     
 
@@ -31,12 +25,12 @@ async def run_quick_test():
             print("Ready for production deployment.")
             return True
         else:
-            print("\n❌ FAILURE: Issues detected in infrastructure.")
-            print("🔧 Please check the errors above and fix before production.")
+            print("\nFAILURE: Issues detected in infrastructure.")
+            print("Please check the errors above and fix before production.")
             return False
             
     except Exception as e:
-        print(f"\n💥 CRITICAL ERROR: {e}")
+        print(f"\nCRITICAL ERROR: {e}")
         import traceback
         traceback.print_exc()
         return False
@@ -45,8 +39,7 @@ async def run_quick_test():
 
 
 def check_dependencies():
-    """Check if all required dependencies are available."""
-    print("🔍 Checking dependencies...")
+    print("Checking dependencies...")
     
     missing = []
     try:
@@ -74,8 +67,8 @@ def check_dependencies():
         missing.append("uvicorn")
     
     if missing:
-        print(f"\n❌ Missing dependencies: {', '.join(missing)}")
-        print("📦 Install with: pip install -e .")
+        print(f"\nMissing dependencies: {', '.join(missing)}")
+        print("Install with: pip install -e .")
         return False
     
     print("All dependencies available")
@@ -102,7 +95,7 @@ if __name__ == "__main__":
     
     print("\nContinue? [y/N]: y (auto-proceeding)")
     try:
-        response = "y"  # Auto-proceed for testing
+        response = "y"
         if response not in ['y', 'yes']:
             print("Test cancelled.")
             sys.exit(0)
@@ -117,5 +110,5 @@ if __name__ == "__main__":
         print("\nInfrastructure test completed successfully!")
         print("You can now deploy to production with confidence.")
     else:
-        print("\n🔧 Please fix the issues above before production deployment.")
+        print("\nPlease fix the issues above before production deployment.")
         sys.exit(1)

@@ -1,15 +1,9 @@
-"""
-Simple configuration management for the poker bot platform.
-Basic settings with sensible defaults.
-"""
-
 import os
 from pathlib import Path
 from typing import Optional
 
 
 class Config:
-    """Basic configuration settings."""
     
 
     DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///pokerbots.db")
@@ -48,14 +42,12 @@ class Config:
     
     @classmethod
     def get_bot_storage_path(cls) -> Path:
-        """Get bot storage directory as Path object."""
         path = Path(cls.BOT_STORAGE_DIR)
         path.mkdir(parents=True, exist_ok=True)
         return path
     
     @classmethod
     def get_docker_image(cls, language: str) -> str:
-        """Get Docker image for language."""
         return cls.DOCKER_IMAGES.get(language.lower(), cls.DOCKER_IMAGES["python"])
 
 

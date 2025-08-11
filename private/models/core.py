@@ -132,7 +132,6 @@ class Match(Base):
 
 
 def calculate_elo_change(winner_rating: float, loser_rating: float, k_factor: float = 32) -> tuple[float, float]:
-    """Simple ELO calculation."""
     expected_winner = 1 / (1 + 10 ** ((loser_rating - winner_rating) / 400))
     expected_loser = 1 / (1 + 10 ** ((winner_rating - loser_rating) / 400))
     
@@ -143,5 +142,4 @@ def calculate_elo_change(winner_rating: float, loser_rating: float, k_factor: fl
 
 
 def hash_file(content: bytes) -> str:
-    """Generate SHA256 hash of file content."""
     return hashlib.sha256(content).hexdigest()

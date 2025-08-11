@@ -1,8 +1,3 @@
-"""
-Simplified tournament management.
-Single-elimination tournaments with basic bracket generation.
-"""
-
 import asyncio
 import random
 from typing import List, Optional, Dict, Any
@@ -14,13 +9,11 @@ from game import MatchRunner
 
 
 class TournamentManager:
-    """Manages tournaments with simplified single-elimination format."""
     
     def __init__(self, bot_files_dir: str = "/tmp/pokerbots"):
         self.match_runner = MatchRunner(bot_files_dir)
     
     async def create_tournament(self, db: AsyncSession, name: str, max_participants: int = 8) -> Tournament:
-        """Create a new tournament."""
         tournament = Tournament(
             name=name,
             max_participants=max_participants,
@@ -31,7 +24,6 @@ class TournamentManager:
         return tournament
     
     async def register_bot(self, db: AsyncSession, tournament_id: int, bot_id: int) -> bool:
-        """Register a bot for a tournament."""
         tournament = await db.get(Tournament, tournament_id)
         if not tournament or tournament.status != TournamentStatus.OPEN:
             return False
@@ -50,7 +42,6 @@ class TournamentManager:
         return True
     
     async def start_tournament(self, db: AsyncSession, tournament_id: int) -> Dict[str, Any]:
-        """Start tournament and generate first round matches."""
         tournament = await db.get(Tournament, tournament_id)
         if not tournament or tournament.status != TournamentStatus.OPEN:
             return {"success": False, "error": "Tournament not ready to start"}
@@ -85,7 +76,6 @@ class TournamentManager:
         }
     
     def _generate_bracket(self, participants: List[int]) -> List[List[tuple]]:
-        """Generate single-elimination bracket."""
 
         participants = participants.copy()
         random.shuffle(participants)
@@ -125,7 +115,6 @@ class TournamentManager:
         return rounds
     
     async def _run_tournament_matches(self, db: AsyncSession, tournament_id: int):
-        """Run all tournament matches sequentially."""
         while True:
 
             stmt = select(Match).where(
@@ -154,7 +143,6 @@ class TournamentManager:
             await asyncio.sleep(1)
     
     async def _advance_winner(self, db: AsyncSession, completed_match_id: int):
-        """Advance winner to next round."""
         completed_match = await db.get(Match, completed_match_id)
         if not completed_match or not completed_match.winner_id:
             return
@@ -164,7 +152,6 @@ class TournamentManager:
         pass
     
     async def _check_tournament_completion(self, db: AsyncSession, tournament_id: int):
-        """Check if tournament is complete and update status."""
         stmt = select(Match).where(
             Match.tournament_id == tournament_id,
             Match.status.in_([MatchStatus.SCHEDULED, MatchStatus.RUNNING])
@@ -179,7 +166,6 @@ class TournamentManager:
             await db.commit()
     
     async def get_tournament_standings(self, db: AsyncSession, tournament_id: int) -> List[Dict[str, Any]]:
-        """Get current tournament standings."""
         tournament = await db.get(Tournament, tournament_id)
         if not tournament:
             return []
@@ -219,7 +205,6 @@ class TournamentManager:
         return standings
     
     async def get_tournament_matches(self, db: AsyncSession, tournament_id: int) -> List[Dict[str, Any]]:
-        """Get all matches for a tournament."""
         stmt = select(Match).where(Match.tournament_id == tournament_id)
         result = await db.execute(stmt)
         matches = result.scalars().all()

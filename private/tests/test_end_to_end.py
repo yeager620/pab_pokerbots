@@ -1,8 +1,3 @@
-"""
-End-to-end integration tests for the simplified poker bot infrastructure.
-Tests the complete workflow from bot submission to tournament completion.
-"""
-
 import asyncio
 import pytest
 import tempfile
@@ -24,7 +19,6 @@ TEST_DATABASE_URL = "sqlite+aiosqlite:///:memory:"
 
 @pytest.fixture
 async def test_db():
-    """Create test database."""
     engine = create_async_engine(TEST_DATABASE_URL, echo=False)
     
 
@@ -44,7 +38,6 @@ async def test_db():
 
 @pytest.fixture
 async def db_session(test_db):
-    """Create test database session."""
     TestSessionLocal = async_sessionmaker(
         test_db,
         class_=AsyncSession,
@@ -57,17 +50,14 @@ async def db_session(test_db):
 
 @pytest.fixture
 def temp_storage():
-    """Create temporary storage directory."""
     with tempfile.TemporaryDirectory() as tmpdir:
         yield Path(tmpdir)
 
 
 @pytest.fixture
 def sample_python_bot():
-    """Create a sample Python bot archive."""
     bot_code = '''
 def get_action(game_state, legal_actions):
-    """Simple bot that always checks/calls."""
     if "CHECK" in legal_actions:
         return "CHECK"
     elif "CALL" in legal_actions:
@@ -89,30 +79,25 @@ if __name__ == "__main__":
 
 @pytest.fixture
 def bot_manager(temp_storage):
-    """Create bot manager with temporary storage."""
     return BotManager(str(temp_storage))
 
 
 @pytest.fixture  
 def tournament_manager(temp_storage):
-    """Create tournament manager."""
     return TournamentManager(str(temp_storage))
 
 
 @pytest.fixture
 def match_runner(temp_storage):
-    """Create match runner."""
     return MatchRunner(str(temp_storage))
 
 
 @pytest.fixture
 def analytics():
-    """Create analytics instance."""
     return Analytics()
 
 
 class TestEndToEndWorkflow:
-    """Complete end-to-end workflow tests."""
     
     @pytest.mark.asyncio
     async def test_complete_tournament_workflow(
@@ -124,7 +109,6 @@ class TestEndToEndWorkflow:
         analytics: Analytics,
         sample_python_bot: bytes
     ):
-        """Test complete workflow: submit bots -> create tournament -> run matches -> check results."""
         
 
         print("📤 Submitting bots...")
@@ -214,7 +198,6 @@ class TestEndToEndWorkflow:
         db_session: AsyncSession,
         bot_manager: BotManager
     ):
-        """Test bot validation during submission."""
         
 
         valid_bot_code = 'print("Hello, World!")'
@@ -261,7 +244,6 @@ class TestEndToEndWorkflow:
         tournament_manager: TournamentManager,
         sample_python_bot: bytes
     ):
-        """Test tournament edge cases."""
         
 
         tournament = await tournament_manager.create_tournament(
@@ -293,7 +275,6 @@ class TestEndToEndWorkflow:
 
 
 class TestProductionReadiness:
-    """Tests to verify production readiness."""
     
     @pytest.mark.asyncio
     async def test_concurrent_bot_submissions(
@@ -302,7 +283,6 @@ class TestProductionReadiness:
         bot_manager: BotManager,
         sample_python_bot: bytes
     ):
-        """Test handling concurrent bot submissions."""
         
         async def submit_bot(i):
             return await bot_manager.submit_bot(
@@ -329,7 +309,6 @@ class TestProductionReadiness:
         db_session: AsyncSession,
         bot_manager: BotManager
     ):
-        """Test error handling throughout the system."""
         
 
         with pytest.raises(ValueError):
@@ -363,7 +342,6 @@ class TestProductionReadiness:
 
 
 async def run_integration_test():
-    """Run a quick integration test for manual testing."""
     print("🧪 Running manual integration test...")
     
 

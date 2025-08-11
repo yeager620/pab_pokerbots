@@ -1,8 +1,3 @@
-"""
-Unified API server for the poker bot competition platform.
-Consolidates all endpoints into a single FastAPI application.
-"""
-
 import os
 from typing import List, Optional
 from fastapi import FastAPI, Depends, HTTPException, UploadFile, File, Form, Query
@@ -74,14 +69,13 @@ app.add_middleware(
 
 @app.on_event("startup")
 async def startup():
-    """Initialize database on startup."""
     await init_db()
 
 
 
 @app.get("/health")
 async def health_check():
-    return {"status": "healthy", "service": "pokerbots-api"}
+    return {"status": "healthy", "service": "pokerbots_api"}
 
 
 
@@ -94,7 +88,6 @@ async def submit_bot(
     bot_file: UploadFile = File(...),
     db: AsyncSession = Depends(get_db)
 ):
-    """Submit a new bot."""
     try:
         bot_archive = await bot_file.read()
         bot = await bot_manager.submit_bot(db, user_id, name, language, version, bot_archive)
@@ -110,7 +103,6 @@ async def submit_bot(
 
 @app.get("/bots/{bot_id}", response_model=BotResponse)
 async def get_bot(bot_id: int, db: AsyncSession = Depends(get_db)):
-    """Get bot details."""
     bot = await bot_manager.get_bot(db, bot_id)
     if not bot:
         raise HTTPException(status_code=404, detail="Bot not found")
@@ -134,7 +126,6 @@ async def list_bots(
     status: Optional[BotStatus] = Query(None),
     db: AsyncSession = Depends(get_db)
 ):
-    """List bots with optional filters."""
     bots = await bot_manager.list_bots(db, user_id, status)
     
     return [
@@ -160,7 +151,6 @@ async def create_tournament(
     max_participants: int = Form(8),
     db: AsyncSession = Depends(get_db)
 ):
-    """Create a new tournament."""
     tournament = await tournament_manager.create_tournament(db, name, max_participants)
     
     return {
@@ -172,7 +162,6 @@ async def create_tournament(
 
 @app.get("/tournaments/{tournament_id}", response_model=TournamentResponse)
 async def get_tournament(tournament_id: int, db: AsyncSession = Depends(get_db)):
-    """Get tournament details."""
     tournament = await db.get(Tournament, tournament_id)
     if not tournament:
         raise HTTPException(status_code=404, detail="Tournament not found")
@@ -193,7 +182,6 @@ async def register_for_tournament(
     bot_id: int = Form(...),
     db: AsyncSession = Depends(get_db)
 ):
-    """Register a bot for a tournament."""
     success = await tournament_manager.register_bot(db, tournament_id, bot_id)
     
     if not success:
@@ -204,7 +192,6 @@ async def register_for_tournament(
 
 @app.post("/tournaments/{tournament_id}/start")
 async def start_tournament(tournament_id: int, db: AsyncSession = Depends(get_db)):
-    """Start a tournament."""
     result = await tournament_manager.start_tournament(db, tournament_id)
     
     if not result["success"]:
@@ -215,14 +202,12 @@ async def start_tournament(tournament_id: int, db: AsyncSession = Depends(get_db
 
 @app.get("/tournaments/{tournament_id}/standings")
 async def get_tournament_standings(tournament_id: int, db: AsyncSession = Depends(get_db)):
-    """Get tournament standings."""
     standings = await tournament_manager.get_tournament_standings(db, tournament_id)
     return {"standings": standings}
 
 
 @app.get("/tournaments/{tournament_id}/matches", response_model=List[MatchResponse])
 async def get_tournament_matches(tournament_id: int, db: AsyncSession = Depends(get_db)):
-    """Get tournament matches."""
     matches = await tournament_manager.get_tournament_matches(db, tournament_id)
     
     return [
@@ -242,7 +227,6 @@ async def get_tournament_matches(tournament_id: int, db: AsyncSession = Depends(
 
 @app.post("/matches/{match_id}/run")
 async def run_match(match_id: int, db: AsyncSession = Depends(get_db)):
-    """Manually run a specific match."""
     try:
         result = await match_runner.run_match(db, match_id)
         return result
@@ -256,14 +240,12 @@ async def get_leaderboard(
     limit: int = Query(50, le=100),
     db: AsyncSession = Depends(get_db)
 ):
-    """Get the current leaderboard."""
     leaderboard = await analytics.get_leaderboard(db, limit)
     return {"leaderboard": leaderboard}
 
 
 @app.get("/bots/{bot_id}/stats")
 async def get_bot_stats(bot_id: int, db: AsyncSession = Depends(get_db)):
-    """Get detailed bot statistics."""
     stats = await analytics.get_bot_stats(db, bot_id)
     if not stats:
         raise HTTPException(status_code=404, detail="Bot not found")
@@ -273,21 +255,18 @@ async def get_bot_stats(bot_id: int, db: AsyncSession = Depends(get_db)):
 
 @app.get("/head-to-head/{bot1_id}/{bot2_id}")
 async def get_head_to_head(bot1_id: int, bot2_id: int, db: AsyncSession = Depends(get_db)):
-    """Get head-to-head statistics between two bots."""
     h2h = await analytics.get_head_to_head(db, bot1_id, bot2_id)
     return h2h
 
 
 @app.get("/stats/global")
 async def get_global_stats(db: AsyncSession = Depends(get_db)):
-    """Get global platform statistics."""
     stats = await analytics.get_global_stats(db)
     return stats
 
 
 @app.get("/stats/ratings")
 async def get_rating_distribution(db: AsyncSession = Depends(get_db)):
-    """Get rating distribution."""
     distribution = await analytics.get_rating_distribution(db)
     return {"rating_distribution": distribution}
 
@@ -295,7 +274,6 @@ async def get_rating_distribution(db: AsyncSession = Depends(get_db)):
 
 @app.get("/")
 async def root():
-    """Root endpoint with API information."""
     return {
         "name": "PAB PokerBots API",
         "version": "1.0.0",

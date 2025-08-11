@@ -1,7 +1,3 @@
-"""
-Simplified poker game engine and match execution.
-Core game logic with essential features only.
-"""
 
 import random
 import asyncio
@@ -23,8 +19,7 @@ class PokerAction(Enum):
 
 
 class Card:
-    """Represents a playing card."""
-    SUITS = ['♠', '♥', '♦', '♣']
+    SUITS = ['S', 'H', 'D', 'C']
     RANKS = ['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A']
     
     def __init__(self, rank: str, suit: str):
@@ -40,37 +35,29 @@ class Card:
 
 
 class Deck:
-    """Standard 52-card deck."""
     
     def __init__(self, seed: Optional[int] = None):
-        # Don't re-seed here - let the parent class handle seeding
         self.cards = []
         self.shuffle()
     
     def shuffle(self):
-        """Create and shuffle a new deck."""
         self.cards = [Card(rank, suit) for suit in Card.SUITS for rank in Card.RANKS]
         random.shuffle(self.cards)
     
     def deal(self) -> Card:
-        """Deal one card from the top of the deck."""
         if not self.cards:
             raise ValueError("Cannot deal from empty deck")
         return self.cards.pop()
 
 
 class HandEvaluator:
-    """Evaluates poker hands."""
     
     @staticmethod
     def evaluate_hand(hole_cards: List[Card], community_cards: List[Card]) -> Tuple[int, str]:
-        """Evaluate a 5-card poker hand. Returns (strength, description)."""
         all_cards = hole_cards + community_cards
         if len(all_cards) < 5:
-            # Pre-river, use simplified evaluation
             return (1, "High Card")
         
-        # Find best 5-card combination from 7 cards
         best_strength = 0
         best_desc = "High Card"
         
@@ -85,34 +72,28 @@ class HandEvaluator:
     
     @staticmethod
     def _evaluate_5_cards(cards: List[Card]) -> Tuple[int, str]:
-        """Evaluate exactly 5 cards."""
         if len(cards) != 5:
             return (1, "High Card")
         
-        # Sort by value for easier analysis
         cards = sorted(cards, key=lambda c: c.value, reverse=True)
         values = [c.value for c in cards]
         suits = [c.suit for c in cards]
         
-        # Check for flush
         is_flush = len(set(suits)) == 1
         
-        # Check for straight
         is_straight = False
-        if values == [14, 5, 4, 3, 2]:  # A-2-3-4-5 straight
+        if values == [14, 5, 4, 3, 2]:
             is_straight = True
-            values = [5, 4, 3, 2, 1]  # Adjust ace value
+            values = [5, 4, 3, 2, 1]
         elif values[0] - values[4] == 4 and len(set(values)) == 5:
             is_straight = True
         
-        # Count occurrences
         from collections import Counter
         counts = Counter(values)
         count_values = sorted(counts.values(), reverse=True)
         
-        # Determine hand ranking
         if is_straight and is_flush:
-            if values[0] == 14:  # Royal flush
+            if values[0] == 14:
                 return (10, "Royal Flush")
             return (9, "Straight Flush")
         elif count_values == [4, 1]:
@@ -159,7 +140,6 @@ class GameState:
 
 
 class PokerGame:
-    """Simplified poker game logic."""
     
     STARTING_STACK = 400
     SMALL_BLIND = 1
@@ -176,7 +156,6 @@ class PokerGame:
         self.reset()
     
     def reset(self):
-        """Reset for new hand."""
         current_stacks = getattr(self.state, 'stacks', [self.STARTING_STACK, self.STARTING_STACK]) if hasattr(self, 'state') else [self.STARTING_STACK, self.STARTING_STACK]
         
         self.state = GameState()
@@ -192,11 +171,9 @@ class PokerGame:
         self._post_blinds()
     
     def get_legal_actions(self) -> List[PokerAction]:
-        """Get legal actions for current player."""
         if self.hand_finished:
             return []
         
-        # Calculate amount needed to call
         max_bet = max(self.state.current_bets)
         call_amount = max_bet - self.state.current_bets[self.active_player]
         
@@ -216,12 +193,10 @@ class PokerGame:
         return actions
     
     def apply_action(self, action: PokerAction, amount: int = 0) -> bool:
-        """Apply action and return True if game continues."""
         if self.hand_finished:
             return False
         
         if action == PokerAction.FOLD:
-            # Player folds, opponent wins
             self.hand_finished = True
             self.winner = 1 - self.active_player
             self.final_scores[self.winner] = self.state.pot - self.state.total_invested[self.winner]
@@ -244,10 +219,9 @@ class PokerGame:
                 return True
         
         elif action == PokerAction.CHECK:
-            # Can only check if no bet to call
             max_bet = max(self.state.current_bets)
             if self.state.current_bets[self.active_player] != max_bet:
-                return False  # Invalid check
+                return False
             
             if self._is_betting_round_complete():
                 return self._advance_street()
@@ -275,16 +249,12 @@ class PokerGame:
         return True
     
     def _next_player(self):
-        """Move to next player."""
         self.active_player = 1 - self.active_player
     
     def _is_betting_round_complete(self) -> bool:
-        """Check if current betting round is complete."""
-        # If someone is all-in, round is complete
         if self.state.stacks[0] == 0 or self.state.stacks[1] == 0:
             return True
         
-        # Both players must have equal current bets and action must have returned to last raiser
         if self.state.current_bets[0] == self.state.current_bets[1]:
             if self.last_raiser is None:
                 return True
@@ -293,14 +263,12 @@ class PokerGame:
         return False
     
     def _deal_hole_cards(self):
-        """Deal 2 hole cards to each player."""
         self.state.hole_cards = [[], []]
         for _ in range(2):
             for player in range(2):
                 self.state.hole_cards[player].append(self.deck.deal())
     
     def _post_blinds(self):
-        """Post small and big blinds."""
         sb_player = self.state.button
         bb_player = 1 - self.state.button
         sb_amount = min(self.SMALL_BLIND, self.state.stacks[sb_player])
@@ -309,7 +277,6 @@ class PokerGame:
         self.state.stacks[sb_player] -= sb_amount
         self.state.stacks[bb_player] -= bb_amount
         
-        # Add to current bets and pot
         self.state.current_bets[sb_player] = sb_amount
         self.state.current_bets[bb_player] = bb_amount
         self.state.total_invested[sb_player] = sb_amount
@@ -320,7 +287,6 @@ class PokerGame:
         self.last_raiser = bb_player
     
     def _advance_street(self) -> bool:
-        """Advance to next street or end hand."""
         if self.state.street >= 3:
             self._finish_hand()
             return False
@@ -345,7 +311,6 @@ class PokerGame:
         return True
     
     def _finish_hand(self):
-        """Finish hand at showdown."""
         self.hand_finished = True
         
         strength0, _ = self.evaluator.evaluate_hand(
@@ -369,9 +334,7 @@ class PokerGame:
             self.final_scores[1] = pot_split - self.state.total_invested[1]
     
     def complete_hand(self):
-        """Complete the current hand and update match scores."""
         if self.hand_finished:
-            # Update running match scores
             self.match_scores[0] += self.final_scores[0]
             self.match_scores[1] += self.final_scores[1]
             self.hands_played += 1
@@ -390,14 +353,12 @@ class PokerGame:
 
 
 class BotRunner:
-    """Runs bots in Docker containers."""
     
     def __init__(self):
         self.docker_client = docker.from_env()
         self.active_containers = {}
     
     async def start_bot(self, bot_id: int, bot_files_dir: str, language: str) -> str:
-        """Start bot container and return container ID."""
         try:
 
             images = {
@@ -426,7 +387,6 @@ class BotRunner:
             raise RuntimeError(f"Failed to start bot container: {str(e)}")
     
     async def stop_bot(self, bot_id: int):
-        """Stop bot container."""
         if bot_id in self.active_containers:
             container = self.active_containers[bot_id]
             try:
@@ -436,23 +396,17 @@ class BotRunner:
             del self.active_containers[bot_id]
     
     async def get_bot_action(self, bot_id: int, game_state: GameState, legal_actions: List[PokerAction], timeout: int = 10) -> PokerAction:
-        """Get action from bot (simplified)."""
-
-
         await asyncio.sleep(0.1)
         return random.choice(legal_actions)
 
 
 class MatchRunner:
-    """Runs matches between bots."""
     
     def __init__(self, bot_files_dir: str = "/tmp/pokerbots"):
         self.bot_files_dir = bot_files_dir
         self.bot_runner = BotRunner()
     
     async def run_match(self, db: AsyncSession, match_id: int) -> Dict[str, Any]:
-        """Run a complete match between two bots."""
-
         match = await db.get(Match, match_id)
         if not match:
             raise ValueError(f"Match {match_id} not found")
@@ -504,13 +458,11 @@ class MatchRunner:
                     "pot_after_blinds": game.state.pot
                 })
                 
-                # Play the hand until it's finished
                 while not game.hand_finished:
                     active_player = game.active_player
                     bot_id = bot1.id if active_player == 0 else bot2.id
                     bot_name = bot1.name if active_player == 0 else bot2.name
                     
-                    # Capture pre-action state
                     street_names = ["preflop", "flop", "turn", "river"]
                     pre_action_state = {
                         "round_num": game.state.round_num,
@@ -572,7 +524,6 @@ class MatchRunner:
                         }
                     })
 
-                # Hand is finished, log the result
                 winner_name = "Split Pot" if game.winner is None else (bot1.name if game.winner == 0 else bot2.name)
                 detailed_log.append({
                     "event": "hand_end",
@@ -593,8 +544,6 @@ class MatchRunner:
                 if match_continues:
                     game.reset()
             
-
-            # Determine final match winner
             if game.is_finished and hasattr(game, 'match_winner'):
                 winner_id = bot1.id if game.match_winner == 0 else bot2.id
                 match.winner_id = winner_id
@@ -609,11 +558,8 @@ class MatchRunner:
                 match.bot1_score = game.match_scores[0]
                 match.bot2_score = game.match_scores[1]
             
-
             await self._update_ratings(db, match)
             
-
-            # Log final match results
             final_winner = 0 if match.winner_id == bot1.id else 1
             detailed_log.append({
                 "event": "match_end",
@@ -656,12 +602,10 @@ class MatchRunner:
             raise
             
         finally:
-
             await self.bot_runner.stop_bot(bot1.id)
             await self.bot_runner.stop_bot(bot2.id)
     
     async def _update_ratings(self, db: AsyncSession, match: Match):
-        """Update ELO ratings after match."""
         if match.winner_id:
             bot1 = await db.get(Bot, match.bot1_id)
             bot2 = await db.get(Bot, match.bot2_id)

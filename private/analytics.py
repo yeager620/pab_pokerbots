@@ -1,8 +1,3 @@
-"""
-Simplified analytics and leaderboard system.
-Basic ELO ratings and performance tracking.
-"""
-
 from typing import List, Dict, Any, Optional
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, func, desc
@@ -11,10 +6,8 @@ from models.core import Bot, Match, MatchStatus, calculate_elo_change
 
 
 class Analytics:
-    """Simplified analytics for bots and tournaments."""
     
     async def get_leaderboard(self, db: AsyncSession, limit: int = 50) -> List[Dict[str, Any]]:
-        """Get bot leaderboard sorted by rating."""
         stmt = (
             select(Bot)
             .where(Bot.matches_played > 0)
@@ -43,7 +36,6 @@ class Analytics:
         return leaderboard
     
     async def get_bot_stats(self, db: AsyncSession, bot_id: int) -> Optional[Dict[str, Any]]:
-        """Get detailed statistics for a bot."""
         bot = await db.get(Bot, bot_id)
         if not bot:
             return None
@@ -85,7 +77,6 @@ class Analytics:
         }
     
     async def get_head_to_head(self, db: AsyncSession, bot1_id: int, bot2_id: int) -> Dict[str, Any]:
-        """Get head-to-head statistics between two bots."""
 
         stmt = select(Match).where(
             (
@@ -123,7 +114,6 @@ class Analytics:
         }
     
     async def get_global_stats(self, db: AsyncSession) -> Dict[str, Any]:
-        """Get global platform statistics."""
 
         total_bots_stmt = select(func.count(Bot.id))
         total_bots = await db.scalar(total_bots_stmt)
@@ -149,7 +139,6 @@ class Analytics:
         }
     
     async def update_ratings_after_match(self, db: AsyncSession, match_id: int):
-        """Update bot ratings after a completed match."""
         match = await db.get(Match, match_id)
         if not match or match.status != MatchStatus.COMPLETED or not match.winner_id:
             return
@@ -181,7 +170,6 @@ class Analytics:
         await db.commit()
     
     async def get_rating_distribution(self, db: AsyncSession) -> Dict[str, int]:
-        """Get distribution of ratings across ranges."""
         stmt = select(Bot.rating).where(Bot.matches_played > 0)
         result = await db.execute(stmt)
         ratings = [r for r, in result]

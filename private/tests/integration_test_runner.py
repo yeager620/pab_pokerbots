@@ -1,9 +1,4 @@
 
-"""
-Integration test runner for manual testing of the poker bot infrastructure.
-Creates example bots and runs a complete tournament to verify everything works.
-"""
-
 import asyncio
 import tempfile
 import zipfile
@@ -18,7 +13,6 @@ from analytics import Analytics
 
 
 class IntegrationTestRunner:
-    """Runs integration tests with real infrastructure."""
     
     def __init__(self, database_url: str = "sqlite+aiosqlite:///test_pokerbots.db"):
         self.database_url = database_url
@@ -27,12 +21,11 @@ class IntegrationTestRunner:
         self.SessionLocal = None
         
     async def setup(self):
-        """Initialize test environment."""
         print("Setting up test environment...")
         
 
         self.temp_dir = Path(tempfile.mkdtemp(prefix="pokerbots_test_"))
-        print(f"📁 Test directory: {self.temp_dir}")
+        print(f"Test directory: {self.temp_dir}")
         
 
         self.engine = create_async_engine(self.database_url, echo=False)
@@ -50,7 +43,6 @@ class IntegrationTestRunner:
         print("Database initialized")
         
     async def cleanup(self):
-        """Clean up test environment."""
         if self.engine:
             await self.engine.dispose()
         if self.temp_dir and self.temp_dir.exists():
@@ -59,13 +51,11 @@ class IntegrationTestRunner:
         print("Cleanup completed")
     
     def create_sample_bots(self) -> dict:
-        """Create sample bot archives for testing."""
         bots = {}
         
 
         python_bot = '''
 def get_action(game_state, legal_actions):
-    """Conservative bot that checks/calls."""
     if "CHECK" in legal_actions:
         return "CHECK"
     elif "CALL" in legal_actions:
@@ -83,7 +73,6 @@ if __name__ == "__main__":
 import random
 
 def get_action(game_state, legal_actions):
-    """Aggressive bot that raises sometimes."""
     if "RAISE" in legal_actions and random.random() < 0.3:
         return "RAISE"
     elif "CHECK" in legal_actions:
@@ -103,7 +92,6 @@ if __name__ == "__main__":
 import random
 
 def get_action(game_state, legal_actions):
-    """Random bot for testing."""
     return random.choice(legal_actions)
 
 if __name__ == "__main__":
@@ -114,7 +102,6 @@ if __name__ == "__main__":
 
         python_folder = '''
 def get_action(game_state, legal_actions):
-    """Folding bot - always folds when possible."""
     if "FOLD" in legal_actions:
         return "FOLD"
     elif "CHECK" in legal_actions:
@@ -130,7 +117,6 @@ if __name__ == "__main__":
         return bots
     
     def _create_zip_archive(self, filename: str, content: str) -> bytes:
-        """Create a zip archive with the given file."""
         import io
         archive_buffer = io.BytesIO()
         
@@ -140,7 +126,6 @@ if __name__ == "__main__":
         return archive_buffer.getvalue()
     
     async def run_complete_test(self):
-        """Run the complete integration test."""
         print("\n" + "="*60)
         print("RUNNING COMPLETE INTEGRATION TEST")
         print("="*60)
@@ -177,11 +162,11 @@ if __name__ == "__main__":
                         submitted_bots.append(bot)
                         print(f"  OK {bot_name} submitted (ID: {bot.id}, Status: {bot.status.value})")
                     except Exception as e:
-                        print(f"  ❌ Failed to submit {bot_name}: {e}")
+                        print(f"  Failed to submit {bot_name}: {e}")
                         return False
                 
                 if len(submitted_bots) < 2:
-                    print("❌ Need at least 2 bots for tournament")
+                    print("Need at least 2 bots for tournament")
                     return False
                 
 
@@ -194,7 +179,7 @@ if __name__ == "__main__":
                     )
                     print(f"  Tournament created (ID: {tournament.id})")
                 except Exception as e:
-                    print(f"  ❌ Failed to create tournament: {e}")
+                    print(f"  Failed to create tournament: {e}")
                     return False
                 
 
@@ -205,9 +190,9 @@ if __name__ == "__main__":
                         if success:
                             print(f"  {bot.name} registered")
                         else:
-                            print(f"  ❌ Failed to register {bot.name}")
+                            print(f"  Failed to register {bot.name}")
                     except Exception as e:
-                        print(f"  ❌ Error registering {bot.name}: {e}")
+                        print(f"  Error registering {bot.name}: {e}")
                 
 
                 print("\nSTEP 4: Starting tournament...")
@@ -216,10 +201,10 @@ if __name__ == "__main__":
                     if result["success"]:
                         print(f"  Tournament started: {result['message']}")
                     else:
-                        print(f"  ❌ Failed to start tournament: {result.get('error', 'Unknown error')}")
+                        print(f"  Failed to start tournament: {result.get('error', 'Unknown error')}")
                         return False
                 except Exception as e:
-                    print(f"  ❌ Error starting tournament: {e}")
+                    print(f"  Error starting tournament: {e}")
                     return False
                 
 
@@ -254,7 +239,7 @@ if __name__ == "__main__":
                     for standing in standings[:3]:
                         print(f"    {standing['rank']}. {standing['bot_name']} - {standing['wins']} wins, {standing['losses']} losses")
                 except Exception as e:
-                    print(f"  ❌ Error getting standings: {e}")
+                    print(f"  Error getting standings: {e}")
                 
 
                 try:
@@ -265,7 +250,7 @@ if __name__ == "__main__":
                         winner = match["winner_name"] or "No winner"
                         print(f"    {match['bot1_name']} vs {match['bot2_name']} → Winner: {winner}")
                 except Exception as e:
-                    print(f"  ❌ Error getting matches: {e}")
+                    print(f"  Error getting matches: {e}")
                 
 
                 try:
@@ -274,14 +259,14 @@ if __name__ == "__main__":
                     for entry in leaderboard:
                         print(f"    {entry['rank']}. {entry['bot_name']} - Rating: {entry['rating']}, WR: {entry['win_rate']}%")
                 except Exception as e:
-                    print(f"  ❌ Error getting leaderboard: {e}")
+                    print(f"  Error getting leaderboard: {e}")
                 
 
                 try:
                     global_stats = await analytics.get_global_stats(db)
                     print(f"  Platform stats: {global_stats['total_bots']} bots, {global_stats['total_matches']} matches")
                 except Exception as e:
-                    print(f"  ❌ Error getting global stats: {e}")
+                    print(f"  Error getting global stats: {e}")
                 
                 print("\n" + "="*60)
                 print("INTEGRATION TEST COMPLETED SUCCESSFULLY!")
@@ -289,21 +274,20 @@ if __name__ == "__main__":
                 return True
                 
             except Exception as e:
-                print(f"\n❌ INTEGRATION TEST FAILED: {e}")
+                print(f"\nINTEGRATION TEST FAILED: {e}")
                 import traceback
                 traceback.print_exc()
                 return False
 
 
 async def main():
-    """Run the integration test."""
     runner = IntegrationTestRunner()
     
     try:
         await runner.setup()
         success = await runner.run_complete_test()
         if success:
-            print("\n🎉 All tests passed! Infrastructure is ready for production.")
+            print("\nAll tests passed! Infrastructure is ready for production.")
         else:
             print("\nSome tests failed. Check the output above for details.")
             exit(1)

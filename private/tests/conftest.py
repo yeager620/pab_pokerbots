@@ -1,7 +1,3 @@
-"""
-Pytest configuration for the simplified poker bot infrastructure tests.
-"""
-
 import asyncio
 import pytest
 import tempfile
@@ -17,7 +13,6 @@ TEST_DATABASE_URL = "sqlite+aiosqlite:///:memory:"
 
 @pytest.fixture(scope="session")
 def event_loop():
-    """Create an event loop for the test session."""
     loop = asyncio.new_event_loop()
     yield loop
     loop.close()
@@ -25,7 +20,6 @@ def event_loop():
 
 @pytest.fixture
 async def test_engine():
-    """Create test database engine."""
     engine = create_async_engine(TEST_DATABASE_URL, echo=False)
     
 
@@ -38,7 +32,6 @@ async def test_engine():
 
 @pytest.fixture
 async def db_session(test_engine):
-    """Create test database session."""
     TestSessionLocal = async_sessionmaker(
         test_engine,
         class_=AsyncSession,
@@ -51,20 +44,17 @@ async def db_session(test_engine):
 
 @pytest.fixture
 def temp_storage():
-    """Create temporary storage directory for tests."""
     with tempfile.TemporaryDirectory() as tmpdir:
         yield Path(tmpdir)
 
 
 @pytest.fixture
 def sample_python_bot():
-    """Create a sample Python bot archive for testing."""
     import zipfile
     import io
     
     bot_code = '''
 def get_action(game_state, legal_actions):
-    """Simple test bot."""
     if "CHECK" in legal_actions:
         return "CHECK"
     elif "CALL" in legal_actions:
