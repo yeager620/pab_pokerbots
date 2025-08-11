@@ -62,7 +62,7 @@ class MatchStatus(str, Enum):
     FAILED = "failed"
 
 
-# Models
+
 class Bot(Base):
     __tablename__ = "bots"
     
@@ -74,12 +74,12 @@ class Bot(Base):
     status: Mapped[BotStatus] = mapped_column(default=BotStatus.ACTIVE)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
     
-    # Simple performance tracking
+
     matches_played: Mapped[int] = mapped_column(Integer, default=0)
     matches_won: Mapped[int] = mapped_column(Integer, default=0)
     rating: Mapped[float] = mapped_column(Float, default=1200.0)
     
-    # File storage path
+
     file_path: Mapped[Optional[str]] = mapped_column(String(500))
 
 
@@ -94,10 +94,10 @@ class Tournament(Base):
     started_at: Mapped[Optional[datetime]] = mapped_column(DateTime)
     completed_at: Mapped[Optional[datetime]] = mapped_column(DateTime)
     
-    # Participants (JSON list of bot IDs for simplicity)
+
     participants: Mapped[List[int]] = mapped_column(JSON, default=list)
     
-    # Relationships
+
     matches: Mapped[list["Match"]] = relationship("Match", back_populates="tournament")
 
 
@@ -111,26 +111,26 @@ class Match(Base):
     
     status: Mapped[MatchStatus] = mapped_column(default=MatchStatus.SCHEDULED)
     
-    # Results
+
     winner_id: Mapped[Optional[int]] = mapped_column(ForeignKey("bots.id"))
     bot1_score: Mapped[int] = mapped_column(Integer, default=0)
     bot2_score: Mapped[int] = mapped_column(Integer, default=0)
     
-    # Timing
+
     started_at: Mapped[Optional[datetime]] = mapped_column(DateTime)
     completed_at: Mapped[Optional[datetime]] = mapped_column(DateTime)
     
-    # Game log (simplified)
+
     game_log: Mapped[Optional[Dict[str, Any]]] = mapped_column(JSON)
     
-    # Relationships
+
     tournament: Mapped["Tournament"] = relationship("Tournament", back_populates="matches")
     bot1: Mapped["Bot"] = relationship("Bot", foreign_keys=[bot1_id])
     bot2: Mapped["Bot"] = relationship("Bot", foreign_keys=[bot2_id])
     winner: Mapped[Optional["Bot"]] = relationship("Bot", foreign_keys=[winner_id])
 
 
-# Simplified utility functions
+
 def calculate_elo_change(winner_rating: float, loser_rating: float, k_factor: float = 32) -> tuple[float, float]:
     """Simple ELO calculation."""
     expected_winner = 1 / (1 + 10 ** ((loser_rating - winner_rating) / 400))

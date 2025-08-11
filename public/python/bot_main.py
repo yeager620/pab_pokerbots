@@ -34,7 +34,7 @@ class PokerStrategy(BaseBot):
         continue_cost = opp_pip - my_pip
         my_bounty = round_state.bounties[active]
         
-        # Strategy implementation
+
         if RaiseAction in legal_actions:
             min_raise, max_raise = round_state.raise_bounds()
             if random.random() < 0.4:

@@ -9,8 +9,8 @@ from typing import List, Optional, Dict, Any
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, update
 
-from .models.core import Tournament, Match, Bot, TournamentStatus, MatchStatus
-from .game import MatchRunner
+from models.core import Tournament, Match, Bot, TournamentStatus, MatchStatus
+from game import MatchRunner
 
 
 class TournamentManager:
@@ -36,15 +36,15 @@ class TournamentManager:
         if not tournament or tournament.status != TournamentStatus.OPEN:
             return False
         
-        # Check if tournament is full
+
         if len(tournament.participants) >= tournament.max_participants:
             return False
         
-        # Check if bot is already registered
+
         if bot_id in tournament.participants:
             return False
         
-        # Add bot to participants
+
         tournament.participants = tournament.participants + [bot_id]
         await db.commit()
         return True
@@ -58,10 +58,10 @@ class TournamentManager:
         if len(tournament.participants) < 2:
             return {"success": False, "error": "Need at least 2 participants"}
         
-        # Generate bracket
+
         matches = self._generate_bracket(tournament.participants)
         
-        # Create match records
+
         for round_num, round_matches in enumerate(matches, 1):
             for bot1_id, bot2_id in round_matches:
                 match = Match(
@@ -75,7 +75,7 @@ class TournamentManager:
         tournament.status = TournamentStatus.RUNNING
         await db.commit()
         
-        # Start first round matches
+
         asyncio.create_task(self._run_tournament_matches(db, tournament_id))
         
         return {
@@ -86,19 +86,19 @@ class TournamentManager:
     
     def _generate_bracket(self, participants: List[int]) -> List[List[tuple]]:
         """Generate single-elimination bracket."""
-        # Shuffle participants for random seeding
+
         participants = participants.copy()
         random.shuffle(participants)
         
-        # Pad to next power of 2 with byes
+
         tournament_size = 1
         while tournament_size < len(participants):
             tournament_size *= 2
         
         while len(participants) < tournament_size:
-            participants.append(None)  # Bye
+            participants.append(None)
         
-        # Generate rounds
+
         rounds = []
         current_round = participants
         
@@ -109,14 +109,14 @@ class TournamentManager:
             for i in range(0, len(current_round), 2):
                 p1, p2 = current_round[i], current_round[i+1]
                 
-                # Skip matches with byes
+
                 if p1 is None:
                     next_round.append(p2)
                 elif p2 is None:
                     next_round.append(p1)
                 else:
                     matches.append((p1, p2))
-                    next_round.append(None)  # Winner TBD
+                    next_round.append(None)
             
             if matches:
                 rounds.append(matches)
@@ -127,7 +127,7 @@ class TournamentManager:
     async def _run_tournament_matches(self, db: AsyncSession, tournament_id: int):
         """Run all tournament matches sequentially."""
         while True:
-            # Get next scheduled matches
+
             stmt = select(Match).where(
                 Match.tournament_id == tournament_id,
                 Match.status == MatchStatus.SCHEDULED
@@ -136,11 +136,11 @@ class TournamentManager:
             matches = result.scalars().all()
             
             if not matches:
-                # Check if tournament is complete
+
                 await self._check_tournament_completion(db, tournament_id)
                 break
             
-            # Run first available match
+
             match = matches[0]
             try:
                 await self.match_runner.run_match(db, match.id)
@@ -150,7 +150,7 @@ class TournamentManager:
                 match.status = MatchStatus.FAILED
                 await db.commit()
             
-            # Small delay between matches
+
             await asyncio.sleep(1)
     
     async def _advance_winner(self, db: AsyncSession, completed_match_id: int):
@@ -159,8 +159,8 @@ class TournamentManager:
         if not completed_match or not completed_match.winner_id:
             return
         
-        # Find next round match that needs this winner
-        # Simplified: just mark winner in result
+
+
         pass
     
     async def _check_tournament_completion(self, db: AsyncSession, tournament_id: int):
@@ -173,7 +173,7 @@ class TournamentManager:
         remaining_matches = result.scalars().all()
         
         if not remaining_matches:
-            # Tournament complete
+
             tournament = await db.get(Tournament, tournament_id)
             tournament.status = TournamentStatus.COMPLETED
             await db.commit()
@@ -188,7 +188,7 @@ class TournamentManager:
         for bot_id in tournament.participants:
             bot = await db.get(Bot, bot_id)
             if bot:
-                # Get bot's matches in this tournament
+
                 stmt = select(Match).where(
                     Match.tournament_id == tournament_id,
                     (Match.bot1_id == bot_id) | (Match.bot2_id == bot_id),
@@ -209,10 +209,10 @@ class TournamentManager:
                     "matches_played": len(matches)
                 })
         
-        # Sort by wins descending
+
         standings.sort(key=lambda x: x["wins"], reverse=True)
         
-        # Add rankings
+
         for i, standing in enumerate(standings):
             standing["rank"] = i + 1
         

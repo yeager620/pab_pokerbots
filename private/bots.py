@@ -13,7 +13,7 @@ from typing import Optional, List
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, update
 
-from .models.core import Bot, BotLanguage, BotStatus, hash_file
+from models.core import Bot, BotLanguage, BotStatus, hash_file
 
 
 class BotManager:
@@ -33,7 +33,7 @@ class BotManager:
         bot_archive: bytes
     ) -> Bot:
         """Submit and validate a new bot."""
-        # Create bot record
+
         bot = Bot(
             user_id=user_id,
             name=name,
@@ -45,7 +45,7 @@ class BotManager:
         await db.flush()
         
         try:
-            # Validate and store
+
             bot_dir = await self._validate_and_store(bot.id, language, bot_archive)
             bot.file_path = str(bot_dir)
             bot.status = BotStatus.ACTIVE
@@ -63,7 +63,7 @@ class BotManager:
         bot_dir = self.storage_dir / str(bot_id)
         bot_dir.mkdir(exist_ok=True)
         
-        # Extract archive
+
         with tempfile.TemporaryDirectory() as temp_dir:
             temp_path = Path(temp_dir)
             archive_file = temp_path / "bot.zip"
@@ -72,7 +72,7 @@ class BotManager:
                 f.write(archive)
             
             with zipfile.ZipFile(archive_file, 'r') as zip_ref:
-                # Basic security: check for path traversal
+
                 for name in zip_ref.namelist():
                     if ".." in name or name.startswith("/"):
                         raise ValueError(f"Unsafe file path: {name}")
@@ -81,11 +81,11 @@ class BotManager:
             
             extracted_dir = temp_path / "extracted"
             
-            # Language-specific validation
+
             self._validate_structure(extracted_dir, language)
             self._validate_syntax(extracted_dir, language)
             
-            # Copy to permanent storage
+
             shutil.copytree(extracted_dir, bot_dir, dirs_exist_ok=True)
         
         return bot_dir
@@ -107,7 +107,7 @@ class BotManager:
         """Basic syntax validation."""
         try:
             if language == BotLanguage.PYTHON:
-                # Check Python syntax
+
                 for py_file in bot_dir.rglob("*.py"):
                     result = subprocess.run(
                         ["python3", "-m", "py_compile", str(py_file)],
@@ -124,7 +124,7 @@ class BotManager:
                 if result.returncode != 0:
                     raise ValueError("Rust compilation error")
             
-            # Add other language checks as needed
+
             
         except subprocess.TimeoutExpired:
             raise ValueError("Syntax validation timed out")

@@ -5,14 +5,14 @@ Core game logic with essential features only.
 
 import random
 import asyncio
-import time
+from datetime import datetime
 import docker
 from typing import Dict, List, Optional, Any
 from dataclasses import dataclass
 from enum import Enum
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from .models.core import Match, Bot, MatchStatus, calculate_elo_change
+from models.core import Match, Bot, MatchStatus, calculate_elo_change
 
 
 class PokerAction(Enum):
@@ -25,16 +25,16 @@ class PokerAction(Enum):
 @dataclass
 class GameState:
     round_num: int = 1
-    button: int = 0  # 0 or 1
-    street: int = 0  # 0=preflop, 1=flop, 2=turn, 3=river
-    pots: List[int] = None  # [player0_contribution, player1_contribution]
-    stacks: List[int] = None  # [player0_stack, player1_stack]
+    button: int = 0
+    street: int = 0
+    pots: List[int] = None
+    stacks: List[int] = None
     
     def __post_init__(self):
         if self.pots is None:
-            self.pots = [1, 2]  # Small blind, big blind
+            self.pots = [1, 2]
         if self.stacks is None:
-            self.stacks = [399, 398]  # Starting stacks minus blinds
+            self.stacks = [399, 398]
 
 
 class PokerGame:
@@ -62,12 +62,12 @@ class PokerGame:
         continue_cost = self.state.pots[1-active_player] - self.state.pots[active_player]
         
         if continue_cost == 0:
-            # No bet to call
+
             if self.state.stacks[0] == 0 or self.state.stacks[1] == 0:
                 return [PokerAction.CHECK, PokerAction.FOLD]
             return [PokerAction.CHECK, PokerAction.RAISE, PokerAction.FOLD]
         else:
-            # Need to call bet
+
             if continue_cost >= self.state.stacks[active_player]:
                 return [PokerAction.FOLD, PokerAction.CALL]
             return [PokerAction.FOLD, PokerAction.CALL, PokerAction.RAISE]
@@ -79,7 +79,7 @@ class PokerGame:
         if action == PokerAction.FOLD:
             self.is_finished = True
             self.winner = 1 - active_player
-            # Winner gets opponent's chips
+
             self.final_scores[self.winner] = sum(self.state.pots)
             self.final_scores[1 - self.winner] = -sum(self.state.pots)
             return False
@@ -89,44 +89,44 @@ class PokerGame:
             self.state.stacks[active_player] -= continue_cost
             self.state.pots[active_player] += continue_cost
             
-            # Check if we should advance street or end hand
-            if self.state.button > 0:  # Both players acted
+
+            if self.state.button > 0:
                 return self._advance_street()
             else:
                 self.state.button = 1
                 return True
         
         elif action == PokerAction.CHECK:
-            if self.state.button > 0:  # Both players checked
+            if self.state.button > 0:
                 return self._advance_street()
             else:
                 self.state.button = 1
                 return True
         
         elif action == PokerAction.RAISE:
-            # Simplified raise to amount
+
             bet_amount = amount - self.state.pots[active_player]
             self.state.stacks[active_player] -= bet_amount
             self.state.pots[active_player] = amount
-            self.state.button = 1 - active_player  # Give action to opponent
+            self.state.button = 1 - active_player
             return True
         
         return True
     
     def _advance_street(self) -> bool:
         """Advance to next street or end hand."""
-        if self.state.street >= 3:  # River completed
+        if self.state.street >= 3:
             self._finish_hand()
             return False
         
         self.state.street += 1
-        self.state.button = 0  # Reset action
+        self.state.button = 0
         return True
     
     def _finish_hand(self):
         """Finish hand at showdown."""
         self.is_finished = True
-        # Simplified: random winner at showdown
+
         self.winner = random.randint(0, 1)
         total_pot = sum(self.state.pots)
         self.final_scores[self.winner] = total_pot // 2
@@ -143,7 +143,7 @@ class BotRunner:
     async def start_bot(self, bot_id: int, bot_files_dir: str, language: str) -> str:
         """Start bot container and return container ID."""
         try:
-            # Language-specific Docker images
+
             images = {
                 "python": "python:3.13-slim",
                 "rust": "rust:1.75-slim", 
@@ -153,12 +153,12 @@ class BotRunner:
             
             container = self.docker_client.containers.run(
                 image=images.get(language, "python:3.13-slim"),
-                command=["sleep", "300"],  # Keep alive for match duration
+                command=["sleep", "300"],
                 volumes={bot_files_dir: {"bind": "/app", "mode": "ro"}},
                 working_dir="/app",
                 mem_limit="256m",
-                cpu_quota=50000,  # 0.5 CPU
-                network_mode="none",  # No network access
+                cpu_quota=50000,
+                network_mode="none",
                 detach=True,
                 remove=True
             )
@@ -181,9 +181,9 @@ class BotRunner:
     
     async def get_bot_action(self, bot_id: int, game_state: GameState, legal_actions: List[PokerAction], timeout: int = 10) -> PokerAction:
         """Get action from bot (simplified)."""
-        # In a real implementation, this would communicate with the bot process
-        # For now, return random legal action
-        await asyncio.sleep(0.1)  # Simulate bot thinking
+
+
+        await asyncio.sleep(0.1)
         return random.choice(legal_actions)
 
 
@@ -196,7 +196,7 @@ class MatchRunner:
     
     async def run_match(self, db: AsyncSession, match_id: int) -> Dict[str, Any]:
         """Run a complete match between two bots."""
-        # Get match info
+
         match = await db.get(Match, match_id)
         if not match:
             raise ValueError(f"Match {match_id} not found")
@@ -204,13 +204,13 @@ class MatchRunner:
         bot1 = await db.get(Bot, match.bot1_id)
         bot2 = await db.get(Bot, match.bot2_id)
         
-        # Update match status
+
         match.status = MatchStatus.RUNNING
-        match.started_at = time.time()
+        match.started_at = datetime.now()
         await db.commit()
         
         try:
-            # Start bot containers
+
             container1 = await self.bot_runner.start_bot(
                 bot1.id, bot1.file_path, bot1.language.value
             )
@@ -218,22 +218,22 @@ class MatchRunner:
                 bot2.id, bot2.file_path, bot2.language.value
             )
             
-            # Run games (simplified: just 1 game instead of 1000)
+
             game = PokerGame()
             game_log = []
             
             hands_played = 0
-            max_hands = 100  # Simplified for demo
+            max_hands = 100
             
             while hands_played < max_hands and not game.is_finished:
-                # Get action from current player
+
                 active_player = game.state.button % 2
                 bot_id = bot1.id if active_player == 0 else bot2.id
                 
                 legal_actions = game.get_legal_actions()
                 action = await self.bot_runner.get_bot_action(bot_id, game.state, legal_actions)
                 
-                # Log action
+
                 game_log.append({
                     "hand": hands_played,
                     "player": active_player,
@@ -241,26 +241,26 @@ class MatchRunner:
                     "game_state": game.state.__dict__.copy()
                 })
                 
-                # Apply action
+
                 continues = game.apply_action(action)
                 if not continues:
                     hands_played += 1
                     if hands_played < max_hands:
-                        game.reset()  # Start new hand
+                        game.reset()
             
-            # Determine winner
+
             if game.winner is not None:
                 winner_id = bot1.id if game.winner == 0 else bot2.id
                 match.winner_id = winner_id
                 match.bot1_score = game.final_scores[0]
                 match.bot2_score = game.final_scores[1]
             
-            # Update ratings
+
             await self._update_ratings(db, match)
             
-            # Finalize match
+
             match.status = MatchStatus.COMPLETED
-            match.completed_at = time.time()
+            match.completed_at = datetime.now()
             match.game_log = {"hands": hands_played, "actions": game_log}
             
             await db.commit()
@@ -280,7 +280,7 @@ class MatchRunner:
             raise
             
         finally:
-            # Cleanup containers
+
             await self.bot_runner.stop_bot(bot1.id)
             await self.bot_runner.stop_bot(bot2.id)
     

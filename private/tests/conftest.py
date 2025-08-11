@@ -8,10 +8,10 @@ import tempfile
 from pathlib import Path
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine, async_sessionmaker
 
-from ..models.core import Base
+from models.core import Base
 
 
-# Test database URL - use in-memory SQLite for fast tests
+
 TEST_DATABASE_URL = "sqlite+aiosqlite:///:memory:"
 
 
@@ -28,7 +28,7 @@ async def test_engine():
     """Create test database engine."""
     engine = create_async_engine(TEST_DATABASE_URL, echo=False)
     
-    # Create all tables
+
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
     

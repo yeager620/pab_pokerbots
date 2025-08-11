@@ -7,7 +7,7 @@ from typing import List, Dict, Any, Optional
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, func, desc
 
-from .models.core import Bot, Match, MatchStatus, calculate_elo_change
+from models.core import Bot, Match, MatchStatus, calculate_elo_change
 
 
 class Analytics:
@@ -17,7 +17,7 @@ class Analytics:
         """Get bot leaderboard sorted by rating."""
         stmt = (
             select(Bot)
-            .where(Bot.matches_played > 0)  # Only bots with matches
+            .where(Bot.matches_played > 0)
             .order_by(desc(Bot.rating))
             .limit(limit)
         )
@@ -48,7 +48,7 @@ class Analytics:
         if not bot:
             return None
         
-        # Get recent matches
+
         stmt = (
             select(Match)
             .where(
@@ -61,11 +61,11 @@ class Analytics:
         result = await db.execute(stmt)
         recent_matches = result.scalars().all()
         
-        # Calculate recent performance
+
         recent_wins = sum(1 for m in recent_matches if m.winner_id == bot_id)
         recent_win_rate = recent_wins / len(recent_matches) if recent_matches else 0
         
-        # Calculate overall win rate
+
         overall_win_rate = bot.matches_won / bot.matches_played if bot.matches_played > 0 else 0
         
         return {
@@ -86,7 +86,7 @@ class Analytics:
     
     async def get_head_to_head(self, db: AsyncSession, bot1_id: int, bot2_id: int) -> Dict[str, Any]:
         """Get head-to-head statistics between two bots."""
-        # Get all matches between these bots
+
         stmt = select(Match).where(
             (
                 ((Match.bot1_id == bot1_id) & (Match.bot2_id == bot2_id)) |
@@ -101,7 +101,7 @@ class Analytics:
         bot2_wins = sum(1 for m in matches if m.winner_id == bot2_id)
         total_matches = len(matches)
         
-        # Get bot names
+
         bot1 = await db.get(Bot, bot1_id)
         bot2 = await db.get(Bot, bot2_id)
         
@@ -124,19 +124,19 @@ class Analytics:
     
     async def get_global_stats(self, db: AsyncSession) -> Dict[str, Any]:
         """Get global platform statistics."""
-        # Total bots
+
         total_bots_stmt = select(func.count(Bot.id))
         total_bots = await db.scalar(total_bots_stmt)
         
-        # Active bots
+
         active_bots_stmt = select(func.count(Bot.id)).where(Bot.status == "active")
         active_bots = await db.scalar(active_bots_stmt)
         
-        # Total matches
+
         total_matches_stmt = select(func.count(Match.id)).where(Match.status == MatchStatus.COMPLETED)
         total_matches = await db.scalar(total_matches_stmt)
         
-        # Language distribution
+
         lang_stmt = select(Bot.language, func.count(Bot.id)).group_by(Bot.language)
         lang_result = await db.execute(lang_stmt)
         language_dist = {lang.value: count for lang, count in lang_result}
@@ -160,21 +160,21 @@ class Analytics:
         if not bot1 or not bot2:
             return
         
-        # Calculate rating changes
+
         if match.winner_id == bot1.id:
             winner_change, loser_change = calculate_elo_change(bot1.rating, bot2.rating)
             bot1.rating += winner_change
             bot2.rating += loser_change
-            # Update win counts
+
             bot1.matches_won += 1
         else:
             winner_change, loser_change = calculate_elo_change(bot2.rating, bot1.rating)
             bot2.rating += winner_change  
             bot1.rating += loser_change
-            # Update win counts
+
             bot2.matches_won += 1
         
-        # Update match counts
+
         bot1.matches_played += 1
         bot2.matches_played += 1
         
@@ -186,7 +186,7 @@ class Analytics:
         result = await db.execute(stmt)
         ratings = [r for r, in result]
         
-        # Define rating ranges
+
         ranges = {
             "Under 1000": 0,
             "1000-1199": 0, 

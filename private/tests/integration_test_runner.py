@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """
 Integration test runner for manual testing of the poker bot infrastructure.
 Creates example bots and runs a complete tournament to verify everything works.
@@ -10,11 +10,11 @@ import zipfile
 from pathlib import Path
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
 
-from ..models.core import init_db, Bot, Tournament, BotLanguage, BotStatus, TournamentStatus
-from ..bots import BotManager
-from ..tournaments import TournamentManager
-from ..game import MatchRunner
-from ..analytics import Analytics
+from models.core import init_db, Bot, Tournament, BotLanguage, BotStatus, TournamentStatus
+from bots import BotManager
+from tournaments import TournamentManager
+from game import MatchRunner
+from analytics import Analytics
 
 
 class IntegrationTestRunner:
@@ -30,11 +30,11 @@ class IntegrationTestRunner:
         """Initialize test environment."""
         print("🚀 Setting up test environment...")
         
-        # Create temporary directory
+
         self.temp_dir = Path(tempfile.mkdtemp(prefix="pokerbots_test_"))
         print(f"📁 Test directory: {self.temp_dir}")
         
-        # Setup database
+
         self.engine = create_async_engine(self.database_url, echo=False)
         self.SessionLocal = async_sessionmaker(
             self.engine,
@@ -42,8 +42,8 @@ class IntegrationTestRunner:
             expire_on_commit=False,
         )
         
-        # Create tables
-        from ..models.core import Base
+
+        from models.core import Base
         async with self.engine.begin() as conn:
             await conn.run_sync(Base.metadata.create_all)
         
@@ -62,7 +62,7 @@ class IntegrationTestRunner:
         """Create sample bot archives for testing."""
         bots = {}
         
-        # Python bot - Always checks/calls
+
         python_bot = '''
 def get_action(game_state, legal_actions):
     """Conservative bot that checks/calls."""
@@ -78,7 +78,7 @@ if __name__ == "__main__":
 '''
         bots['python_conservative'] = self._create_zip_archive("bot_main.py", python_bot)
         
-        # Python bot - More aggressive
+
         python_aggressive = '''
 import random
 
@@ -98,7 +98,7 @@ if __name__ == "__main__":
 '''
         bots['python_aggressive'] = self._create_zip_archive("bot_main.py", python_aggressive)
         
-        # Python bot - Random
+
         python_random = '''
 import random
 
@@ -111,7 +111,7 @@ if __name__ == "__main__":
 '''
         bots['python_random'] = self._create_zip_archive("bot_main.py", python_random)
         
-        # Python bot - Folding
+
         python_folder = '''
 def get_action(game_state, legal_actions):
     """Folding bot - always folds when possible."""
@@ -146,13 +146,13 @@ if __name__ == "__main__":
         print("="*60)
         
         async with self.SessionLocal() as db:
-            # Initialize managers
+
             bot_manager = BotManager(str(self.temp_dir / "bots"))
             tournament_manager = TournamentManager(str(self.temp_dir / "bots"))
             analytics = Analytics()
             
             try:
-                # Step 1: Submit bots
+
                 print("\n📤 STEP 1: Submitting bots...")
                 sample_bots = self.create_sample_bots()
                 submitted_bots = []
@@ -184,7 +184,7 @@ if __name__ == "__main__":
                     print("❌ Need at least 2 bots for tournament")
                     return False
                 
-                # Step 2: Create tournament
+
                 print("\n🏆 STEP 2: Creating tournament...")
                 try:
                     tournament = await tournament_manager.create_tournament(
@@ -197,7 +197,7 @@ if __name__ == "__main__":
                     print(f"  ❌ Failed to create tournament: {e}")
                     return False
                 
-                # Step 3: Register bots
+
                 print("\n📝 STEP 3: Registering bots...")
                 for bot in submitted_bots:
                     try:
@@ -209,7 +209,7 @@ if __name__ == "__main__":
                     except Exception as e:
                         print(f"  ❌ Error registering {bot.name}: {e}")
                 
-                # Step 4: Start tournament
+
                 print("\n🚀 STEP 4: Starting tournament...")
                 try:
                     result = await tournament_manager.start_tournament(db, tournament.id)
@@ -222,9 +222,9 @@ if __name__ == "__main__":
                     print(f"  ❌ Error starting tournament: {e}")
                     return False
                 
-                # Step 5: Monitor tournament
+
                 print("\n⏳ STEP 5: Monitoring tournament progress...")
-                max_wait = 120  # 2 minutes timeout
+                max_wait = 120
                 wait_time = 0
                 
                 while wait_time < max_wait:
@@ -242,32 +242,32 @@ if __name__ == "__main__":
                 
                 if tournament.status != TournamentStatus.COMPLETED:
                     print(f"  ⚠️  Tournament did not complete in time (status: {tournament.status.value})")
-                    # Continue anyway to check partial results
+
                 
-                # Step 6: Check results
+
                 print("\n📊 STEP 6: Checking results...")
                 
-                # Tournament standings
+
                 try:
                     standings = await tournament_manager.get_tournament_standings(db, tournament.id)
                     print(f"  🏆 Tournament standings ({len(standings)} participants):")
-                    for standing in standings[:3]:  # Top 3
+                    for standing in standings[:3]:
                         print(f"    {standing['rank']}. {standing['bot_name']} - {standing['wins']} wins, {standing['losses']} losses")
                 except Exception as e:
                     print(f"  ❌ Error getting standings: {e}")
                 
-                # Match results
+
                 try:
                     matches = await tournament_manager.get_tournament_matches(db, tournament.id)
                     completed_matches = [m for m in matches if m["status"] == "completed"]
                     print(f"  ⚔️  Matches: {len(completed_matches)} completed out of {len(matches)} total")
-                    for match in completed_matches[-3:]:  # Last 3 matches
+                    for match in completed_matches[-3:]:
                         winner = match["winner_name"] or "No winner"
                         print(f"    {match['bot1_name']} vs {match['bot2_name']} → Winner: {winner}")
                 except Exception as e:
                     print(f"  ❌ Error getting matches: {e}")
                 
-                # Updated leaderboard
+
                 try:
                     leaderboard = await analytics.get_leaderboard(db, limit=5)
                     print(f"  📈 Updated leaderboard (top {len(leaderboard)}):")
@@ -276,7 +276,7 @@ if __name__ == "__main__":
                 except Exception as e:
                     print(f"  ❌ Error getting leaderboard: {e}")
                 
-                # Global stats
+
                 try:
                     global_stats = await analytics.get_global_stats(db)
                     print(f"  📊 Platform stats: {global_stats['total_bots']} bots, {global_stats['total_matches']} matches")

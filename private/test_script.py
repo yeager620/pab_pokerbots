@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """
 Quick test script for the poker bot infrastructure.
 Run this to verify everything works before production deployment.
@@ -9,7 +9,7 @@ import sys
 import os
 from pathlib import Path
 
-# Add the private directory to Python path
+
 sys.path.insert(0, str(Path(__file__).parent))
 
 from tests.integration_test_runner import IntegrationTestRunner
@@ -19,7 +19,7 @@ async def run_quick_test():
     """Run a quick test with minimal setup."""
     print("🚀 Running quick infrastructure test...")
     
-    # Use in-memory database for testing
+
     runner = IntegrationTestRunner("sqlite+aiosqlite:///:memory:")
     
     try:
@@ -86,7 +86,7 @@ if __name__ == "__main__":
     print("🧪 Poker Bot Infrastructure Test Script")
     print("=" * 50)
     
-    # Check dependencies first
+
     if not check_dependencies():
         sys.exit(1)
     
@@ -110,7 +110,7 @@ if __name__ == "__main__":
         print("\n👋 Test cancelled.")
         sys.exit(0)
     
-    # Run the test
+
     success = asyncio.run(run_quick_test())
     
     if success:

@@ -10,15 +10,15 @@ import zipfile
 from pathlib import Path
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine, async_sessionmaker
 
-from ..models.core import init_db, get_db, Bot, Tournament, Match, BotLanguage, BotStatus, TournamentStatus
-from ..bots import BotManager
-from ..tournaments import TournamentManager
-from ..game import MatchRunner
-from ..analytics import Analytics
-from ..config import config
+from models.core import init_db, get_db, Bot, Tournament, Match, BotLanguage, BotStatus, TournamentStatus
+from bots import BotManager
+from tournaments import TournamentManager
+from game import MatchRunner
+from analytics import Analytics
+from config import config
 
 
-# Test database setup
+
 TEST_DATABASE_URL = "sqlite+aiosqlite:///:memory:"
 
 
@@ -27,17 +27,17 @@ async def test_db():
     """Create test database."""
     engine = create_async_engine(TEST_DATABASE_URL, echo=False)
     
-    # Override the database engine for testing
-    from ..models import core
+
+    from models import core
     original_engine = core.engine
     core.engine = engine
     
-    # Create tables
+
     await init_db()
     
     yield engine
     
-    # Restore original engine
+
     core.engine = original_engine
     await engine.dispose()
 
@@ -126,7 +126,7 @@ class TestEndToEndWorkflow:
     ):
         """Test complete workflow: submit bots -> create tournament -> run matches -> check results."""
         
-        # Step 1: Submit multiple bots
+
         print("📤 Submitting bots...")
         bots = []
         for i in range(4):
@@ -142,7 +142,7 @@ class TestEndToEndWorkflow:
             bots.append(bot)
             print(f"✅ Bot {bot.name} submitted successfully (ID: {bot.id})")
         
-        # Step 2: Create tournament
+
         print("\n🏆 Creating tournament...")
         tournament = await tournament_manager.create_tournament(
             db_session,
@@ -152,22 +152,22 @@ class TestEndToEndWorkflow:
         assert tournament.status == TournamentStatus.OPEN
         print(f"✅ Tournament '{tournament.name}' created (ID: {tournament.id})")
         
-        # Step 3: Register bots for tournament
+
         print("\n📝 Registering bots...")
         for bot in bots:
             success = await tournament_manager.register_bot(db_session, tournament.id, bot.id)
             assert success
             print(f"✅ Bot {bot.name} registered")
         
-        # Step 4: Start tournament
+
         print("\n🚀 Starting tournament...")
         result = await tournament_manager.start_tournament(db_session, tournament.id)
         assert result["success"]
         print(f"✅ Tournament started: {result['message']}")
         
-        # Step 5: Wait for tournament completion (with timeout)
+
         print("\n⏳ Waiting for tournament completion...")
-        max_wait = 60  # seconds
+        max_wait = 60
         wait_time = 0
         while wait_time < max_wait:
             await db_session.refresh(tournament)
@@ -179,28 +179,28 @@ class TestEndToEndWorkflow:
         assert tournament.status == TournamentStatus.COMPLETED, "Tournament should complete"
         print("✅ Tournament completed!")
         
-        # Step 6: Verify results
+
         print("\n📊 Checking results...")
         
-        # Check standings
+
         standings = await tournament_manager.get_tournament_standings(db_session, tournament.id)
         assert len(standings) == 4
-        assert standings[0]["rank"] == 1  # Winner should be rank 1
+        assert standings[0]["rank"] == 1
         print(f"🏆 Winner: {standings[0]['bot_name']}")
         
-        # Check matches were played
+
         matches = await tournament_manager.get_tournament_matches(db_session, tournament.id)
         completed_matches = [m for m in matches if m["status"] == "completed"]
-        assert len(completed_matches) >= 3  # At least 3 matches for 4 bots (semifinals + final)
+        assert len(completed_matches) >= 3
         print(f"✅ {len(completed_matches)} matches completed")
         
-        # Check leaderboard updated
+
         leaderboard = await analytics.get_leaderboard(db_session, limit=10)
         assert len(leaderboard) == 4
         assert all(bot["matches_played"] > 0 for bot in leaderboard)
         print("✅ Leaderboard updated with new ratings")
         
-        # Check global stats
+
         global_stats = await analytics.get_global_stats(db_session)
         assert global_stats["total_bots"] == 4
         assert global_stats["total_matches"] >= 3
@@ -216,7 +216,7 @@ class TestEndToEndWorkflow:
     ):
         """Test bot validation during submission."""
         
-        # Test valid Python bot
+
         valid_bot_code = 'print("Hello, World!")'
         archive_buffer = tempfile.NamedTemporaryFile(suffix='.zip', delete=False)
         with zipfile.ZipFile(archive_buffer.name, 'w') as zf:
@@ -235,7 +235,7 @@ class TestEndToEndWorkflow:
         )
         assert bot.status == BotStatus.ACTIVE
         
-        # Test invalid archive (missing required file)
+
         invalid_archive_buffer = tempfile.NamedTemporaryFile(suffix='.zip', delete=False)
         with zipfile.ZipFile(invalid_archive_buffer.name, 'w') as zf:
             zf.writestr("wrong_file.txt", "not a bot")
@@ -263,19 +263,19 @@ class TestEndToEndWorkflow:
     ):
         """Test tournament edge cases."""
         
-        # Create tournament
+
         tournament = await tournament_manager.create_tournament(
             db_session,
             name="Edge Case Tournament",
             max_participants=8
         )
         
-        # Try to start tournament with no participants
+
         result = await tournament_manager.start_tournament(db_session, tournament.id)
         assert not result["success"]
         assert "at least 2 participants" in result["error"]
         
-        # Add one bot
+
         bot = await bot_manager.submit_bot(
             db_session,
             user_id="user_1",
@@ -286,7 +286,7 @@ class TestEndToEndWorkflow:
         )
         await tournament_manager.register_bot(db_session, tournament.id, bot.id)
         
-        # Try to start with only one participant
+
         result = await tournament_manager.start_tournament(db_session, tournament.id)
         assert not result["success"]
         assert "at least 2 participants" in result["error"]
@@ -314,14 +314,14 @@ class TestProductionReadiness:
                 bot_archive=sample_python_bot
             )
         
-        # Submit 5 bots concurrently
+
         tasks = [submit_bot(i) for i in range(5)]
         bots = await asyncio.gather(*tasks)
         
-        # All should succeed
+
         assert len(bots) == 5
         assert all(bot.status == BotStatus.ACTIVE for bot in bots)
-        assert len(set(bot.id for bot in bots)) == 5  # All unique IDs
+        assert len(set(bot.id for bot in bots)) == 5
     
     @pytest.mark.asyncio
     async def test_error_handling(
@@ -331,7 +331,7 @@ class TestProductionReadiness:
     ):
         """Test error handling throughout the system."""
         
-        # Test malformed archive
+
         with pytest.raises(ValueError):
             await bot_manager.submit_bot(
                 db_session,
@@ -342,7 +342,7 @@ class TestProductionReadiness:
                 bot_archive=b"not a zip file"
             )
         
-        # Test archive with path traversal attempt
+
         malicious_archive = tempfile.NamedTemporaryFile(suffix='.zip', delete=False)
         with zipfile.ZipFile(malicious_archive.name, 'w') as zf:
             zf.writestr("../../../etc/passwd", "malicious content")
@@ -361,16 +361,16 @@ class TestProductionReadiness:
             )
 
 
-# Utility function for running tests
+
 async def run_integration_test():
     """Run a quick integration test for manual testing."""
     print("🧪 Running manual integration test...")
     
-    # This can be called directly for testing
-    # Would need to set up fixtures manually
+
+
     pass
 
 
 if __name__ == "__main__":
-    # Run a simple test
+
     asyncio.run(run_integration_test())

@@ -7,7 +7,8 @@ participants can create and submit bots that compete against each other in poker
 ## Overview
 
 the goal is to:
-- provide a platform for developing, testing, and competing with similarly developed rival poker bots via a unified API.
+- provide a platform for developing, testing, submitting, and competing with similarly developed rival poker bots via a unified, intuitive API
+- develop core tournament running infrastructure (to be used internally) for efficient, flexible, and simple conduction of pokerbot tournaments by P@B 
 - support multiple programming languages, each with their own base implementation and mini-SDK (maybe a better term for this?)
  
 ### More specifically, pab_pokerbots should provide:

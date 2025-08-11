@@ -10,14 +10,14 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from .models.core import get_db, init_db, Bot, Tournament, Match, BotLanguage, BotStatus, TournamentStatus
-from .bots import BotManager
-from .tournaments import TournamentManager
-from .game import MatchRunner
-from .analytics import Analytics
+from models.core import get_db, init_db, Bot, Tournament, Match, BotLanguage, BotStatus, TournamentStatus
+from bots import BotManager
+from tournaments import TournamentManager
+from game import MatchRunner
+from analytics import Analytics
 
 
-# Pydantic models for API
+
 class BotResponse(BaseModel):
     id: int
     name: str
@@ -49,20 +49,20 @@ class MatchResponse(BaseModel):
     completed_at: Optional[str]
 
 
-# Initialize managers
+
 bot_manager = BotManager()
 tournament_manager = TournamentManager()
 match_runner = MatchRunner()
 analytics = Analytics()
 
-# Create FastAPI app
+
 app = FastAPI(
     title="PAB PokerBots API",
     description="Simplified API for poker bot competition",
     version="1.0.0"
 )
 
-# Add CORS middleware
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -78,13 +78,13 @@ async def startup():
     await init_db()
 
 
-# Health check
+
 @app.get("/health")
 async def health_check():
     return {"status": "healthy", "service": "pokerbots-api"}
 
 
-# Bot endpoints
+
 @app.post("/bots", response_model=dict)
 async def submit_bot(
     name: str = Form(...),
@@ -153,7 +153,7 @@ async def list_bots(
     ]
 
 
-# Tournament endpoints
+
 @app.post("/tournaments", response_model=dict)
 async def create_tournament(
     name: str = Form(...),
@@ -239,7 +239,7 @@ async def get_tournament_matches(tournament_id: int, db: AsyncSession = Depends(
     ]
 
 
-# Match endpoints
+
 @app.post("/matches/{match_id}/run")
 async def run_match(match_id: int, db: AsyncSession = Depends(get_db)):
     """Manually run a specific match."""
@@ -250,7 +250,7 @@ async def run_match(match_id: int, db: AsyncSession = Depends(get_db)):
         raise HTTPException(status_code=500, detail=str(e))
 
 
-# Analytics endpoints
+
 @app.get("/leaderboard")
 async def get_leaderboard(
     limit: int = Query(50, le=100),
@@ -292,7 +292,7 @@ async def get_rating_distribution(db: AsyncSession = Depends(get_db)):
     return {"rating_distribution": distribution}
 
 
-# Development/admin endpoints
+
 @app.get("/")
 async def root():
     """Root endpoint with API information."""

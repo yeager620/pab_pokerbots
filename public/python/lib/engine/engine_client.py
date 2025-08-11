@@ -25,7 +25,7 @@ class EngineClient:
             code = 'C'
         elif isinstance(action, CheckAction):
             code = 'K'
-        else:  # isinstance(action, RaiseAction)
+        else:
             code = 'R' + str(action.amount)
         self.socketfile.write(code + '\n')
         self.socketfile.flush()
