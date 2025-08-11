@@ -43,8 +43,7 @@ class Deck:
     """Standard 52-card deck."""
     
     def __init__(self, seed: Optional[int] = None):
-        if seed:
-            random.seed(seed)
+        # Don't re-seed here - let the parent class handle seeding
         self.cards = []
         self.shuffle()
     
@@ -137,18 +136,18 @@ class HandEvaluator:
 @dataclass
 class GameState:
     round_num: int = 1
-    button: int = 0  # Button position (0 or 1)
-    street: int = 0  # 0=preflop, 1=flop, 2=turn, 3=river
-    pot: int = 0     # Total pot size
+    button: int = 0
+    street: int = 0
+    pot: int = 0
     stacks: List[int] = None
-    hole_cards: List[List[Card]] = None  # [player0_cards, player1_cards]
+    hole_cards: List[List[Card]] = None
     community_cards: List[Card] = None
-    current_bets: List[int] = None  # Current round bets by each player
-    total_invested: List[int] = None  # Total invested this hand by each player
+    current_bets: List[int] = None
+    total_invested: List[int] = None
     
     def __post_init__(self):
         if self.stacks is None:
-            self.stacks = [400, 400]  # Starting stacks
+            self.stacks = [400, 400]
         if self.hole_cards is None:
             self.hole_cards = [[], []]
         if self.community_cards is None:
@@ -169,17 +168,15 @@ class PokerGame:
     def __init__(self, seed: Optional[int] = None):
         if seed:
             random.seed(seed)
-        # Track match vs hand completion separately
-        self.is_finished = False  # Match finished (when player runs out of chips)
+        self.is_finished = False
         self.hands_played = 0
-        self.match_scores = [0, 0]  # Running match scores
-        self.deck = Deck(seed)
+        self.match_scores = [0, 0]
+        self.deck = Deck()
         self.evaluator = HandEvaluator()
         self.reset()
     
     def reset(self):
         """Reset for new hand."""
-        # Preserve stacks from previous hand if they exist
         current_stacks = getattr(self.state, 'stacks', [self.STARTING_STACK, self.STARTING_STACK]) if hasattr(self, 'state') else [self.STARTING_STACK, self.STARTING_STACK]
         
         self.state = GameState()
@@ -187,10 +184,10 @@ class PokerGame:
         self.state.round_num = self.hands_played + 1
         self.hand_finished = False
         self.winner = None
-        self.final_scores = [0, 0]  # Hand scores
-        self.active_player = 0  # Current player to act
-        self.last_raiser = None  # Track who raised last
-        self.deck.shuffle()  # New deck for each hand
+        self.final_scores = [0, 0]
+        self.active_player = 0
+        self.last_raiser = None
+        self.deck.shuffle()
         self._deal_hole_cards()
         self._post_blinds()
     
@@ -206,17 +203,13 @@ class PokerGame:
         actions = [PokerAction.FOLD]
         
         if call_amount == 0:
-            # No bet to call, can check
             actions.append(PokerAction.CHECK)
         else:
-            # Need to call a bet
             if call_amount < self.state.stacks[self.active_player]:
                 actions.append(PokerAction.CALL)
             elif call_amount >= self.state.stacks[self.active_player] and self.state.stacks[self.active_player] > 0:
-                # All-in call
                 actions.append(PokerAction.CALL)
         
-        # Can raise if have chips left and not already all-in
         if self.state.stacks[self.active_player] > call_amount:
             actions.append(PokerAction.RAISE)
         
@@ -231,26 +224,19 @@ class PokerGame:
             # Player folds, opponent wins
             self.hand_finished = True
             self.winner = 1 - self.active_player
-            # Winner gets the pot
             self.final_scores[self.winner] = self.state.pot - self.state.total_invested[self.winner]
             self.final_scores[1 - self.winner] = -self.state.total_invested[1 - self.winner]
             return False
         
         elif action == PokerAction.CALL:
-            # Calculate call amount
             max_bet = max(self.state.current_bets)
             call_amount = max_bet - self.state.current_bets[self.active_player]
-            
-            # All-in protection
             actual_call = min(call_amount, self.state.stacks[self.active_player])
-            
-            # Update state
             self.state.stacks[self.active_player] -= actual_call
             self.state.current_bets[self.active_player] += actual_call
             self.state.total_invested[self.active_player] += actual_call
             self.state.pot += actual_call
             
-            # Check if betting round is complete
             if self._is_betting_round_complete():
                 return self._advance_street()
             else:
@@ -263,7 +249,6 @@ class PokerGame:
             if self.state.current_bets[self.active_player] != max_bet:
                 return False  # Invalid check
             
-            # Check if betting round is complete
             if self._is_betting_round_complete():
                 return self._advance_street()
             else:
@@ -271,28 +256,19 @@ class PokerGame:
                 return True
         
         elif action == PokerAction.RAISE:
-            # Default raise to pot size if no amount specified
             if amount == 0:
                 amount = self.state.pot
             
-            # Calculate total bet amount needed
             max_bet = max(self.state.current_bets)
             call_amount = max_bet - self.state.current_bets[self.active_player]
             total_bet = call_amount + amount
-            
-            # All-in protection
             actual_bet = min(total_bet, self.state.stacks[self.active_player])
-            
-            # Update state
             self.state.stacks[self.active_player] -= actual_bet
             self.state.current_bets[self.active_player] += actual_bet
             self.state.total_invested[self.active_player] += actual_bet
             self.state.pot += actual_bet
             
-            # Mark as last raiser
             self.last_raiser = self.active_player
-            
-            # Next player
             self._next_player()
             return True
         
@@ -310,10 +286,8 @@ class PokerGame:
         
         # Both players must have equal current bets and action must have returned to last raiser
         if self.state.current_bets[0] == self.state.current_bets[1]:
-            # If no raises this round, round is complete after both players act
             if self.last_raiser is None:
                 return True
-            # If there was a raise, action must return to the raiser
             return self.active_player == self.last_raiser
         
         return False
@@ -327,11 +301,8 @@ class PokerGame:
     
     def _post_blinds(self):
         """Post small and big blinds."""
-        # Small blind is posted by button player (heads-up)
         sb_player = self.state.button
         bb_player = 1 - self.state.button
-        
-        # Deduct blinds from stacks
         sb_amount = min(self.SMALL_BLIND, self.state.stacks[sb_player])
         bb_amount = min(self.BIG_BLIND, self.state.stacks[bb_player])
         
@@ -345,36 +316,30 @@ class PokerGame:
         self.state.total_invested[bb_player] = bb_amount
         self.state.pot = sb_amount + bb_amount
         
-        # Action starts with small blind (button) pre-flop
         self.active_player = sb_player
-        self.last_raiser = bb_player  # BB is the initial "raiser"
+        self.last_raiser = bb_player
     
     def _advance_street(self) -> bool:
         """Advance to next street or end hand."""
-        if self.state.street >= 3:  # After river, go to showdown
+        if self.state.street >= 3:
             self._finish_hand()
             return False
         
-        # Move to next street
         self.state.street += 1
         
-        # Deal community cards
-        if self.state.street == 1:  # Flop
-            self.deck.deal()  # Burn card
+        if self.state.street == 1:
+            self.deck.deal()
             for _ in range(3):
                 self.state.community_cards.append(self.deck.deal())
-        elif self.state.street == 2:  # Turn
-            self.deck.deal()  # Burn card
+        elif self.state.street == 2:
+            self.deck.deal()
             self.state.community_cards.append(self.deck.deal())
-        elif self.state.street == 3:  # River
-            self.deck.deal()  # Burn card
+        elif self.state.street == 3:
+            self.deck.deal()
             self.state.community_cards.append(self.deck.deal())
         
-        # Reset betting for new street
         self.state.current_bets = [0, 0]
         self.last_raiser = None
-        
-        # Action starts with first player (opposite of button)
         self.active_player = 1 - self.state.button
         
         return True
@@ -383,29 +348,22 @@ class PokerGame:
         """Finish hand at showdown."""
         self.hand_finished = True
         
-        # Evaluate both hands
         strength0, desc0 = self.evaluator.evaluate_hand(
             self.state.hole_cards[0], self.state.community_cards
         )
         strength1, desc1 = self.evaluator.evaluate_hand(
             self.state.hole_cards[1], self.state.community_cards
         )
-        
-        # Determine winner
         if strength0 > strength1:
             self.winner = 0
         elif strength1 > strength0:
             self.winner = 1
         else:
-            # Tie - split pot
             self.winner = None
-        
-        # Calculate final scores
         if self.winner is not None:
             self.final_scores[self.winner] = self.state.pot - self.state.total_invested[self.winner]
             self.final_scores[1 - self.winner] = -self.state.total_invested[1 - self.winner]
         else:
-            # Split pot
             pot_split = self.state.pot // 2
             self.final_scores[0] = pot_split - self.state.total_invested[0]
             self.final_scores[1] = pot_split - self.state.total_invested[1]
@@ -418,11 +376,9 @@ class PokerGame:
             self.match_scores[1] += self.final_scores[1]
             self.hands_played += 1
             
-            # Update actual stacks based on final scores
             self.state.stacks[0] += self.final_scores[0]
             self.state.stacks[1] += self.final_scores[1]
             
-            # Check if either player is out of chips (match over)
             if self.state.stacks[0] <= 0:
                 self.is_finished = True
                 self.match_winner = 1
@@ -527,7 +483,6 @@ class MatchRunner:
             hands_played = 0
             max_hands = 100
             
-            # Log initial game state
             detailed_log.append({
                 "event": "match_start",
                 "bot1_name": bot1.name,
@@ -536,10 +491,7 @@ class MatchRunner:
                 "max_hands": max_hands
             })
             
-            # Main game loop - play multiple hands until match ends
             while game.hands_played < max_hands and not game.is_finished:
-                
-                # Start new hand
                 current_hand = game.hands_played + 1
                 detailed_log.append({
                     "event": "hand_start",
@@ -577,11 +529,8 @@ class MatchRunner:
                     legal_actions = game.get_legal_actions()
                     action = await self.bot_runner.get_bot_action(bot_id, game.state, legal_actions)
                     
-                    # Calculate action details
                     max_bet = max(game.state.current_bets)
                     call_amount = max_bet - game.state.current_bets[active_player]
-
-                    # Log detailed action
                     detailed_log.append({
                         "event": "player_action",
                         "hand_number": current_hand,
@@ -594,10 +543,7 @@ class MatchRunner:
                         "stack_before": game.state.stacks[active_player]
                     })
 
-                    # Apply action and capture result
                     continues = game.apply_action(action)
-                    
-                    # Log post-action state
                     detailed_log.append({
                         "event": "action_result", 
                         "hand_number": current_hand,
@@ -613,7 +559,6 @@ class MatchRunner:
                         "hand_finished": game.hand_finished
                     })
                     
-                    # Basic game log for compatibility
                     game_log.append({
                         "hand": current_hand,
                         "player": active_player,
@@ -646,8 +591,9 @@ class MatchRunner:
                     "final_scores": game.final_scores.copy()
                 })
                 
-                # Complete the hand and check if match should continue
                 match_continues = game.complete_hand()
+                if match_continues:
+                    game.reset()
             
 
             # Determine final match winner

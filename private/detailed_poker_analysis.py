@@ -188,7 +188,7 @@ async def main():
     """Run detailed poker analysis."""
     analyzer = DetailedPokerAnalyzer()
     
-    print("🧪 DETAILED POKER GAME ANALYSIS")
+    print("DETAILED POKER GAME ANALYSIS")
     print("=" * 50)
     
     try:
@@ -208,10 +208,10 @@ async def main():
             f.write("="*60 + "\n")
             f.write(json.dumps(match_result, indent=2, default=str))
         
-        print(f"\n✅ Analysis complete! Detailed log saved to: {filename}")
+        print(f"\nAnalysis complete! Detailed log saved to: {filename}")
         
     except Exception as e:
-        print(f"❌ Analysis failed: {e}")
+        print(f"Analysis failed: {e}")
         import traceback
         traceback.print_exc()
 

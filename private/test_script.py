@@ -17,7 +17,7 @@ from tests.integration_test_runner import IntegrationTestRunner
 
 async def run_quick_test():
     """Run a quick test with minimal setup."""
-    print("🚀 Running quick infrastructure test...")
+    print("Running quick infrastructure test...")
     
 
     runner = IntegrationTestRunner("sqlite+aiosqlite:///:memory:")
@@ -27,8 +27,8 @@ async def run_quick_test():
         success = await runner.run_complete_test()
         
         if success:
-            print("\n✅ SUCCESS: Infrastructure is working correctly!")
-            print("🎯 Ready for production deployment.")
+            print("\nSUCCESS: Infrastructure is working correctly!")
+            print("Ready for production deployment.")
             return True
         else:
             print("\n❌ FAILURE: Issues detected in infrastructure.")
@@ -51,25 +51,25 @@ def check_dependencies():
     missing = []
     try:
         import fastapi
-        print("  ✅ FastAPI")
+        print("  OK FastAPI")
     except ImportError:
         missing.append("fastapi")
     
     try:
         import sqlalchemy
-        print("  ✅ SQLAlchemy")
+        print("  OK SQLAlchemy")
     except ImportError:
         missing.append("sqlalchemy")
     
     try:
         import docker
-        print("  ✅ Docker")
+        print("  OK Docker")
     except ImportError:
         missing.append("docker")
     
     try:
         import uvicorn
-        print("  ✅ Uvicorn")
+        print("  OK Uvicorn")
     except ImportError:
         missing.append("uvicorn")
     
@@ -78,12 +78,12 @@ def check_dependencies():
         print("📦 Install with: pip install -e .")
         return False
     
-    print("✅ All dependencies available")
+    print("All dependencies available")
     return True
 
 
 if __name__ == "__main__":
-    print("🧪 Poker Bot Infrastructure Test Script")
+    print("Poker Bot Infrastructure Test Script")
     print("=" * 50)
     
 
@@ -97,25 +97,25 @@ if __name__ == "__main__":
     print("• Verify all results")
     print("• Test the entire workflow end-to-end")
     
-    print("\n⚠️  Note: This test uses Docker containers.")
+    print("\nNote: This test uses Docker containers.")
     print("Make sure Docker is running on your system.")
     
     print("\nContinue? [y/N]: y (auto-proceeding)")
     try:
         response = "y"  # Auto-proceed for testing
         if response not in ['y', 'yes']:
-            print("👋 Test cancelled.")
+            print("Test cancelled.")
             sys.exit(0)
     except KeyboardInterrupt:
-        print("\n👋 Test cancelled.")
+        print("\nTest cancelled.")
         sys.exit(0)
     
 
     success = asyncio.run(run_quick_test())
     
     if success:
-        print("\n🎉 Infrastructure test completed successfully!")
-        print("🚀 You can now deploy to production with confidence.")
+        print("\nInfrastructure test completed successfully!")
+        print("You can now deploy to production with confidence.")
     else:
         print("\n🔧 Please fix the issues above before production deployment.")
         sys.exit(1)

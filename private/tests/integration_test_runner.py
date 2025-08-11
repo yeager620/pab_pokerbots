@@ -28,7 +28,7 @@ class IntegrationTestRunner:
         
     async def setup(self):
         """Initialize test environment."""
-        print("🚀 Setting up test environment...")
+        print("Setting up test environment...")
         
 
         self.temp_dir = Path(tempfile.mkdtemp(prefix="pokerbots_test_"))
@@ -47,7 +47,7 @@ class IntegrationTestRunner:
         async with self.engine.begin() as conn:
             await conn.run_sync(Base.metadata.create_all)
         
-        print("✅ Database initialized")
+        print("Database initialized")
         
     async def cleanup(self):
         """Clean up test environment."""
@@ -56,7 +56,7 @@ class IntegrationTestRunner:
         if self.temp_dir and self.temp_dir.exists():
             import shutil
             shutil.rmtree(self.temp_dir)
-        print("🧹 Cleanup completed")
+        print("Cleanup completed")
     
     def create_sample_bots(self) -> dict:
         """Create sample bot archives for testing."""
@@ -142,7 +142,7 @@ if __name__ == "__main__":
     async def run_complete_test(self):
         """Run the complete integration test."""
         print("\n" + "="*60)
-        print("🧪 RUNNING COMPLETE INTEGRATION TEST")
+        print("RUNNING COMPLETE INTEGRATION TEST")
         print("="*60)
         
         async with self.SessionLocal() as db:
@@ -153,7 +153,7 @@ if __name__ == "__main__":
             
             try:
 
-                print("\n📤 STEP 1: Submitting bots...")
+                print("\nSTEP 1: Submitting bots...")
                 sample_bots = self.create_sample_bots()
                 submitted_bots = []
                 
@@ -175,7 +175,7 @@ if __name__ == "__main__":
                             bot_archive=sample_bots[bot_type]
                         )
                         submitted_bots.append(bot)
-                        print(f"  ✅ {bot_name} submitted (ID: {bot.id}, Status: {bot.status.value})")
+                        print(f"  OK {bot_name} submitted (ID: {bot.id}, Status: {bot.status.value})")
                     except Exception as e:
                         print(f"  ❌ Failed to submit {bot_name}: {e}")
                         return False
@@ -185,36 +185,36 @@ if __name__ == "__main__":
                     return False
                 
 
-                print("\n🏆 STEP 2: Creating tournament...")
+                print("\nSTEP 2: Creating tournament...")
                 try:
                     tournament = await tournament_manager.create_tournament(
                         db,
                         name="Integration Test Tournament",
                         max_participants=len(submitted_bots)
                     )
-                    print(f"  ✅ Tournament created (ID: {tournament.id})")
+                    print(f"  Tournament created (ID: {tournament.id})")
                 except Exception as e:
                     print(f"  ❌ Failed to create tournament: {e}")
                     return False
                 
 
-                print("\n📝 STEP 3: Registering bots...")
+                print("\nSTEP 3: Registering bots...")
                 for bot in submitted_bots:
                     try:
                         success = await tournament_manager.register_bot(db, tournament.id, bot.id)
                         if success:
-                            print(f"  ✅ {bot.name} registered")
+                            print(f"  {bot.name} registered")
                         else:
                             print(f"  ❌ Failed to register {bot.name}")
                     except Exception as e:
                         print(f"  ❌ Error registering {bot.name}: {e}")
                 
 
-                print("\n🚀 STEP 4: Starting tournament...")
+                print("\nSTEP 4: Starting tournament...")
                 try:
                     result = await tournament_manager.start_tournament(db, tournament.id)
                     if result["success"]:
-                        print(f"  ✅ Tournament started: {result['message']}")
+                        print(f"  Tournament started: {result['message']}")
                     else:
                         print(f"  ❌ Failed to start tournament: {result.get('error', 'Unknown error')}")
                         return False
@@ -223,16 +223,16 @@ if __name__ == "__main__":
                     return False
                 
 
-                print("\n⏳ STEP 5: Monitoring tournament progress...")
+                print("\nSTEP 5: Monitoring tournament progress...")
                 max_wait = 120
                 wait_time = 0
                 
                 while wait_time < max_wait:
                     await db.refresh(tournament)
-                    print(f"  🔄 Tournament status: {tournament.status.value} (waited {wait_time}s)")
+                    print(f"  Tournament status: {tournament.status.value} (waited {wait_time}s)")
                     
                     if tournament.status == TournamentStatus.COMPLETED:
-                        print("  ✅ Tournament completed!")
+                        print("  Tournament completed!")
                         break
                     elif tournament.status in [TournamentStatus.OPEN]:
                         print("  ⚠️  Tournament still in preparation...")
@@ -245,12 +245,12 @@ if __name__ == "__main__":
 
                 
 
-                print("\n📊 STEP 6: Checking results...")
+                print("\nSTEP 6: Checking results...")
                 
 
                 try:
                     standings = await tournament_manager.get_tournament_standings(db, tournament.id)
-                    print(f"  🏆 Tournament standings ({len(standings)} participants):")
+                    print(f"  Tournament standings ({len(standings)} participants):")
                     for standing in standings[:3]:
                         print(f"    {standing['rank']}. {standing['bot_name']} - {standing['wins']} wins, {standing['losses']} losses")
                 except Exception as e:
@@ -279,12 +279,12 @@ if __name__ == "__main__":
 
                 try:
                     global_stats = await analytics.get_global_stats(db)
-                    print(f"  📊 Platform stats: {global_stats['total_bots']} bots, {global_stats['total_matches']} matches")
+                    print(f"  Platform stats: {global_stats['total_bots']} bots, {global_stats['total_matches']} matches")
                 except Exception as e:
                     print(f"  ❌ Error getting global stats: {e}")
                 
                 print("\n" + "="*60)
-                print("✅ INTEGRATION TEST COMPLETED SUCCESSFULLY!")
+                print("INTEGRATION TEST COMPLETED SUCCESSFULLY!")
                 print("="*60)
                 return True
                 
@@ -305,14 +305,14 @@ async def main():
         if success:
             print("\n🎉 All tests passed! Infrastructure is ready for production.")
         else:
-            print("\n💥 Some tests failed. Check the output above for details.")
+            print("\nSome tests failed. Check the output above for details.")
             exit(1)
     finally:
         await runner.cleanup()
 
 
 if __name__ == "__main__":
-    print("🧪 Poker Bot Infrastructure Integration Test")
+    print("Poker Bot Infrastructure Integration Test")
     print("This will create sample bots and run a complete tournament.")
     print("Press Ctrl+C to cancel, or Enter to continue...")
     try:

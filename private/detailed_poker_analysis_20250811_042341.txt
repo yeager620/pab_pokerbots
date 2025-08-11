@@ -1,0 +1,3816 @@
+[04:23:25.516] [SETUP] Creating two bots for detailed analysis
+[04:23:25.577] [SETUP] Bot 1: DetailBot1 (ID: 11)
+[04:23:25.577] [SETUP] Bot 2: DetailBot2 (ID: 12)
+[04:23:25.580] [SETUP] Tournament started: {'success': True, 'message': 'Tournament started with 2 participants', 'first_round_matches': 1}
+[04:23:41.745] [MATCH] Match completed: DetailBot1 vs DetailBot2
+[04:23:41.745] [RESULT] Winner ID: 12
+[04:23:41.745] [RESULT] Final scores: 318 - -318
+[04:23:41.745] [ANALYSIS] ANALYZING DETAILED POKER GAMEPLAY
+[04:23:41.745] [ANALYSIS] ============================================================
+[04:23:41.745] [MATCH] Match started: DetailBot2 vs DetailBot1
+[04:23:41.745] [MATCH] Starting stacks: [400, 400]
+[04:23:41.745] [HAND ] 
+--- HAND #1 ---
+[04:23:41.745] [HAND ] Stacks before: [399, 398]
+[04:23:41.745] [HAND ] Button player: 0
+[04:23:41.745] [CARDS] Player 0 hole cards: ['4♠', 'K♦']
+[04:23:41.745] [CARDS] Player 1 hole cards: ['T♥', '4♣']
+[04:23:41.745] [HAND ] Pot after blinds: 3
+[04:23:41.745] [ACTION] Player 0 (DetailBot2)  (preflop): F
+[04:23:41.745] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.745] [ACTION]   Call amount: 1
+[04:23:41.745] [RESULT]   Result: Stack → 399 (change: 0)
+[04:23:41.745] [RESULT]   Pot size: 3
+[04:23:41.745] [RESULT]   Current bets: [1, 2]
+[04:23:41.745] [HAND ] 
+*** HAND END ***
+[04:23:41.745] [HAND ] Winner: DetailBot1
+[04:23:41.745] [CARDS] Final board: []
+[04:23:41.745] [CARDS] Player 0 showed: ['4♠', 'K♦']
+[04:23:41.745] [CARDS] Player 1 showed: ['T♥', '4♣']
+[04:23:41.745] [HAND ] Pot size: 3
+[04:23:41.745] [HAND ] Final scores: [-1, 1]
+[04:23:41.745] [HAND ] 
+--- HAND #2 ---
+[04:23:41.745] [HAND ] Stacks before: [397, 397]
+[04:23:41.745] [HAND ] Button player: 0
+[04:23:41.745] [CARDS] Player 0 hole cards: ['K♦', 'A♦']
+[04:23:41.745] [CARDS] Player 1 hole cards: ['3♦', 'J♠']
+[04:23:41.745] [HAND ] Pot after blinds: 3
+[04:23:41.745] [ACTION] Player 0 (DetailBot2)  (preflop): F
+[04:23:41.746] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.746] [ACTION]   Call amount: 1
+[04:23:41.746] [RESULT]   Result: Stack → 397 (change: 0)
+[04:23:41.746] [RESULT]   Pot size: 3
+[04:23:41.746] [RESULT]   Current bets: [1, 2]
+[04:23:41.746] [HAND ] 
+*** HAND END ***
+[04:23:41.746] [HAND ] Winner: DetailBot1
+[04:23:41.746] [CARDS] Final board: []
+[04:23:41.746] [CARDS] Player 0 showed: ['K♦', 'A♦']
+[04:23:41.746] [CARDS] Player 1 showed: ['3♦', 'J♠']
+[04:23:41.746] [HAND ] Pot size: 3
+[04:23:41.746] [HAND ] Final scores: [-1, 1]
+[04:23:41.746] [HAND ] 
+--- HAND #3 ---
+[04:23:41.746] [HAND ] Stacks before: [395, 396]
+[04:23:41.746] [HAND ] Button player: 0
+[04:23:41.746] [CARDS] Player 0 hole cards: ['4♠', 'K♥']
+[04:23:41.746] [CARDS] Player 1 hole cards: ['3♥', '8♣']
+[04:23:41.746] [HAND ] Pot after blinds: 3
+[04:23:41.746] [ACTION] Player 0 (DetailBot2)  (preflop): C
+[04:23:41.746] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.746] [ACTION]   Call amount: 1
+[04:23:41.746] [RESULT]   Result: Stack → 394 (change: -1)
+[04:23:41.746] [RESULT]   Pot size: 4
+[04:23:41.746] [RESULT]   Current bets: [2, 2]
+[04:23:41.746] [ACTION] Player 1 (DetailBot1)  (preflop): K
+[04:23:41.746] [ACTION]   Legal actions: ['F', 'K', 'R']
+[04:23:41.746] [ACTION]   Call amount: 0
+[04:23:41.746] [RESULT]   Result: Stack → 396 (change: 0)
+[04:23:41.746] [RESULT]   Pot size: 4
+[04:23:41.746] [RESULT]   Current bets: [0, 0]
+[04:23:41.746] [ACTION] Player 1 (DetailBot1)  (flop): K
+[04:23:41.746] [ACTION]   Legal actions: ['F', 'K', 'R']
+[04:23:41.746] [ACTION]   Call amount: 0
+[04:23:41.746] [CARDS]   Community cards: ['Q♠', 'K♠', 'K♦']
+[04:23:41.746] [RESULT]   Result: Stack → 396 (change: 0)
+[04:23:41.746] [RESULT]   Pot size: 4
+[04:23:41.746] [RESULT]   Current bets: [0, 0]
+[04:23:41.746] [ACTION] Player 1 (DetailBot1)  (turn): K
+[04:23:41.746] [ACTION]   Legal actions: ['F', 'K', 'R']
+[04:23:41.746] [ACTION]   Call amount: 0
+[04:23:41.746] [CARDS]   Community cards: ['Q♠', 'K♠', 'K♦', '6♦']
+[04:23:41.746] [RESULT]   Result: Stack → 396 (change: 0)
+[04:23:41.746] [RESULT]   Pot size: 4
+[04:23:41.746] [RESULT]   Current bets: [0, 0]
+[04:23:41.746] [ACTION] Player 1 (DetailBot1)  (river): K
+[04:23:41.746] [ACTION]   Legal actions: ['F', 'K', 'R']
+[04:23:41.746] [ACTION]   Call amount: 0
+[04:23:41.746] [CARDS]   Community cards: ['Q♠', 'K♠', 'K♦', '6♦', '5♣']
+[04:23:41.746] [RESULT]   Result: Stack → 396 (change: 0)
+[04:23:41.746] [RESULT]   Pot size: 4
+[04:23:41.746] [RESULT]   Current bets: [0, 0]
+[04:23:41.746] [HAND ] 
+*** HAND END ***
+[04:23:41.746] [HAND ] Winner: DetailBot2
+[04:23:41.746] [CARDS] Final board: ['Q♠', 'K♠', 'K♦', '6♦', '5♣']
+[04:23:41.746] [CARDS] Player 0 showed: ['4♠', 'K♥']
+[04:23:41.746] [CARDS] Player 1 showed: ['3♥', '8♣']
+[04:23:41.746] [HAND ] Pot size: 4
+[04:23:41.746] [HAND ] Final scores: [2, -2]
+[04:23:41.746] [HAND ] 
+--- HAND #4 ---
+[04:23:41.746] [HAND ] Stacks before: [395, 392]
+[04:23:41.746] [HAND ] Button player: 0
+[04:23:41.746] [CARDS] Player 0 hole cards: ['8♣', '9♥']
+[04:23:41.746] [CARDS] Player 1 hole cards: ['J♣', 'K♥']
+[04:23:41.746] [HAND ] Pot after blinds: 3
+[04:23:41.746] [ACTION] Player 0 (DetailBot2)  (preflop): F
+[04:23:41.746] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.746] [ACTION]   Call amount: 1
+[04:23:41.746] [RESULT]   Result: Stack → 395 (change: 0)
+[04:23:41.746] [RESULT]   Pot size: 3
+[04:23:41.746] [RESULT]   Current bets: [1, 2]
+[04:23:41.746] [HAND ] 
+*** HAND END ***
+[04:23:41.746] [HAND ] Winner: DetailBot1
+[04:23:41.746] [CARDS] Final board: []
+[04:23:41.746] [CARDS] Player 0 showed: ['8♣', '9♥']
+[04:23:41.746] [CARDS] Player 1 showed: ['J♣', 'K♥']
+[04:23:41.746] [HAND ] Pot size: 3
+[04:23:41.746] [HAND ] Final scores: [-1, 1]
+[04:23:41.746] [HAND ] 
+--- HAND #5 ---
+[04:23:41.746] [HAND ] Stacks before: [393, 391]
+[04:23:41.746] [HAND ] Button player: 0
+[04:23:41.746] [CARDS] Player 0 hole cards: ['9♦', 'T♣']
+[04:23:41.746] [CARDS] Player 1 hole cards: ['6♥', '2♥']
+[04:23:41.746] [HAND ] Pot after blinds: 3
+[04:23:41.746] [ACTION] Player 0 (DetailBot2)  (preflop): F
+[04:23:41.746] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.746] [ACTION]   Call amount: 1
+[04:23:41.746] [RESULT]   Result: Stack → 393 (change: 0)
+[04:23:41.746] [RESULT]   Pot size: 3
+[04:23:41.746] [RESULT]   Current bets: [1, 2]
+[04:23:41.746] [HAND ] 
+*** HAND END ***
+[04:23:41.746] [HAND ] Winner: DetailBot1
+[04:23:41.746] [CARDS] Final board: []
+[04:23:41.746] [CARDS] Player 0 showed: ['9♦', 'T♣']
+[04:23:41.746] [CARDS] Player 1 showed: ['6♥', '2♥']
+[04:23:41.746] [HAND ] Pot size: 3
+[04:23:41.746] [HAND ] Final scores: [-1, 1]
+[04:23:41.746] [HAND ] 
+--- HAND #6 ---
+[04:23:41.746] [HAND ] Stacks before: [391, 390]
+[04:23:41.746] [HAND ] Button player: 0
+[04:23:41.746] [CARDS] Player 0 hole cards: ['J♣', '8♠']
+[04:23:41.746] [CARDS] Player 1 hole cards: ['2♠', '3♣']
+[04:23:41.746] [HAND ] Pot after blinds: 3
+[04:23:41.746] [ACTION] Player 0 (DetailBot2)  (preflop): C
+[04:23:41.746] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.746] [ACTION]   Call amount: 1
+[04:23:41.746] [RESULT]   Result: Stack → 390 (change: -1)
+[04:23:41.746] [RESULT]   Pot size: 4
+[04:23:41.746] [RESULT]   Current bets: [2, 2]
+[04:23:41.746] [ACTION] Player 1 (DetailBot1)  (preflop): R
+[04:23:41.746] [ACTION]   Legal actions: ['F', 'K', 'R']
+[04:23:41.746] [ACTION]   Call amount: 0
+[04:23:41.746] [RESULT]   Result: Stack → 386 (change: -4)
+[04:23:41.746] [RESULT]   Pot size: 8
+[04:23:41.746] [RESULT]   Current bets: [2, 6]
+[04:23:41.746] [ACTION] Player 0 (DetailBot2)  (preflop): F
+[04:23:41.746] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.746] [ACTION]   Call amount: 4
+[04:23:41.746] [RESULT]   Result: Stack → 390 (change: 0)
+[04:23:41.746] [RESULT]   Pot size: 8
+[04:23:41.746] [RESULT]   Current bets: [2, 6]
+[04:23:41.746] [HAND ] 
+*** HAND END ***
+[04:23:41.746] [HAND ] Winner: DetailBot1
+[04:23:41.746] [CARDS] Final board: []
+[04:23:41.746] [CARDS] Player 0 showed: ['J♣', '8♠']
+[04:23:41.746] [CARDS] Player 1 showed: ['2♠', '3♣']
+[04:23:41.746] [HAND ] Pot size: 8
+[04:23:41.746] [HAND ] Final scores: [-2, 2]
+[04:23:41.746] [HAND ] 
+--- HAND #7 ---
+[04:23:41.746] [HAND ] Stacks before: [387, 386]
+[04:23:41.746] [HAND ] Button player: 0
+[04:23:41.746] [CARDS] Player 0 hole cards: ['2♦', '6♠']
+[04:23:41.746] [CARDS] Player 1 hole cards: ['J♦', 'T♣']
+[04:23:41.746] [HAND ] Pot after blinds: 3
+[04:23:41.746] [ACTION] Player 0 (DetailBot2)  (preflop): R
+[04:23:41.746] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.746] [ACTION]   Call amount: 1
+[04:23:41.746] [RESULT]   Result: Stack → 383 (change: -4)
+[04:23:41.746] [RESULT]   Pot size: 7
+[04:23:41.746] [RESULT]   Current bets: [5, 2]
+[04:23:41.746] [ACTION] Player 1 (DetailBot1)  (preflop): F
+[04:23:41.746] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.746] [ACTION]   Call amount: 3
+[04:23:41.746] [RESULT]   Result: Stack → 386 (change: 0)
+[04:23:41.747] [RESULT]   Pot size: 7
+[04:23:41.747] [RESULT]   Current bets: [5, 2]
+[04:23:41.747] [HAND ] 
+*** HAND END ***
+[04:23:41.747] [HAND ] Winner: DetailBot2
+[04:23:41.747] [CARDS] Final board: []
+[04:23:41.747] [CARDS] Player 0 showed: ['2♦', '6♠']
+[04:23:41.747] [CARDS] Player 1 showed: ['J♦', 'T♣']
+[04:23:41.747] [HAND ] Pot size: 7
+[04:23:41.747] [HAND ] Final scores: [2, -2]
+[04:23:41.747] [HAND ] 
+--- HAND #8 ---
+[04:23:41.747] [HAND ] Stacks before: [384, 382]
+[04:23:41.747] [HAND ] Button player: 0
+[04:23:41.747] [CARDS] Player 0 hole cards: ['6♠', '3♣']
+[04:23:41.747] [CARDS] Player 1 hole cards: ['5♥', '8♥']
+[04:23:41.747] [HAND ] Pot after blinds: 3
+[04:23:41.747] [ACTION] Player 0 (DetailBot2)  (preflop): F
+[04:23:41.747] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.747] [ACTION]   Call amount: 1
+[04:23:41.747] [RESULT]   Result: Stack → 384 (change: 0)
+[04:23:41.747] [RESULT]   Pot size: 3
+[04:23:41.747] [RESULT]   Current bets: [1, 2]
+[04:23:41.747] [HAND ] 
+*** HAND END ***
+[04:23:41.747] [HAND ] Winner: DetailBot1
+[04:23:41.747] [CARDS] Final board: []
+[04:23:41.747] [CARDS] Player 0 showed: ['6♠', '3♣']
+[04:23:41.747] [CARDS] Player 1 showed: ['5♥', '8♥']
+[04:23:41.747] [HAND ] Pot size: 3
+[04:23:41.747] [HAND ] Final scores: [-1, 1]
+[04:23:41.747] [HAND ] 
+--- HAND #9 ---
+[04:23:41.747] [HAND ] Stacks before: [382, 381]
+[04:23:41.747] [HAND ] Button player: 0
+[04:23:41.747] [CARDS] Player 0 hole cards: ['A♠', 'A♦']
+[04:23:41.747] [CARDS] Player 1 hole cards: ['3♣', '9♦']
+[04:23:41.747] [HAND ] Pot after blinds: 3
+[04:23:41.747] [ACTION] Player 0 (DetailBot2)  (preflop): R
+[04:23:41.747] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.747] [ACTION]   Call amount: 1
+[04:23:41.747] [RESULT]   Result: Stack → 378 (change: -4)
+[04:23:41.747] [RESULT]   Pot size: 7
+[04:23:41.747] [RESULT]   Current bets: [5, 2]
+[04:23:41.747] [ACTION] Player 1 (DetailBot1)  (preflop): R
+[04:23:41.747] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.747] [ACTION]   Call amount: 3
+[04:23:41.747] [RESULT]   Result: Stack → 371 (change: -10)
+[04:23:41.747] [RESULT]   Pot size: 17
+[04:23:41.747] [RESULT]   Current bets: [5, 12]
+[04:23:41.747] [ACTION] Player 0 (DetailBot2)  (preflop): R
+[04:23:41.747] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.747] [ACTION]   Call amount: 7
+[04:23:41.747] [RESULT]   Result: Stack → 354 (change: -24)
+[04:23:41.747] [RESULT]   Pot size: 41
+[04:23:41.747] [RESULT]   Current bets: [29, 12]
+[04:23:41.747] [ACTION] Player 1 (DetailBot1)  (preflop): C
+[04:23:41.747] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.747] [ACTION]   Call amount: 17
+[04:23:41.747] [RESULT]   Result: Stack → 354 (change: -17)
+[04:23:41.747] [RESULT]   Pot size: 58
+[04:23:41.747] [RESULT]   Current bets: [29, 29]
+[04:23:41.747] [ACTION] Player 0 (DetailBot2)  (preflop): F
+[04:23:41.747] [ACTION]   Legal actions: ['F', 'K', 'R']
+[04:23:41.747] [ACTION]   Call amount: 0
+[04:23:41.747] [RESULT]   Result: Stack → 354 (change: 0)
+[04:23:41.747] [RESULT]   Pot size: 58
+[04:23:41.747] [RESULT]   Current bets: [29, 29]
+[04:23:41.747] [HAND ] 
+*** HAND END ***
+[04:23:41.747] [HAND ] Winner: DetailBot1
+[04:23:41.747] [CARDS] Final board: []
+[04:23:41.747] [CARDS] Player 0 showed: ['A♠', 'A♦']
+[04:23:41.747] [CARDS] Player 1 showed: ['3♣', '9♦']
+[04:23:41.747] [HAND ] Pot size: 58
+[04:23:41.747] [HAND ] Final scores: [-29, 29]
+[04:23:41.747] [HAND ] 
+--- HAND #10 ---
+[04:23:41.747] [HAND ] Stacks before: [324, 381]
+[04:23:41.747] [HAND ] Button player: 0
+[04:23:41.747] [CARDS] Player 0 hole cards: ['9♠', '6♠']
+[04:23:41.747] [CARDS] Player 1 hole cards: ['9♦', '4♣']
+[04:23:41.747] [HAND ] Pot after blinds: 3
+[04:23:41.747] [ACTION] Player 0 (DetailBot2)  (preflop): F
+[04:23:41.747] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.747] [ACTION]   Call amount: 1
+[04:23:41.747] [RESULT]   Result: Stack → 324 (change: 0)
+[04:23:41.747] [RESULT]   Pot size: 3
+[04:23:41.747] [RESULT]   Current bets: [1, 2]
+[04:23:41.747] [HAND ] 
+*** HAND END ***
+[04:23:41.747] [HAND ] Winner: DetailBot1
+[04:23:41.747] [CARDS] Final board: []
+[04:23:41.747] [CARDS] Player 0 showed: ['9♠', '6♠']
+[04:23:41.747] [CARDS] Player 1 showed: ['9♦', '4♣']
+[04:23:41.747] [HAND ] Pot size: 3
+[04:23:41.747] [HAND ] Final scores: [-1, 1]
+[04:23:41.747] [HAND ] 
+--- HAND #11 ---
+[04:23:41.747] [HAND ] Stacks before: [322, 380]
+[04:23:41.747] [HAND ] Button player: 0
+[04:23:41.747] [CARDS] Player 0 hole cards: ['8♠', 'T♣']
+[04:23:41.747] [CARDS] Player 1 hole cards: ['Q♥', '7♥']
+[04:23:41.747] [HAND ] Pot after blinds: 3
+[04:23:41.747] [ACTION] Player 0 (DetailBot2)  (preflop): R
+[04:23:41.747] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.747] [ACTION]   Call amount: 1
+[04:23:41.747] [RESULT]   Result: Stack → 318 (change: -4)
+[04:23:41.747] [RESULT]   Pot size: 7
+[04:23:41.747] [RESULT]   Current bets: [5, 2]
+[04:23:41.747] [ACTION] Player 1 (DetailBot1)  (preflop): F
+[04:23:41.747] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.747] [ACTION]   Call amount: 3
+[04:23:41.747] [RESULT]   Result: Stack → 380 (change: 0)
+[04:23:41.747] [RESULT]   Pot size: 7
+[04:23:41.747] [RESULT]   Current bets: [5, 2]
+[04:23:41.747] [HAND ] 
+*** HAND END ***
+[04:23:41.747] [HAND ] Winner: DetailBot2
+[04:23:41.747] [CARDS] Final board: []
+[04:23:41.747] [CARDS] Player 0 showed: ['8♠', 'T♣']
+[04:23:41.747] [CARDS] Player 1 showed: ['Q♥', '7♥']
+[04:23:41.747] [HAND ] Pot size: 7
+[04:23:41.747] [HAND ] Final scores: [2, -2]
+[04:23:41.747] [HAND ] 
+--- HAND #12 ---
+[04:23:41.747] [HAND ] Stacks before: [319, 376]
+[04:23:41.747] [HAND ] Button player: 0
+[04:23:41.747] [CARDS] Player 0 hole cards: ['9♠', '9♣']
+[04:23:41.747] [CARDS] Player 1 hole cards: ['Q♦', '3♠']
+[04:23:41.747] [HAND ] Pot after blinds: 3
+[04:23:41.747] [ACTION] Player 0 (DetailBot2)  (preflop): R
+[04:23:41.747] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.747] [ACTION]   Call amount: 1
+[04:23:41.747] [RESULT]   Result: Stack → 315 (change: -4)
+[04:23:41.747] [RESULT]   Pot size: 7
+[04:23:41.747] [RESULT]   Current bets: [5, 2]
+[04:23:41.747] [ACTION] Player 1 (DetailBot1)  (preflop): R
+[04:23:41.747] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.747] [ACTION]   Call amount: 3
+[04:23:41.747] [RESULT]   Result: Stack → 366 (change: -10)
+[04:23:41.747] [RESULT]   Pot size: 17
+[04:23:41.747] [RESULT]   Current bets: [5, 12]
+[04:23:41.747] [ACTION] Player 0 (DetailBot2)  (preflop): R
+[04:23:41.747] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.747] [ACTION]   Call amount: 7
+[04:23:41.747] [RESULT]   Result: Stack → 291 (change: -24)
+[04:23:41.747] [RESULT]   Pot size: 41
+[04:23:41.747] [RESULT]   Current bets: [29, 12]
+[04:23:41.747] [ACTION] Player 1 (DetailBot1)  (preflop): C
+[04:23:41.747] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.747] [ACTION]   Call amount: 17
+[04:23:41.747] [RESULT]   Result: Stack → 349 (change: -17)
+[04:23:41.747] [RESULT]   Pot size: 58
+[04:23:41.747] [RESULT]   Current bets: [29, 29]
+[04:23:41.747] [ACTION] Player 0 (DetailBot2)  (preflop): F
+[04:23:41.747] [ACTION]   Legal actions: ['F', 'K', 'R']
+[04:23:41.747] [ACTION]   Call amount: 0
+[04:23:41.747] [RESULT]   Result: Stack → 291 (change: 0)
+[04:23:41.747] [RESULT]   Pot size: 58
+[04:23:41.747] [RESULT]   Current bets: [29, 29]
+[04:23:41.747] [HAND ] 
+*** HAND END ***
+[04:23:41.747] [HAND ] Winner: DetailBot1
+[04:23:41.747] [CARDS] Final board: []
+[04:23:41.748] [CARDS] Player 0 showed: ['9♠', '9♣']
+[04:23:41.748] [CARDS] Player 1 showed: ['Q♦', '3♠']
+[04:23:41.748] [HAND ] Pot size: 58
+[04:23:41.748] [HAND ] Final scores: [-29, 29]
+[04:23:41.748] [HAND ] 
+--- HAND #13 ---
+[04:23:41.748] [HAND ] Stacks before: [261, 376]
+[04:23:41.748] [HAND ] Button player: 0
+[04:23:41.748] [CARDS] Player 0 hole cards: ['3♣', 'A♣']
+[04:23:41.748] [CARDS] Player 1 hole cards: ['5♥', '9♣']
+[04:23:41.748] [HAND ] Pot after blinds: 3
+[04:23:41.748] [ACTION] Player 0 (DetailBot2)  (preflop): R
+[04:23:41.748] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.748] [ACTION]   Call amount: 1
+[04:23:41.748] [RESULT]   Result: Stack → 257 (change: -4)
+[04:23:41.748] [RESULT]   Pot size: 7
+[04:23:41.748] [RESULT]   Current bets: [5, 2]
+[04:23:41.748] [ACTION] Player 1 (DetailBot1)  (preflop): R
+[04:23:41.748] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.748] [ACTION]   Call amount: 3
+[04:23:41.748] [RESULT]   Result: Stack → 366 (change: -10)
+[04:23:41.748] [RESULT]   Pot size: 17
+[04:23:41.748] [RESULT]   Current bets: [5, 12]
+[04:23:41.748] [ACTION] Player 0 (DetailBot2)  (preflop): R
+[04:23:41.748] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.748] [ACTION]   Call amount: 7
+[04:23:41.748] [RESULT]   Result: Stack → 233 (change: -24)
+[04:23:41.748] [RESULT]   Pot size: 41
+[04:23:41.748] [RESULT]   Current bets: [29, 12]
+[04:23:41.748] [ACTION] Player 1 (DetailBot1)  (preflop): C
+[04:23:41.748] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.748] [ACTION]   Call amount: 17
+[04:23:41.748] [RESULT]   Result: Stack → 349 (change: -17)
+[04:23:41.748] [RESULT]   Pot size: 58
+[04:23:41.748] [RESULT]   Current bets: [29, 29]
+[04:23:41.748] [ACTION] Player 0 (DetailBot2)  (preflop): R
+[04:23:41.748] [ACTION]   Legal actions: ['F', 'K', 'R']
+[04:23:41.748] [ACTION]   Call amount: 0
+[04:23:41.748] [RESULT]   Result: Stack → 175 (change: -58)
+[04:23:41.748] [RESULT]   Pot size: 116
+[04:23:41.748] [RESULT]   Current bets: [87, 29]
+[04:23:41.748] [ACTION] Player 1 (DetailBot1)  (preflop): R
+[04:23:41.748] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.748] [ACTION]   Call amount: 58
+[04:23:41.748] [RESULT]   Result: Stack → 175 (change: -174)
+[04:23:41.748] [RESULT]   Pot size: 290
+[04:23:41.748] [RESULT]   Current bets: [87, 203]
+[04:23:41.748] [ACTION] Player 0 (DetailBot2)  (preflop): C
+[04:23:41.748] [ACTION]   Legal actions: ['F', 'C', 'R']
+[04:23:41.748] [ACTION]   Call amount: 116
+[04:23:41.748] [RESULT]   Result: Stack → 59 (change: -116)
+[04:23:41.748] [RESULT]   Pot size: 406
+[04:23:41.748] [RESULT]   Current bets: [203, 203]
+[04:23:41.748] [ACTION] Player 1 (DetailBot1)  (preflop): R
+[04:23:41.748] [ACTION]   Legal actions: ['F', 'K', 'R']
+[04:23:41.748] [ACTION]   Call amount: 0
+[04:23:41.748] [RESULT]   Result: Stack → 0 (change: -175)
+[04:23:41.748] [RESULT]   Pot size: 581
+[04:23:41.748] [RESULT]   Current bets: [203, 378]
+[04:23:41.748] [ACTION] Player 0 (DetailBot2)  (preflop): C
+[04:23:41.748] [ACTION]   Legal actions: ['F', 'C']
+[04:23:41.748] [ACTION]   Call amount: 175
+[04:23:41.748] [RESULT]   Result: Stack → 0 (change: -59)
+[04:23:41.748] [RESULT]   Pot size: 640
+[04:23:41.748] [RESULT]   Current bets: [0, 0]
+[04:23:41.748] [ACTION] Player 1 (DetailBot1)  (flop): F
+[04:23:41.748] [ACTION]   Legal actions: ['F', 'K']
+[04:23:41.748] [ACTION]   Call amount: 0
+[04:23:41.748] [CARDS]   Community cards: ['K♣', '8♦', 'Q♣']
+[04:23:41.748] [RESULT]   Result: Stack → 0 (change: 0)
+[04:23:41.748] [RESULT]   Pot size: 640
+[04:23:41.748] [RESULT]   Current bets: [0, 0]
+[04:23:41.748] [HAND ] 
+*** HAND END ***
+[04:23:41.748] [HAND ] Winner: DetailBot2
+[04:23:41.748] [CARDS] Final board: ['K♣', '8♦', 'Q♣']
+[04:23:41.748] [CARDS] Player 0 showed: ['3♣', 'A♣']
+[04:23:41.748] [CARDS] Player 1 showed: ['5♥', '9♣']
+[04:23:41.748] [HAND ] Pot size: 640
+[04:23:41.748] [HAND ] Final scores: [378, -378]
+[04:23:41.748] [MATCH] 
+*** MATCH END ***
+[04:23:41.748] [MATCH] Total hands played: 13
+[04:23:41.748] [MATCH] Match winner: DetailBot2
+[04:23:41.748] [MATCH] Final match scores: [318, -318]
+[04:23:41.748] [ANALYSIS] 
+Analysis complete: 13 hands analyzed
+
+============================================================
+RAW MATCH DATA
+============================================================
+{
+  "bot1_name": "DetailBot1",
+  "bot2_name": "DetailBot2",
+  "winner_id": 12,
+  "bot1_score": 318,
+  "bot2_score": -318,
+  "game_log": {
+    "hands": 13,
+    "actions": [
+      {
+        "hand": 1,
+        "player": 0,
+        "action": "F",
+        "game_state": {
+          "round_num": 1,
+          "button": 0,
+          "street": 0,
+          "pot": 3,
+          "stacks": [
+            399,
+            398
+          ],
+          "current_bets": [
+            1,
+            2
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 2,
+        "player": 0,
+        "action": "F",
+        "game_state": {
+          "round_num": 2,
+          "button": 0,
+          "street": 0,
+          "pot": 3,
+          "stacks": [
+            397,
+            397
+          ],
+          "current_bets": [
+            1,
+            2
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 3,
+        "player": 0,
+        "action": "C",
+        "game_state": {
+          "round_num": 3,
+          "button": 0,
+          "street": 0,
+          "pot": 4,
+          "stacks": [
+            394,
+            396
+          ],
+          "current_bets": [
+            2,
+            2
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 3,
+        "player": 1,
+        "action": "K",
+        "game_state": {
+          "round_num": 3,
+          "button": 0,
+          "street": 1,
+          "pot": 4,
+          "stacks": [
+            394,
+            396
+          ],
+          "current_bets": [
+            0,
+            0
+          ],
+          "community_cards": [
+            "Q\u2660",
+            "K\u2660",
+            "K\u2666"
+          ]
+        }
+      },
+      {
+        "hand": 3,
+        "player": 1,
+        "action": "K",
+        "game_state": {
+          "round_num": 3,
+          "button": 0,
+          "street": 2,
+          "pot": 4,
+          "stacks": [
+            394,
+            396
+          ],
+          "current_bets": [
+            0,
+            0
+          ],
+          "community_cards": [
+            "Q\u2660",
+            "K\u2660",
+            "K\u2666",
+            "6\u2666"
+          ]
+        }
+      },
+      {
+        "hand": 3,
+        "player": 1,
+        "action": "K",
+        "game_state": {
+          "round_num": 3,
+          "button": 0,
+          "street": 3,
+          "pot": 4,
+          "stacks": [
+            394,
+            396
+          ],
+          "current_bets": [
+            0,
+            0
+          ],
+          "community_cards": [
+            "Q\u2660",
+            "K\u2660",
+            "K\u2666",
+            "6\u2666",
+            "5\u2663"
+          ]
+        }
+      },
+      {
+        "hand": 3,
+        "player": 1,
+        "action": "K",
+        "game_state": {
+          "round_num": 3,
+          "button": 0,
+          "street": 3,
+          "pot": 4,
+          "stacks": [
+            394,
+            396
+          ],
+          "current_bets": [
+            0,
+            0
+          ],
+          "community_cards": [
+            "Q\u2660",
+            "K\u2660",
+            "K\u2666",
+            "6\u2666",
+            "5\u2663"
+          ]
+        }
+      },
+      {
+        "hand": 4,
+        "player": 0,
+        "action": "F",
+        "game_state": {
+          "round_num": 4,
+          "button": 0,
+          "street": 0,
+          "pot": 3,
+          "stacks": [
+            395,
+            392
+          ],
+          "current_bets": [
+            1,
+            2
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 5,
+        "player": 0,
+        "action": "F",
+        "game_state": {
+          "round_num": 5,
+          "button": 0,
+          "street": 0,
+          "pot": 3,
+          "stacks": [
+            393,
+            391
+          ],
+          "current_bets": [
+            1,
+            2
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 6,
+        "player": 0,
+        "action": "C",
+        "game_state": {
+          "round_num": 6,
+          "button": 0,
+          "street": 0,
+          "pot": 4,
+          "stacks": [
+            390,
+            390
+          ],
+          "current_bets": [
+            2,
+            2
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 6,
+        "player": 1,
+        "action": "R",
+        "game_state": {
+          "round_num": 6,
+          "button": 0,
+          "street": 0,
+          "pot": 8,
+          "stacks": [
+            390,
+            386
+          ],
+          "current_bets": [
+            2,
+            6
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 6,
+        "player": 0,
+        "action": "F",
+        "game_state": {
+          "round_num": 6,
+          "button": 0,
+          "street": 0,
+          "pot": 8,
+          "stacks": [
+            390,
+            386
+          ],
+          "current_bets": [
+            2,
+            6
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 7,
+        "player": 0,
+        "action": "R",
+        "game_state": {
+          "round_num": 7,
+          "button": 0,
+          "street": 0,
+          "pot": 7,
+          "stacks": [
+            383,
+            386
+          ],
+          "current_bets": [
+            5,
+            2
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 7,
+        "player": 1,
+        "action": "F",
+        "game_state": {
+          "round_num": 7,
+          "button": 0,
+          "street": 0,
+          "pot": 7,
+          "stacks": [
+            383,
+            386
+          ],
+          "current_bets": [
+            5,
+            2
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 8,
+        "player": 0,
+        "action": "F",
+        "game_state": {
+          "round_num": 8,
+          "button": 0,
+          "street": 0,
+          "pot": 3,
+          "stacks": [
+            384,
+            382
+          ],
+          "current_bets": [
+            1,
+            2
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 9,
+        "player": 0,
+        "action": "R",
+        "game_state": {
+          "round_num": 9,
+          "button": 0,
+          "street": 0,
+          "pot": 7,
+          "stacks": [
+            378,
+            381
+          ],
+          "current_bets": [
+            5,
+            2
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 9,
+        "player": 1,
+        "action": "R",
+        "game_state": {
+          "round_num": 9,
+          "button": 0,
+          "street": 0,
+          "pot": 17,
+          "stacks": [
+            378,
+            371
+          ],
+          "current_bets": [
+            5,
+            12
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 9,
+        "player": 0,
+        "action": "R",
+        "game_state": {
+          "round_num": 9,
+          "button": 0,
+          "street": 0,
+          "pot": 41,
+          "stacks": [
+            354,
+            371
+          ],
+          "current_bets": [
+            29,
+            12
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 9,
+        "player": 1,
+        "action": "C",
+        "game_state": {
+          "round_num": 9,
+          "button": 0,
+          "street": 0,
+          "pot": 58,
+          "stacks": [
+            354,
+            354
+          ],
+          "current_bets": [
+            29,
+            29
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 9,
+        "player": 0,
+        "action": "F",
+        "game_state": {
+          "round_num": 9,
+          "button": 0,
+          "street": 0,
+          "pot": 58,
+          "stacks": [
+            354,
+            354
+          ],
+          "current_bets": [
+            29,
+            29
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 10,
+        "player": 0,
+        "action": "F",
+        "game_state": {
+          "round_num": 10,
+          "button": 0,
+          "street": 0,
+          "pot": 3,
+          "stacks": [
+            324,
+            381
+          ],
+          "current_bets": [
+            1,
+            2
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 11,
+        "player": 0,
+        "action": "R",
+        "game_state": {
+          "round_num": 11,
+          "button": 0,
+          "street": 0,
+          "pot": 7,
+          "stacks": [
+            318,
+            380
+          ],
+          "current_bets": [
+            5,
+            2
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 11,
+        "player": 1,
+        "action": "F",
+        "game_state": {
+          "round_num": 11,
+          "button": 0,
+          "street": 0,
+          "pot": 7,
+          "stacks": [
+            318,
+            380
+          ],
+          "current_bets": [
+            5,
+            2
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 12,
+        "player": 0,
+        "action": "R",
+        "game_state": {
+          "round_num": 12,
+          "button": 0,
+          "street": 0,
+          "pot": 7,
+          "stacks": [
+            315,
+            376
+          ],
+          "current_bets": [
+            5,
+            2
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 12,
+        "player": 1,
+        "action": "R",
+        "game_state": {
+          "round_num": 12,
+          "button": 0,
+          "street": 0,
+          "pot": 17,
+          "stacks": [
+            315,
+            366
+          ],
+          "current_bets": [
+            5,
+            12
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 12,
+        "player": 0,
+        "action": "R",
+        "game_state": {
+          "round_num": 12,
+          "button": 0,
+          "street": 0,
+          "pot": 41,
+          "stacks": [
+            291,
+            366
+          ],
+          "current_bets": [
+            29,
+            12
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 12,
+        "player": 1,
+        "action": "C",
+        "game_state": {
+          "round_num": 12,
+          "button": 0,
+          "street": 0,
+          "pot": 58,
+          "stacks": [
+            291,
+            349
+          ],
+          "current_bets": [
+            29,
+            29
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 12,
+        "player": 0,
+        "action": "F",
+        "game_state": {
+          "round_num": 12,
+          "button": 0,
+          "street": 0,
+          "pot": 58,
+          "stacks": [
+            291,
+            349
+          ],
+          "current_bets": [
+            29,
+            29
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 13,
+        "player": 0,
+        "action": "R",
+        "game_state": {
+          "round_num": 13,
+          "button": 0,
+          "street": 0,
+          "pot": 7,
+          "stacks": [
+            257,
+            376
+          ],
+          "current_bets": [
+            5,
+            2
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 13,
+        "player": 1,
+        "action": "R",
+        "game_state": {
+          "round_num": 13,
+          "button": 0,
+          "street": 0,
+          "pot": 17,
+          "stacks": [
+            257,
+            366
+          ],
+          "current_bets": [
+            5,
+            12
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 13,
+        "player": 0,
+        "action": "R",
+        "game_state": {
+          "round_num": 13,
+          "button": 0,
+          "street": 0,
+          "pot": 41,
+          "stacks": [
+            233,
+            366
+          ],
+          "current_bets": [
+            29,
+            12
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 13,
+        "player": 1,
+        "action": "C",
+        "game_state": {
+          "round_num": 13,
+          "button": 0,
+          "street": 0,
+          "pot": 58,
+          "stacks": [
+            233,
+            349
+          ],
+          "current_bets": [
+            29,
+            29
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 13,
+        "player": 0,
+        "action": "R",
+        "game_state": {
+          "round_num": 13,
+          "button": 0,
+          "street": 0,
+          "pot": 116,
+          "stacks": [
+            175,
+            349
+          ],
+          "current_bets": [
+            87,
+            29
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 13,
+        "player": 1,
+        "action": "R",
+        "game_state": {
+          "round_num": 13,
+          "button": 0,
+          "street": 0,
+          "pot": 290,
+          "stacks": [
+            175,
+            175
+          ],
+          "current_bets": [
+            87,
+            203
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 13,
+        "player": 0,
+        "action": "C",
+        "game_state": {
+          "round_num": 13,
+          "button": 0,
+          "street": 0,
+          "pot": 406,
+          "stacks": [
+            59,
+            175
+          ],
+          "current_bets": [
+            203,
+            203
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 13,
+        "player": 1,
+        "action": "R",
+        "game_state": {
+          "round_num": 13,
+          "button": 0,
+          "street": 0,
+          "pot": 581,
+          "stacks": [
+            59,
+            0
+          ],
+          "current_bets": [
+            203,
+            378
+          ],
+          "community_cards": []
+        }
+      },
+      {
+        "hand": 13,
+        "player": 0,
+        "action": "C",
+        "game_state": {
+          "round_num": 13,
+          "button": 0,
+          "street": 1,
+          "pot": 640,
+          "stacks": [
+            0,
+            0
+          ],
+          "current_bets": [
+            0,
+            0
+          ],
+          "community_cards": [
+            "K\u2663",
+            "8\u2666",
+            "Q\u2663"
+          ]
+        }
+      },
+      {
+        "hand": 13,
+        "player": 1,
+        "action": "F",
+        "game_state": {
+          "round_num": 13,
+          "button": 0,
+          "street": 1,
+          "pot": 640,
+          "stacks": [
+            0,
+            0
+          ],
+          "current_bets": [
+            0,
+            0
+          ],
+          "community_cards": [
+            "K\u2663",
+            "8\u2666",
+            "Q\u2663"
+          ]
+        }
+      }
+    ],
+    "detailed_log": [
+      {
+        "event": "match_start",
+        "bot1_name": "DetailBot2",
+        "bot2_name": "DetailBot1",
+        "starting_stacks": [
+          400,
+          400
+        ],
+        "max_hands": 100
+      },
+      {
+        "event": "hand_start",
+        "hand_number": 1,
+        "stacks_before": [
+          399,
+          398
+        ],
+        "button_player": 0,
+        "blinds_posted": {
+          "small_blind": 1,
+          "big_blind": 2
+        },
+        "hole_cards": {
+          "player_0": [
+            "4\u2660",
+            "K\u2666"
+          ],
+          "player_1": [
+            "T\u2665",
+            "4\u2663"
+          ]
+        },
+        "pot_after_blinds": 3
+      },
+      {
+        "event": "player_action",
+        "hand_number": 1,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "F",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 1,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            399,
+            398
+          ],
+          "pot": 3,
+          "current_bets": [
+            1,
+            2
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 1,
+        "stack_before": 399
+      },
+      {
+        "event": "action_result",
+        "hand_number": 1,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "F",
+        "stack_after": 399,
+        "stack_change": 0,
+        "pot_after": 3,
+        "current_bets_after": [
+          1,
+          2
+        ],
+        "community_cards": [],
+        "game_continues": false,
+        "hand_finished": true
+      },
+      {
+        "event": "hand_end",
+        "hand_number": 1,
+        "winner": 1,
+        "winner_name": "DetailBot1",
+        "final_community_cards": [],
+        "hole_cards": {
+          "player_0": [
+            "4\u2660",
+            "K\u2666"
+          ],
+          "player_1": [
+            "T\u2665",
+            "4\u2663"
+          ]
+        },
+        "stacks_before_resolution": [
+          399,
+          398
+        ],
+        "pot_size": 3,
+        "final_scores": [
+          -1,
+          1
+        ]
+      },
+      {
+        "event": "hand_start",
+        "hand_number": 2,
+        "stacks_before": [
+          397,
+          397
+        ],
+        "button_player": 0,
+        "blinds_posted": {
+          "small_blind": 1,
+          "big_blind": 2
+        },
+        "hole_cards": {
+          "player_0": [
+            "K\u2666",
+            "A\u2666"
+          ],
+          "player_1": [
+            "3\u2666",
+            "J\u2660"
+          ]
+        },
+        "pot_after_blinds": 3
+      },
+      {
+        "event": "player_action",
+        "hand_number": 2,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "F",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 2,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            397,
+            397
+          ],
+          "pot": 3,
+          "current_bets": [
+            1,
+            2
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 1,
+        "stack_before": 397
+      },
+      {
+        "event": "action_result",
+        "hand_number": 2,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "F",
+        "stack_after": 397,
+        "stack_change": 0,
+        "pot_after": 3,
+        "current_bets_after": [
+          1,
+          2
+        ],
+        "community_cards": [],
+        "game_continues": false,
+        "hand_finished": true
+      },
+      {
+        "event": "hand_end",
+        "hand_number": 2,
+        "winner": 1,
+        "winner_name": "DetailBot1",
+        "final_community_cards": [],
+        "hole_cards": {
+          "player_0": [
+            "K\u2666",
+            "A\u2666"
+          ],
+          "player_1": [
+            "3\u2666",
+            "J\u2660"
+          ]
+        },
+        "stacks_before_resolution": [
+          397,
+          397
+        ],
+        "pot_size": 3,
+        "final_scores": [
+          -1,
+          1
+        ]
+      },
+      {
+        "event": "hand_start",
+        "hand_number": 3,
+        "stacks_before": [
+          395,
+          396
+        ],
+        "button_player": 0,
+        "blinds_posted": {
+          "small_blind": 1,
+          "big_blind": 2
+        },
+        "hole_cards": {
+          "player_0": [
+            "4\u2660",
+            "K\u2665"
+          ],
+          "player_1": [
+            "3\u2665",
+            "8\u2663"
+          ]
+        },
+        "pot_after_blinds": 3
+      },
+      {
+        "event": "player_action",
+        "hand_number": 3,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "C",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 3,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            395,
+            396
+          ],
+          "pot": 3,
+          "current_bets": [
+            1,
+            2
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 1,
+        "stack_before": 395
+      },
+      {
+        "event": "action_result",
+        "hand_number": 3,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "C",
+        "stack_after": 394,
+        "stack_change": -1,
+        "pot_after": 4,
+        "current_bets_after": [
+          2,
+          2
+        ],
+        "community_cards": [],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 3,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "K",
+        "legal_actions": [
+          "F",
+          "K",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 3,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            394,
+            396
+          ],
+          "pot": 4,
+          "current_bets": [
+            2,
+            2
+          ],
+          "community_cards": [],
+          "active_player": 1,
+          "button": 0
+        },
+        "call_amount": 0,
+        "stack_before": 396
+      },
+      {
+        "event": "action_result",
+        "hand_number": 3,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "K",
+        "stack_after": 396,
+        "stack_change": 0,
+        "pot_after": 4,
+        "current_bets_after": [
+          0,
+          0
+        ],
+        "community_cards": [
+          "Q\u2660",
+          "K\u2660",
+          "K\u2666"
+        ],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 3,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "K",
+        "legal_actions": [
+          "F",
+          "K",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 3,
+          "street": 1,
+          "street_name": "flop",
+          "stacks": [
+            394,
+            396
+          ],
+          "pot": 4,
+          "current_bets": [
+            0,
+            0
+          ],
+          "community_cards": [
+            "Q\u2660",
+            "K\u2660",
+            "K\u2666"
+          ],
+          "active_player": 1,
+          "button": 0
+        },
+        "call_amount": 0,
+        "stack_before": 396
+      },
+      {
+        "event": "action_result",
+        "hand_number": 3,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "K",
+        "stack_after": 396,
+        "stack_change": 0,
+        "pot_after": 4,
+        "current_bets_after": [
+          0,
+          0
+        ],
+        "community_cards": [
+          "Q\u2660",
+          "K\u2660",
+          "K\u2666",
+          "6\u2666"
+        ],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 3,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "K",
+        "legal_actions": [
+          "F",
+          "K",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 3,
+          "street": 2,
+          "street_name": "turn",
+          "stacks": [
+            394,
+            396
+          ],
+          "pot": 4,
+          "current_bets": [
+            0,
+            0
+          ],
+          "community_cards": [
+            "Q\u2660",
+            "K\u2660",
+            "K\u2666",
+            "6\u2666"
+          ],
+          "active_player": 1,
+          "button": 0
+        },
+        "call_amount": 0,
+        "stack_before": 396
+      },
+      {
+        "event": "action_result",
+        "hand_number": 3,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "K",
+        "stack_after": 396,
+        "stack_change": 0,
+        "pot_after": 4,
+        "current_bets_after": [
+          0,
+          0
+        ],
+        "community_cards": [
+          "Q\u2660",
+          "K\u2660",
+          "K\u2666",
+          "6\u2666",
+          "5\u2663"
+        ],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 3,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "K",
+        "legal_actions": [
+          "F",
+          "K",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 3,
+          "street": 3,
+          "street_name": "river",
+          "stacks": [
+            394,
+            396
+          ],
+          "pot": 4,
+          "current_bets": [
+            0,
+            0
+          ],
+          "community_cards": [
+            "Q\u2660",
+            "K\u2660",
+            "K\u2666",
+            "6\u2666",
+            "5\u2663"
+          ],
+          "active_player": 1,
+          "button": 0
+        },
+        "call_amount": 0,
+        "stack_before": 396
+      },
+      {
+        "event": "action_result",
+        "hand_number": 3,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "K",
+        "stack_after": 396,
+        "stack_change": 0,
+        "pot_after": 4,
+        "current_bets_after": [
+          0,
+          0
+        ],
+        "community_cards": [
+          "Q\u2660",
+          "K\u2660",
+          "K\u2666",
+          "6\u2666",
+          "5\u2663"
+        ],
+        "game_continues": false,
+        "hand_finished": true
+      },
+      {
+        "event": "hand_end",
+        "hand_number": 3,
+        "winner": 0,
+        "winner_name": "DetailBot2",
+        "final_community_cards": [
+          "Q\u2660",
+          "K\u2660",
+          "K\u2666",
+          "6\u2666",
+          "5\u2663"
+        ],
+        "hole_cards": {
+          "player_0": [
+            "4\u2660",
+            "K\u2665"
+          ],
+          "player_1": [
+            "3\u2665",
+            "8\u2663"
+          ]
+        },
+        "stacks_before_resolution": [
+          394,
+          396
+        ],
+        "pot_size": 4,
+        "final_scores": [
+          2,
+          -2
+        ]
+      },
+      {
+        "event": "hand_start",
+        "hand_number": 4,
+        "stacks_before": [
+          395,
+          392
+        ],
+        "button_player": 0,
+        "blinds_posted": {
+          "small_blind": 1,
+          "big_blind": 2
+        },
+        "hole_cards": {
+          "player_0": [
+            "8\u2663",
+            "9\u2665"
+          ],
+          "player_1": [
+            "J\u2663",
+            "K\u2665"
+          ]
+        },
+        "pot_after_blinds": 3
+      },
+      {
+        "event": "player_action",
+        "hand_number": 4,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "F",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 4,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            395,
+            392
+          ],
+          "pot": 3,
+          "current_bets": [
+            1,
+            2
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 1,
+        "stack_before": 395
+      },
+      {
+        "event": "action_result",
+        "hand_number": 4,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "F",
+        "stack_after": 395,
+        "stack_change": 0,
+        "pot_after": 3,
+        "current_bets_after": [
+          1,
+          2
+        ],
+        "community_cards": [],
+        "game_continues": false,
+        "hand_finished": true
+      },
+      {
+        "event": "hand_end",
+        "hand_number": 4,
+        "winner": 1,
+        "winner_name": "DetailBot1",
+        "final_community_cards": [],
+        "hole_cards": {
+          "player_0": [
+            "8\u2663",
+            "9\u2665"
+          ],
+          "player_1": [
+            "J\u2663",
+            "K\u2665"
+          ]
+        },
+        "stacks_before_resolution": [
+          395,
+          392
+        ],
+        "pot_size": 3,
+        "final_scores": [
+          -1,
+          1
+        ]
+      },
+      {
+        "event": "hand_start",
+        "hand_number": 5,
+        "stacks_before": [
+          393,
+          391
+        ],
+        "button_player": 0,
+        "blinds_posted": {
+          "small_blind": 1,
+          "big_blind": 2
+        },
+        "hole_cards": {
+          "player_0": [
+            "9\u2666",
+            "T\u2663"
+          ],
+          "player_1": [
+            "6\u2665",
+            "2\u2665"
+          ]
+        },
+        "pot_after_blinds": 3
+      },
+      {
+        "event": "player_action",
+        "hand_number": 5,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "F",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 5,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            393,
+            391
+          ],
+          "pot": 3,
+          "current_bets": [
+            1,
+            2
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 1,
+        "stack_before": 393
+      },
+      {
+        "event": "action_result",
+        "hand_number": 5,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "F",
+        "stack_after": 393,
+        "stack_change": 0,
+        "pot_after": 3,
+        "current_bets_after": [
+          1,
+          2
+        ],
+        "community_cards": [],
+        "game_continues": false,
+        "hand_finished": true
+      },
+      {
+        "event": "hand_end",
+        "hand_number": 5,
+        "winner": 1,
+        "winner_name": "DetailBot1",
+        "final_community_cards": [],
+        "hole_cards": {
+          "player_0": [
+            "9\u2666",
+            "T\u2663"
+          ],
+          "player_1": [
+            "6\u2665",
+            "2\u2665"
+          ]
+        },
+        "stacks_before_resolution": [
+          393,
+          391
+        ],
+        "pot_size": 3,
+        "final_scores": [
+          -1,
+          1
+        ]
+      },
+      {
+        "event": "hand_start",
+        "hand_number": 6,
+        "stacks_before": [
+          391,
+          390
+        ],
+        "button_player": 0,
+        "blinds_posted": {
+          "small_blind": 1,
+          "big_blind": 2
+        },
+        "hole_cards": {
+          "player_0": [
+            "J\u2663",
+            "8\u2660"
+          ],
+          "player_1": [
+            "2\u2660",
+            "3\u2663"
+          ]
+        },
+        "pot_after_blinds": 3
+      },
+      {
+        "event": "player_action",
+        "hand_number": 6,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "C",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 6,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            391,
+            390
+          ],
+          "pot": 3,
+          "current_bets": [
+            1,
+            2
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 1,
+        "stack_before": 391
+      },
+      {
+        "event": "action_result",
+        "hand_number": 6,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "C",
+        "stack_after": 390,
+        "stack_change": -1,
+        "pot_after": 4,
+        "current_bets_after": [
+          2,
+          2
+        ],
+        "community_cards": [],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 6,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "R",
+        "legal_actions": [
+          "F",
+          "K",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 6,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            390,
+            390
+          ],
+          "pot": 4,
+          "current_bets": [
+            2,
+            2
+          ],
+          "community_cards": [],
+          "active_player": 1,
+          "button": 0
+        },
+        "call_amount": 0,
+        "stack_before": 390
+      },
+      {
+        "event": "action_result",
+        "hand_number": 6,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "R",
+        "stack_after": 386,
+        "stack_change": -4,
+        "pot_after": 8,
+        "current_bets_after": [
+          2,
+          6
+        ],
+        "community_cards": [],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 6,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "F",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 6,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            390,
+            386
+          ],
+          "pot": 8,
+          "current_bets": [
+            2,
+            6
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 4,
+        "stack_before": 390
+      },
+      {
+        "event": "action_result",
+        "hand_number": 6,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "F",
+        "stack_after": 390,
+        "stack_change": 0,
+        "pot_after": 8,
+        "current_bets_after": [
+          2,
+          6
+        ],
+        "community_cards": [],
+        "game_continues": false,
+        "hand_finished": true
+      },
+      {
+        "event": "hand_end",
+        "hand_number": 6,
+        "winner": 1,
+        "winner_name": "DetailBot1",
+        "final_community_cards": [],
+        "hole_cards": {
+          "player_0": [
+            "J\u2663",
+            "8\u2660"
+          ],
+          "player_1": [
+            "2\u2660",
+            "3\u2663"
+          ]
+        },
+        "stacks_before_resolution": [
+          390,
+          386
+        ],
+        "pot_size": 8,
+        "final_scores": [
+          -2,
+          2
+        ]
+      },
+      {
+        "event": "hand_start",
+        "hand_number": 7,
+        "stacks_before": [
+          387,
+          386
+        ],
+        "button_player": 0,
+        "blinds_posted": {
+          "small_blind": 1,
+          "big_blind": 2
+        },
+        "hole_cards": {
+          "player_0": [
+            "2\u2666",
+            "6\u2660"
+          ],
+          "player_1": [
+            "J\u2666",
+            "T\u2663"
+          ]
+        },
+        "pot_after_blinds": 3
+      },
+      {
+        "event": "player_action",
+        "hand_number": 7,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "R",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 7,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            387,
+            386
+          ],
+          "pot": 3,
+          "current_bets": [
+            1,
+            2
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 1,
+        "stack_before": 387
+      },
+      {
+        "event": "action_result",
+        "hand_number": 7,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "R",
+        "stack_after": 383,
+        "stack_change": -4,
+        "pot_after": 7,
+        "current_bets_after": [
+          5,
+          2
+        ],
+        "community_cards": [],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 7,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "F",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 7,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            383,
+            386
+          ],
+          "pot": 7,
+          "current_bets": [
+            5,
+            2
+          ],
+          "community_cards": [],
+          "active_player": 1,
+          "button": 0
+        },
+        "call_amount": 3,
+        "stack_before": 386
+      },
+      {
+        "event": "action_result",
+        "hand_number": 7,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "F",
+        "stack_after": 386,
+        "stack_change": 0,
+        "pot_after": 7,
+        "current_bets_after": [
+          5,
+          2
+        ],
+        "community_cards": [],
+        "game_continues": false,
+        "hand_finished": true
+      },
+      {
+        "event": "hand_end",
+        "hand_number": 7,
+        "winner": 0,
+        "winner_name": "DetailBot2",
+        "final_community_cards": [],
+        "hole_cards": {
+          "player_0": [
+            "2\u2666",
+            "6\u2660"
+          ],
+          "player_1": [
+            "J\u2666",
+            "T\u2663"
+          ]
+        },
+        "stacks_before_resolution": [
+          383,
+          386
+        ],
+        "pot_size": 7,
+        "final_scores": [
+          2,
+          -2
+        ]
+      },
+      {
+        "event": "hand_start",
+        "hand_number": 8,
+        "stacks_before": [
+          384,
+          382
+        ],
+        "button_player": 0,
+        "blinds_posted": {
+          "small_blind": 1,
+          "big_blind": 2
+        },
+        "hole_cards": {
+          "player_0": [
+            "6\u2660",
+            "3\u2663"
+          ],
+          "player_1": [
+            "5\u2665",
+            "8\u2665"
+          ]
+        },
+        "pot_after_blinds": 3
+      },
+      {
+        "event": "player_action",
+        "hand_number": 8,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "F",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 8,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            384,
+            382
+          ],
+          "pot": 3,
+          "current_bets": [
+            1,
+            2
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 1,
+        "stack_before": 384
+      },
+      {
+        "event": "action_result",
+        "hand_number": 8,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "F",
+        "stack_after": 384,
+        "stack_change": 0,
+        "pot_after": 3,
+        "current_bets_after": [
+          1,
+          2
+        ],
+        "community_cards": [],
+        "game_continues": false,
+        "hand_finished": true
+      },
+      {
+        "event": "hand_end",
+        "hand_number": 8,
+        "winner": 1,
+        "winner_name": "DetailBot1",
+        "final_community_cards": [],
+        "hole_cards": {
+          "player_0": [
+            "6\u2660",
+            "3\u2663"
+          ],
+          "player_1": [
+            "5\u2665",
+            "8\u2665"
+          ]
+        },
+        "stacks_before_resolution": [
+          384,
+          382
+        ],
+        "pot_size": 3,
+        "final_scores": [
+          -1,
+          1
+        ]
+      },
+      {
+        "event": "hand_start",
+        "hand_number": 9,
+        "stacks_before": [
+          382,
+          381
+        ],
+        "button_player": 0,
+        "blinds_posted": {
+          "small_blind": 1,
+          "big_blind": 2
+        },
+        "hole_cards": {
+          "player_0": [
+            "A\u2660",
+            "A\u2666"
+          ],
+          "player_1": [
+            "3\u2663",
+            "9\u2666"
+          ]
+        },
+        "pot_after_blinds": 3
+      },
+      {
+        "event": "player_action",
+        "hand_number": 9,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "R",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 9,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            382,
+            381
+          ],
+          "pot": 3,
+          "current_bets": [
+            1,
+            2
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 1,
+        "stack_before": 382
+      },
+      {
+        "event": "action_result",
+        "hand_number": 9,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "R",
+        "stack_after": 378,
+        "stack_change": -4,
+        "pot_after": 7,
+        "current_bets_after": [
+          5,
+          2
+        ],
+        "community_cards": [],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 9,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "R",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 9,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            378,
+            381
+          ],
+          "pot": 7,
+          "current_bets": [
+            5,
+            2
+          ],
+          "community_cards": [],
+          "active_player": 1,
+          "button": 0
+        },
+        "call_amount": 3,
+        "stack_before": 381
+      },
+      {
+        "event": "action_result",
+        "hand_number": 9,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "R",
+        "stack_after": 371,
+        "stack_change": -10,
+        "pot_after": 17,
+        "current_bets_after": [
+          5,
+          12
+        ],
+        "community_cards": [],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 9,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "R",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 9,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            378,
+            371
+          ],
+          "pot": 17,
+          "current_bets": [
+            5,
+            12
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 7,
+        "stack_before": 378
+      },
+      {
+        "event": "action_result",
+        "hand_number": 9,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "R",
+        "stack_after": 354,
+        "stack_change": -24,
+        "pot_after": 41,
+        "current_bets_after": [
+          29,
+          12
+        ],
+        "community_cards": [],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 9,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "C",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 9,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            354,
+            371
+          ],
+          "pot": 41,
+          "current_bets": [
+            29,
+            12
+          ],
+          "community_cards": [],
+          "active_player": 1,
+          "button": 0
+        },
+        "call_amount": 17,
+        "stack_before": 371
+      },
+      {
+        "event": "action_result",
+        "hand_number": 9,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "C",
+        "stack_after": 354,
+        "stack_change": -17,
+        "pot_after": 58,
+        "current_bets_after": [
+          29,
+          29
+        ],
+        "community_cards": [],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 9,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "F",
+        "legal_actions": [
+          "F",
+          "K",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 9,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            354,
+            354
+          ],
+          "pot": 58,
+          "current_bets": [
+            29,
+            29
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 0,
+        "stack_before": 354
+      },
+      {
+        "event": "action_result",
+        "hand_number": 9,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "F",
+        "stack_after": 354,
+        "stack_change": 0,
+        "pot_after": 58,
+        "current_bets_after": [
+          29,
+          29
+        ],
+        "community_cards": [],
+        "game_continues": false,
+        "hand_finished": true
+      },
+      {
+        "event": "hand_end",
+        "hand_number": 9,
+        "winner": 1,
+        "winner_name": "DetailBot1",
+        "final_community_cards": [],
+        "hole_cards": {
+          "player_0": [
+            "A\u2660",
+            "A\u2666"
+          ],
+          "player_1": [
+            "3\u2663",
+            "9\u2666"
+          ]
+        },
+        "stacks_before_resolution": [
+          354,
+          354
+        ],
+        "pot_size": 58,
+        "final_scores": [
+          -29,
+          29
+        ]
+      },
+      {
+        "event": "hand_start",
+        "hand_number": 10,
+        "stacks_before": [
+          324,
+          381
+        ],
+        "button_player": 0,
+        "blinds_posted": {
+          "small_blind": 1,
+          "big_blind": 2
+        },
+        "hole_cards": {
+          "player_0": [
+            "9\u2660",
+            "6\u2660"
+          ],
+          "player_1": [
+            "9\u2666",
+            "4\u2663"
+          ]
+        },
+        "pot_after_blinds": 3
+      },
+      {
+        "event": "player_action",
+        "hand_number": 10,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "F",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 10,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            324,
+            381
+          ],
+          "pot": 3,
+          "current_bets": [
+            1,
+            2
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 1,
+        "stack_before": 324
+      },
+      {
+        "event": "action_result",
+        "hand_number": 10,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "F",
+        "stack_after": 324,
+        "stack_change": 0,
+        "pot_after": 3,
+        "current_bets_after": [
+          1,
+          2
+        ],
+        "community_cards": [],
+        "game_continues": false,
+        "hand_finished": true
+      },
+      {
+        "event": "hand_end",
+        "hand_number": 10,
+        "winner": 1,
+        "winner_name": "DetailBot1",
+        "final_community_cards": [],
+        "hole_cards": {
+          "player_0": [
+            "9\u2660",
+            "6\u2660"
+          ],
+          "player_1": [
+            "9\u2666",
+            "4\u2663"
+          ]
+        },
+        "stacks_before_resolution": [
+          324,
+          381
+        ],
+        "pot_size": 3,
+        "final_scores": [
+          -1,
+          1
+        ]
+      },
+      {
+        "event": "hand_start",
+        "hand_number": 11,
+        "stacks_before": [
+          322,
+          380
+        ],
+        "button_player": 0,
+        "blinds_posted": {
+          "small_blind": 1,
+          "big_blind": 2
+        },
+        "hole_cards": {
+          "player_0": [
+            "8\u2660",
+            "T\u2663"
+          ],
+          "player_1": [
+            "Q\u2665",
+            "7\u2665"
+          ]
+        },
+        "pot_after_blinds": 3
+      },
+      {
+        "event": "player_action",
+        "hand_number": 11,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "R",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 11,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            322,
+            380
+          ],
+          "pot": 3,
+          "current_bets": [
+            1,
+            2
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 1,
+        "stack_before": 322
+      },
+      {
+        "event": "action_result",
+        "hand_number": 11,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "R",
+        "stack_after": 318,
+        "stack_change": -4,
+        "pot_after": 7,
+        "current_bets_after": [
+          5,
+          2
+        ],
+        "community_cards": [],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 11,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "F",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 11,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            318,
+            380
+          ],
+          "pot": 7,
+          "current_bets": [
+            5,
+            2
+          ],
+          "community_cards": [],
+          "active_player": 1,
+          "button": 0
+        },
+        "call_amount": 3,
+        "stack_before": 380
+      },
+      {
+        "event": "action_result",
+        "hand_number": 11,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "F",
+        "stack_after": 380,
+        "stack_change": 0,
+        "pot_after": 7,
+        "current_bets_after": [
+          5,
+          2
+        ],
+        "community_cards": [],
+        "game_continues": false,
+        "hand_finished": true
+      },
+      {
+        "event": "hand_end",
+        "hand_number": 11,
+        "winner": 0,
+        "winner_name": "DetailBot2",
+        "final_community_cards": [],
+        "hole_cards": {
+          "player_0": [
+            "8\u2660",
+            "T\u2663"
+          ],
+          "player_1": [
+            "Q\u2665",
+            "7\u2665"
+          ]
+        },
+        "stacks_before_resolution": [
+          318,
+          380
+        ],
+        "pot_size": 7,
+        "final_scores": [
+          2,
+          -2
+        ]
+      },
+      {
+        "event": "hand_start",
+        "hand_number": 12,
+        "stacks_before": [
+          319,
+          376
+        ],
+        "button_player": 0,
+        "blinds_posted": {
+          "small_blind": 1,
+          "big_blind": 2
+        },
+        "hole_cards": {
+          "player_0": [
+            "9\u2660",
+            "9\u2663"
+          ],
+          "player_1": [
+            "Q\u2666",
+            "3\u2660"
+          ]
+        },
+        "pot_after_blinds": 3
+      },
+      {
+        "event": "player_action",
+        "hand_number": 12,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "R",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 12,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            319,
+            376
+          ],
+          "pot": 3,
+          "current_bets": [
+            1,
+            2
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 1,
+        "stack_before": 319
+      },
+      {
+        "event": "action_result",
+        "hand_number": 12,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "R",
+        "stack_after": 315,
+        "stack_change": -4,
+        "pot_after": 7,
+        "current_bets_after": [
+          5,
+          2
+        ],
+        "community_cards": [],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 12,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "R",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 12,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            315,
+            376
+          ],
+          "pot": 7,
+          "current_bets": [
+            5,
+            2
+          ],
+          "community_cards": [],
+          "active_player": 1,
+          "button": 0
+        },
+        "call_amount": 3,
+        "stack_before": 376
+      },
+      {
+        "event": "action_result",
+        "hand_number": 12,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "R",
+        "stack_after": 366,
+        "stack_change": -10,
+        "pot_after": 17,
+        "current_bets_after": [
+          5,
+          12
+        ],
+        "community_cards": [],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 12,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "R",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 12,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            315,
+            366
+          ],
+          "pot": 17,
+          "current_bets": [
+            5,
+            12
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 7,
+        "stack_before": 315
+      },
+      {
+        "event": "action_result",
+        "hand_number": 12,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "R",
+        "stack_after": 291,
+        "stack_change": -24,
+        "pot_after": 41,
+        "current_bets_after": [
+          29,
+          12
+        ],
+        "community_cards": [],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 12,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "C",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 12,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            291,
+            366
+          ],
+          "pot": 41,
+          "current_bets": [
+            29,
+            12
+          ],
+          "community_cards": [],
+          "active_player": 1,
+          "button": 0
+        },
+        "call_amount": 17,
+        "stack_before": 366
+      },
+      {
+        "event": "action_result",
+        "hand_number": 12,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "C",
+        "stack_after": 349,
+        "stack_change": -17,
+        "pot_after": 58,
+        "current_bets_after": [
+          29,
+          29
+        ],
+        "community_cards": [],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 12,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "F",
+        "legal_actions": [
+          "F",
+          "K",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 12,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            291,
+            349
+          ],
+          "pot": 58,
+          "current_bets": [
+            29,
+            29
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 0,
+        "stack_before": 291
+      },
+      {
+        "event": "action_result",
+        "hand_number": 12,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "F",
+        "stack_after": 291,
+        "stack_change": 0,
+        "pot_after": 58,
+        "current_bets_after": [
+          29,
+          29
+        ],
+        "community_cards": [],
+        "game_continues": false,
+        "hand_finished": true
+      },
+      {
+        "event": "hand_end",
+        "hand_number": 12,
+        "winner": 1,
+        "winner_name": "DetailBot1",
+        "final_community_cards": [],
+        "hole_cards": {
+          "player_0": [
+            "9\u2660",
+            "9\u2663"
+          ],
+          "player_1": [
+            "Q\u2666",
+            "3\u2660"
+          ]
+        },
+        "stacks_before_resolution": [
+          291,
+          349
+        ],
+        "pot_size": 58,
+        "final_scores": [
+          -29,
+          29
+        ]
+      },
+      {
+        "event": "hand_start",
+        "hand_number": 13,
+        "stacks_before": [
+          261,
+          376
+        ],
+        "button_player": 0,
+        "blinds_posted": {
+          "small_blind": 1,
+          "big_blind": 2
+        },
+        "hole_cards": {
+          "player_0": [
+            "3\u2663",
+            "A\u2663"
+          ],
+          "player_1": [
+            "5\u2665",
+            "9\u2663"
+          ]
+        },
+        "pot_after_blinds": 3
+      },
+      {
+        "event": "player_action",
+        "hand_number": 13,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "R",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 13,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            261,
+            376
+          ],
+          "pot": 3,
+          "current_bets": [
+            1,
+            2
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 1,
+        "stack_before": 261
+      },
+      {
+        "event": "action_result",
+        "hand_number": 13,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "R",
+        "stack_after": 257,
+        "stack_change": -4,
+        "pot_after": 7,
+        "current_bets_after": [
+          5,
+          2
+        ],
+        "community_cards": [],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 13,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "R",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 13,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            257,
+            376
+          ],
+          "pot": 7,
+          "current_bets": [
+            5,
+            2
+          ],
+          "community_cards": [],
+          "active_player": 1,
+          "button": 0
+        },
+        "call_amount": 3,
+        "stack_before": 376
+      },
+      {
+        "event": "action_result",
+        "hand_number": 13,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "R",
+        "stack_after": 366,
+        "stack_change": -10,
+        "pot_after": 17,
+        "current_bets_after": [
+          5,
+          12
+        ],
+        "community_cards": [],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 13,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "R",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 13,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            257,
+            366
+          ],
+          "pot": 17,
+          "current_bets": [
+            5,
+            12
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 7,
+        "stack_before": 257
+      },
+      {
+        "event": "action_result",
+        "hand_number": 13,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "R",
+        "stack_after": 233,
+        "stack_change": -24,
+        "pot_after": 41,
+        "current_bets_after": [
+          29,
+          12
+        ],
+        "community_cards": [],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 13,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "C",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 13,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            233,
+            366
+          ],
+          "pot": 41,
+          "current_bets": [
+            29,
+            12
+          ],
+          "community_cards": [],
+          "active_player": 1,
+          "button": 0
+        },
+        "call_amount": 17,
+        "stack_before": 366
+      },
+      {
+        "event": "action_result",
+        "hand_number": 13,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "C",
+        "stack_after": 349,
+        "stack_change": -17,
+        "pot_after": 58,
+        "current_bets_after": [
+          29,
+          29
+        ],
+        "community_cards": [],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 13,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "R",
+        "legal_actions": [
+          "F",
+          "K",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 13,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            233,
+            349
+          ],
+          "pot": 58,
+          "current_bets": [
+            29,
+            29
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 0,
+        "stack_before": 233
+      },
+      {
+        "event": "action_result",
+        "hand_number": 13,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "R",
+        "stack_after": 175,
+        "stack_change": -58,
+        "pot_after": 116,
+        "current_bets_after": [
+          87,
+          29
+        ],
+        "community_cards": [],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 13,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "R",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 13,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            175,
+            349
+          ],
+          "pot": 116,
+          "current_bets": [
+            87,
+            29
+          ],
+          "community_cards": [],
+          "active_player": 1,
+          "button": 0
+        },
+        "call_amount": 58,
+        "stack_before": 349
+      },
+      {
+        "event": "action_result",
+        "hand_number": 13,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "R",
+        "stack_after": 175,
+        "stack_change": -174,
+        "pot_after": 290,
+        "current_bets_after": [
+          87,
+          203
+        ],
+        "community_cards": [],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 13,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "C",
+        "legal_actions": [
+          "F",
+          "C",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 13,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            175,
+            175
+          ],
+          "pot": 290,
+          "current_bets": [
+            87,
+            203
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 116,
+        "stack_before": 175
+      },
+      {
+        "event": "action_result",
+        "hand_number": 13,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "C",
+        "stack_after": 59,
+        "stack_change": -116,
+        "pot_after": 406,
+        "current_bets_after": [
+          203,
+          203
+        ],
+        "community_cards": [],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 13,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "R",
+        "legal_actions": [
+          "F",
+          "K",
+          "R"
+        ],
+        "pre_action_state": {
+          "round_num": 13,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            59,
+            175
+          ],
+          "pot": 406,
+          "current_bets": [
+            203,
+            203
+          ],
+          "community_cards": [],
+          "active_player": 1,
+          "button": 0
+        },
+        "call_amount": 0,
+        "stack_before": 175
+      },
+      {
+        "event": "action_result",
+        "hand_number": 13,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "R",
+        "stack_after": 0,
+        "stack_change": -175,
+        "pot_after": 581,
+        "current_bets_after": [
+          203,
+          378
+        ],
+        "community_cards": [],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 13,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "C",
+        "legal_actions": [
+          "F",
+          "C"
+        ],
+        "pre_action_state": {
+          "round_num": 13,
+          "street": 0,
+          "street_name": "preflop",
+          "stacks": [
+            59,
+            0
+          ],
+          "pot": 581,
+          "current_bets": [
+            203,
+            378
+          ],
+          "community_cards": [],
+          "active_player": 0,
+          "button": 0
+        },
+        "call_amount": 175,
+        "stack_before": 59
+      },
+      {
+        "event": "action_result",
+        "hand_number": 13,
+        "player": 0,
+        "player_name": "DetailBot2",
+        "action": "C",
+        "stack_after": 0,
+        "stack_change": -59,
+        "pot_after": 640,
+        "current_bets_after": [
+          0,
+          0
+        ],
+        "community_cards": [
+          "K\u2663",
+          "8\u2666",
+          "Q\u2663"
+        ],
+        "game_continues": true,
+        "hand_finished": false
+      },
+      {
+        "event": "player_action",
+        "hand_number": 13,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "F",
+        "legal_actions": [
+          "F",
+          "K"
+        ],
+        "pre_action_state": {
+          "round_num": 13,
+          "street": 1,
+          "street_name": "flop",
+          "stacks": [
+            0,
+            0
+          ],
+          "pot": 640,
+          "current_bets": [
+            0,
+            0
+          ],
+          "community_cards": [
+            "K\u2663",
+            "8\u2666",
+            "Q\u2663"
+          ],
+          "active_player": 1,
+          "button": 0
+        },
+        "call_amount": 0,
+        "stack_before": 0
+      },
+      {
+        "event": "action_result",
+        "hand_number": 13,
+        "player": 1,
+        "player_name": "DetailBot1",
+        "action": "F",
+        "stack_after": 0,
+        "stack_change": 0,
+        "pot_after": 640,
+        "current_bets_after": [
+          0,
+          0
+        ],
+        "community_cards": [
+          "K\u2663",
+          "8\u2666",
+          "Q\u2663"
+        ],
+        "game_continues": false,
+        "hand_finished": true
+      },
+      {
+        "event": "hand_end",
+        "hand_number": 13,
+        "winner": 0,
+        "winner_name": "DetailBot2",
+        "final_community_cards": [
+          "K\u2663",
+          "8\u2666",
+          "Q\u2663"
+        ],
+        "hole_cards": {
+          "player_0": [
+            "3\u2663",
+            "A\u2663"
+          ],
+          "player_1": [
+            "5\u2665",
+            "9\u2663"
+          ]
+        },
+        "stacks_before_resolution": [
+          0,
+          0
+        ],
+        "pot_size": 640,
+        "final_scores": [
+          378,
+          -378
+        ]
+      },
+      {
+        "event": "match_end",
+        "total_hands": 13,
+        "winner": 0,
+        "winner_name": "DetailBot2",
+        "final_scores": [
+          318,
+          -318
+        ],
+        "final_stacks": [
+          378,
+          -378
+        ]
+      }
+    ],
+    "summary": {
+      "bot1_name": "DetailBot2",
+      "bot2_name": "DetailBot1",
+      "winner": "DetailBot2",
+      "total_hands": 13,
+      "final_scores": [
+        318,
+        -318
+      ]
+    }
+  }
+}
