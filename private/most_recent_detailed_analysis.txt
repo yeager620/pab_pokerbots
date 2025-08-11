@@ -1,0 +1,1040 @@
+🧪 DETAILED POKER GAME ANALYSIS
+==================================================
+🚀 Setting up test environment...
+📁 Test directory: /var/folders/0g/zz7n585d7tvbph3cwhd8b_qw0000gn/T/pokerbots_test_skq_ugf5
+✅ Database initialized
+[03:57:37.046] [SETUP] Creating two bots for detailed analysis
+[03:57:37.109] [SETUP] Bot 1: DetailBot1 (ID: 7)
+[03:57:37.109] [SETUP] Bot 2: DetailBot2 (ID: 8)
+[03:57:37.112] [SETUP] Tournament started: {'success': True, 'message': 'Tournament started with 2 participants', 'first_round_matches': 1}
+[03:57:49.823] [MATCH] Match completed: DetailBot1 vs DetailBot2
+[03:57:49.823] [RESULT] Winner ID: 7
+[03:57:49.823] [RESULT] Final scores: 396 - -396
+[03:57:49.824] [ANALYSIS] ANALYZING DETAILED POKER GAMEPLAY
+[03:57:49.824] [ANALYSIS] ============================================================
+[03:57:49.824] [MATCH] Match started: DetailBot1 vs DetailBot2
+[03:57:49.824] [MATCH] Starting stacks: [400, 400]
+[03:57:49.824] [HAND ] 
+--- HAND #1 ---
+[03:57:49.824] [HAND ] Stacks before: [399, 398]
+[03:57:49.824] [HAND ] Button player: 0
+[03:57:49.824] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.824] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.824] [HAND ] Pot after blinds: 3
+[03:57:49.824] [ACTION] Player 0 (DetailBot1)  (preflop): C
+[03:57:49.824] [ACTION]   Legal actions: ['F', 'C', 'R']
+[03:57:49.824] [ACTION]   Call amount: 1
+[03:57:49.824] [RESULT]   Result: Stack → 398 (change: -1)
+[03:57:49.824] [RESULT]   Pot size: 4
+[03:57:49.824] [RESULT]   Current bets: [2, 2]
+[03:57:49.824] [ACTION] Player 1 (DetailBot2)  (preflop): R
+[03:57:49.824] [ACTION]   Legal actions: ['F', 'K', 'R']
+[03:57:49.824] [ACTION]   Call amount: 0
+[03:57:49.824] [RESULT]   Result: Stack → 394 (change: -4)
+[03:57:49.824] [RESULT]   Pot size: 8
+[03:57:49.824] [RESULT]   Current bets: [2, 6]
+[03:57:49.824] [ACTION] Player 0 (DetailBot1)  (preflop): R
+[03:57:49.824] [ACTION]   Legal actions: ['F', 'C', 'R']
+[03:57:49.824] [ACTION]   Call amount: 4
+[03:57:49.824] [RESULT]   Result: Stack → 386 (change: -12)
+[03:57:49.824] [RESULT]   Pot size: 20
+[03:57:49.824] [RESULT]   Current bets: [14, 6]
+[03:57:49.824] [ACTION] Player 1 (DetailBot2)  (preflop): F
+[03:57:49.824] [ACTION]   Legal actions: ['F', 'C', 'R']
+[03:57:49.824] [ACTION]   Call amount: 8
+[03:57:49.824] [RESULT]   Result: Stack → 394 (change: 0)
+[03:57:49.824] [RESULT]   Pot size: 20
+[03:57:49.824] [RESULT]   Current bets: [14, 6]
+[03:57:49.824] [HAND ] 
+*** HAND END ***
+[03:57:49.824] [HAND ] Winner: DetailBot1
+[03:57:49.824] [CARDS] Final board: []
+[03:57:49.824] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.824] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.824] [HAND ] Pot size: 20
+[03:57:49.824] [HAND ] Final scores: [6, -6]
+[03:57:49.824] [HAND ] 
+--- HAND #2 ---
+[03:57:49.824] [HAND ] Stacks before: [392, 388]
+[03:57:49.824] [HAND ] Button player: 0
+[03:57:49.824] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.824] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.824] [HAND ] Pot after blinds: 20
+[03:57:49.824] [HAND ] 
+*** HAND END ***
+[03:57:49.824] [HAND ] Winner: DetailBot1
+[03:57:49.824] [CARDS] Final board: []
+[03:57:49.824] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.824] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.824] [HAND ] Pot size: 20
+[03:57:49.824] [HAND ] Final scores: [6, -6]
+[03:57:49.824] [HAND ] 
+--- HAND #3 ---
+[03:57:49.824] [HAND ] Stacks before: [398, 382]
+[03:57:49.824] [HAND ] Button player: 0
+[03:57:49.824] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.824] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.824] [HAND ] Pot after blinds: 20
+[03:57:49.824] [HAND ] 
+*** HAND END ***
+[03:57:49.824] [HAND ] Winner: DetailBot1
+[03:57:49.824] [CARDS] Final board: []
+[03:57:49.824] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.824] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.824] [HAND ] Pot size: 20
+[03:57:49.824] [HAND ] Final scores: [6, -6]
+[03:57:49.824] [HAND ] 
+--- HAND #4 ---
+[03:57:49.824] [HAND ] Stacks before: [404, 376]
+[03:57:49.824] [HAND ] Button player: 0
+[03:57:49.824] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.824] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.824] [HAND ] Pot after blinds: 20
+[03:57:49.824] [HAND ] 
+*** HAND END ***
+[03:57:49.824] [HAND ] Winner: DetailBot1
+[03:57:49.824] [CARDS] Final board: []
+[03:57:49.824] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.824] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.824] [HAND ] Pot size: 20
+[03:57:49.824] [HAND ] Final scores: [6, -6]
+[03:57:49.824] [HAND ] 
+--- HAND #5 ---
+[03:57:49.824] [HAND ] Stacks before: [410, 370]
+[03:57:49.824] [HAND ] Button player: 0
+[03:57:49.824] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.824] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.825] [HAND ] Pot after blinds: 20
+[03:57:49.825] [HAND ] 
+*** HAND END ***
+[03:57:49.825] [HAND ] Winner: DetailBot1
+[03:57:49.825] [CARDS] Final board: []
+[03:57:49.825] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.825] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.825] [HAND ] Pot size: 20
+[03:57:49.825] [HAND ] Final scores: [6, -6]
+[03:57:49.825] [HAND ] 
+--- HAND #6 ---
+[03:57:49.825] [HAND ] Stacks before: [416, 364]
+[03:57:49.825] [HAND ] Button player: 0
+[03:57:49.825] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.825] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.825] [HAND ] Pot after blinds: 20
+[03:57:49.825] [HAND ] 
+*** HAND END ***
+[03:57:49.825] [HAND ] Winner: DetailBot1
+[03:57:49.825] [CARDS] Final board: []
+[03:57:49.825] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.825] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.825] [HAND ] Pot size: 20
+[03:57:49.825] [HAND ] Final scores: [6, -6]
+[03:57:49.825] [HAND ] 
+--- HAND #7 ---
+[03:57:49.825] [HAND ] Stacks before: [422, 358]
+[03:57:49.825] [HAND ] Button player: 0
+[03:57:49.825] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.825] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.825] [HAND ] Pot after blinds: 20
+[03:57:49.825] [HAND ] 
+*** HAND END ***
+[03:57:49.825] [HAND ] Winner: DetailBot1
+[03:57:49.825] [CARDS] Final board: []
+[03:57:49.825] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.825] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.825] [HAND ] Pot size: 20
+[03:57:49.825] [HAND ] Final scores: [6, -6]
+[03:57:49.825] [HAND ] 
+--- HAND #8 ---
+[03:57:49.825] [HAND ] Stacks before: [428, 352]
+[03:57:49.825] [HAND ] Button player: 0
+[03:57:49.825] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.825] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.825] [HAND ] Pot after blinds: 20
+[03:57:49.825] [HAND ] 
+*** HAND END ***
+[03:57:49.825] [HAND ] Winner: DetailBot1
+[03:57:49.825] [CARDS] Final board: []
+[03:57:49.825] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.825] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.825] [HAND ] Pot size: 20
+[03:57:49.825] [HAND ] Final scores: [6, -6]
+[03:57:49.825] [HAND ] 
+--- HAND #9 ---
+[03:57:49.825] [HAND ] Stacks before: [434, 346]
+[03:57:49.825] [HAND ] Button player: 0
+[03:57:49.825] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.825] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.825] [HAND ] Pot after blinds: 20
+[03:57:49.825] [HAND ] 
+*** HAND END ***
+[03:57:49.825] [HAND ] Winner: DetailBot1
+[03:57:49.825] [CARDS] Final board: []
+[03:57:49.826] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot size: 20
+[03:57:49.826] [HAND ] Final scores: [6, -6]
+[03:57:49.826] [HAND ] 
+--- HAND #10 ---
+[03:57:49.826] [HAND ] Stacks before: [440, 340]
+[03:57:49.826] [HAND ] Button player: 0
+[03:57:49.826] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot after blinds: 20
+[03:57:49.826] [HAND ] 
+*** HAND END ***
+[03:57:49.826] [HAND ] Winner: DetailBot1
+[03:57:49.826] [CARDS] Final board: []
+[03:57:49.826] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot size: 20
+[03:57:49.826] [HAND ] Final scores: [6, -6]
+[03:57:49.826] [HAND ] 
+--- HAND #11 ---
+[03:57:49.826] [HAND ] Stacks before: [446, 334]
+[03:57:49.826] [HAND ] Button player: 0
+[03:57:49.826] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot after blinds: 20
+[03:57:49.826] [HAND ] 
+*** HAND END ***
+[03:57:49.826] [HAND ] Winner: DetailBot1
+[03:57:49.826] [CARDS] Final board: []
+[03:57:49.826] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot size: 20
+[03:57:49.826] [HAND ] Final scores: [6, -6]
+[03:57:49.826] [HAND ] 
+--- HAND #12 ---
+[03:57:49.826] [HAND ] Stacks before: [452, 328]
+[03:57:49.826] [HAND ] Button player: 0
+[03:57:49.826] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot after blinds: 20
+[03:57:49.826] [HAND ] 
+*** HAND END ***
+[03:57:49.826] [HAND ] Winner: DetailBot1
+[03:57:49.826] [CARDS] Final board: []
+[03:57:49.826] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot size: 20
+[03:57:49.826] [HAND ] Final scores: [6, -6]
+[03:57:49.826] [HAND ] 
+--- HAND #13 ---
+[03:57:49.826] [HAND ] Stacks before: [458, 322]
+[03:57:49.826] [HAND ] Button player: 0
+[03:57:49.826] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot after blinds: 20
+[03:57:49.826] [HAND ] 
+*** HAND END ***
+[03:57:49.826] [HAND ] Winner: DetailBot1
+[03:57:49.826] [CARDS] Final board: []
+[03:57:49.826] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot size: 20
+[03:57:49.826] [HAND ] Final scores: [6, -6]
+[03:57:49.826] [HAND ] 
+--- HAND #14 ---
+[03:57:49.826] [HAND ] Stacks before: [464, 316]
+[03:57:49.826] [HAND ] Button player: 0
+[03:57:49.826] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot after blinds: 20
+[03:57:49.826] [HAND ] 
+*** HAND END ***
+[03:57:49.826] [HAND ] Winner: DetailBot1
+[03:57:49.826] [CARDS] Final board: []
+[03:57:49.826] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot size: 20
+[03:57:49.826] [HAND ] Final scores: [6, -6]
+[03:57:49.826] [HAND ] 
+--- HAND #15 ---
+[03:57:49.826] [HAND ] Stacks before: [470, 310]
+[03:57:49.826] [HAND ] Button player: 0
+[03:57:49.826] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot after blinds: 20
+[03:57:49.826] [HAND ] 
+*** HAND END ***
+[03:57:49.826] [HAND ] Winner: DetailBot1
+[03:57:49.826] [CARDS] Final board: []
+[03:57:49.826] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot size: 20
+[03:57:49.826] [HAND ] Final scores: [6, -6]
+[03:57:49.826] [HAND ] 
+--- HAND #16 ---
+[03:57:49.826] [HAND ] Stacks before: [476, 304]
+[03:57:49.826] [HAND ] Button player: 0
+[03:57:49.826] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot after blinds: 20
+[03:57:49.826] [HAND ] 
+*** HAND END ***
+[03:57:49.826] [HAND ] Winner: DetailBot1
+[03:57:49.826] [CARDS] Final board: []
+[03:57:49.826] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot size: 20
+[03:57:49.826] [HAND ] Final scores: [6, -6]
+[03:57:49.826] [HAND ] 
+--- HAND #17 ---
+[03:57:49.826] [HAND ] Stacks before: [482, 298]
+[03:57:49.826] [HAND ] Button player: 0
+[03:57:49.826] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot after blinds: 20
+[03:57:49.826] [HAND ] 
+*** HAND END ***
+[03:57:49.826] [HAND ] Winner: DetailBot1
+[03:57:49.826] [CARDS] Final board: []
+[03:57:49.826] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot size: 20
+[03:57:49.826] [HAND ] Final scores: [6, -6]
+[03:57:49.826] [HAND ] 
+--- HAND #18 ---
+[03:57:49.826] [HAND ] Stacks before: [488, 292]
+[03:57:49.826] [HAND ] Button player: 0
+[03:57:49.826] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot after blinds: 20
+[03:57:49.826] [HAND ] 
+*** HAND END ***
+[03:57:49.826] [HAND ] Winner: DetailBot1
+[03:57:49.826] [CARDS] Final board: []
+[03:57:49.826] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot size: 20
+[03:57:49.826] [HAND ] Final scores: [6, -6]
+[03:57:49.826] [HAND ] 
+--- HAND #19 ---
+[03:57:49.826] [HAND ] Stacks before: [494, 286]
+[03:57:49.826] [HAND ] Button player: 0
+[03:57:49.826] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot after blinds: 20
+[03:57:49.826] [HAND ] 
+*** HAND END ***
+[03:57:49.826] [HAND ] Winner: DetailBot1
+[03:57:49.826] [CARDS] Final board: []
+[03:57:49.826] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot size: 20
+[03:57:49.826] [HAND ] Final scores: [6, -6]
+[03:57:49.826] [HAND ] 
+--- HAND #20 ---
+[03:57:49.826] [HAND ] Stacks before: [500, 280]
+[03:57:49.826] [HAND ] Button player: 0
+[03:57:49.826] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.826] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.826] [HAND ] Pot after blinds: 20
+[03:57:49.826] [HAND ] 
+*** HAND END ***
+[03:57:49.826] [HAND ] Winner: DetailBot1
+[03:57:49.826] [CARDS] Final board: []
+[03:57:49.827] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot size: 20
+[03:57:49.827] [HAND ] Final scores: [6, -6]
+[03:57:49.827] [HAND ] 
+--- HAND #21 ---
+[03:57:49.827] [HAND ] Stacks before: [506, 274]
+[03:57:49.827] [HAND ] Button player: 0
+[03:57:49.827] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot after blinds: 20
+[03:57:49.827] [HAND ] 
+*** HAND END ***
+[03:57:49.827] [HAND ] Winner: DetailBot1
+[03:57:49.827] [CARDS] Final board: []
+[03:57:49.827] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot size: 20
+[03:57:49.827] [HAND ] Final scores: [6, -6]
+[03:57:49.827] [HAND ] 
+--- HAND #22 ---
+[03:57:49.827] [HAND ] Stacks before: [512, 268]
+[03:57:49.827] [HAND ] Button player: 0
+[03:57:49.827] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot after blinds: 20
+[03:57:49.827] [HAND ] 
+*** HAND END ***
+[03:57:49.827] [HAND ] Winner: DetailBot1
+[03:57:49.827] [CARDS] Final board: []
+[03:57:49.827] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot size: 20
+[03:57:49.827] [HAND ] Final scores: [6, -6]
+[03:57:49.827] [HAND ] 
+--- HAND #23 ---
+[03:57:49.827] [HAND ] Stacks before: [518, 262]
+[03:57:49.827] [HAND ] Button player: 0
+[03:57:49.827] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot after blinds: 20
+[03:57:49.827] [HAND ] 
+*** HAND END ***
+[03:57:49.827] [HAND ] Winner: DetailBot1
+[03:57:49.827] [CARDS] Final board: []
+[03:57:49.827] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot size: 20
+[03:57:49.827] [HAND ] Final scores: [6, -6]
+[03:57:49.827] [HAND ] 
+--- HAND #24 ---
+[03:57:49.827] [HAND ] Stacks before: [524, 256]
+[03:57:49.827] [HAND ] Button player: 0
+[03:57:49.827] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot after blinds: 20
+[03:57:49.827] [HAND ] 
+*** HAND END ***
+[03:57:49.827] [HAND ] Winner: DetailBot1
+[03:57:49.827] [CARDS] Final board: []
+[03:57:49.827] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot size: 20
+[03:57:49.827] [HAND ] Final scores: [6, -6]
+[03:57:49.827] [HAND ] 
+--- HAND #25 ---
+[03:57:49.827] [HAND ] Stacks before: [530, 250]
+[03:57:49.827] [HAND ] Button player: 0
+[03:57:49.827] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot after blinds: 20
+[03:57:49.827] [HAND ] 
+*** HAND END ***
+[03:57:49.827] [HAND ] Winner: DetailBot1
+[03:57:49.827] [CARDS] Final board: []
+[03:57:49.827] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot size: 20
+[03:57:49.827] [HAND ] Final scores: [6, -6]
+[03:57:49.827] [HAND ] 
+--- HAND #26 ---
+[03:57:49.827] [HAND ] Stacks before: [536, 244]
+[03:57:49.827] [HAND ] Button player: 0
+[03:57:49.827] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot after blinds: 20
+[03:57:49.827] [HAND ] 
+*** HAND END ***
+[03:57:49.827] [HAND ] Winner: DetailBot1
+[03:57:49.827] [CARDS] Final board: []
+[03:57:49.827] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot size: 20
+[03:57:49.827] [HAND ] Final scores: [6, -6]
+[03:57:49.827] [HAND ] 
+--- HAND #27 ---
+[03:57:49.827] [HAND ] Stacks before: [542, 238]
+[03:57:49.827] [HAND ] Button player: 0
+[03:57:49.827] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot after blinds: 20
+[03:57:49.827] [HAND ] 
+*** HAND END ***
+[03:57:49.827] [HAND ] Winner: DetailBot1
+[03:57:49.827] [CARDS] Final board: []
+[03:57:49.827] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot size: 20
+[03:57:49.827] [HAND ] Final scores: [6, -6]
+[03:57:49.827] [HAND ] 
+--- HAND #28 ---
+[03:57:49.827] [HAND ] Stacks before: [548, 232]
+[03:57:49.827] [HAND ] Button player: 0
+[03:57:49.827] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot after blinds: 20
+[03:57:49.827] [HAND ] 
+*** HAND END ***
+[03:57:49.827] [HAND ] Winner: DetailBot1
+[03:57:49.827] [CARDS] Final board: []
+[03:57:49.827] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot size: 20
+[03:57:49.827] [HAND ] Final scores: [6, -6]
+[03:57:49.827] [HAND ] 
+--- HAND #29 ---
+[03:57:49.827] [HAND ] Stacks before: [554, 226]
+[03:57:49.827] [HAND ] Button player: 0
+[03:57:49.827] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot after blinds: 20
+[03:57:49.827] [HAND ] 
+*** HAND END ***
+[03:57:49.827] [HAND ] Winner: DetailBot1
+[03:57:49.827] [CARDS] Final board: []
+[03:57:49.827] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot size: 20
+[03:57:49.827] [HAND ] Final scores: [6, -6]
+[03:57:49.827] [HAND ] 
+--- HAND #30 ---
+[03:57:49.827] [HAND ] Stacks before: [560, 220]
+[03:57:49.827] [HAND ] Button player: 0
+[03:57:49.827] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot after blinds: 20
+[03:57:49.827] [HAND ] 
+*** HAND END ***
+[03:57:49.827] [HAND ] Winner: DetailBot1
+[03:57:49.827] [CARDS] Final board: []
+[03:57:49.827] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot size: 20
+[03:57:49.827] [HAND ] Final scores: [6, -6]
+[03:57:49.827] [HAND ] 
+--- HAND #31 ---
+[03:57:49.827] [HAND ] Stacks before: [566, 214]
+[03:57:49.827] [HAND ] Button player: 0
+[03:57:49.827] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot after blinds: 20
+[03:57:49.827] [HAND ] 
+*** HAND END ***
+[03:57:49.827] [HAND ] Winner: DetailBot1
+[03:57:49.827] [CARDS] Final board: []
+[03:57:49.827] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot size: 20
+[03:57:49.827] [HAND ] Final scores: [6, -6]
+[03:57:49.827] [HAND ] 
+--- HAND #32 ---
+[03:57:49.827] [HAND ] Stacks before: [572, 208]
+[03:57:49.827] [HAND ] Button player: 0
+[03:57:49.827] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot after blinds: 20
+[03:57:49.827] [HAND ] 
+*** HAND END ***
+[03:57:49.827] [HAND ] Winner: DetailBot1
+[03:57:49.827] [CARDS] Final board: []
+[03:57:49.827] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot size: 20
+[03:57:49.827] [HAND ] Final scores: [6, -6]
+[03:57:49.827] [HAND ] 
+--- HAND #33 ---
+[03:57:49.827] [HAND ] Stacks before: [578, 202]
+[03:57:49.827] [HAND ] Button player: 0
+[03:57:49.827] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot after blinds: 20
+[03:57:49.827] [HAND ] 
+*** HAND END ***
+[03:57:49.827] [HAND ] Winner: DetailBot1
+[03:57:49.827] [CARDS] Final board: []
+[03:57:49.827] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot size: 20
+[03:57:49.827] [HAND ] Final scores: [6, -6]
+[03:57:49.827] [HAND ] 
+--- HAND #34 ---
+[03:57:49.827] [HAND ] Stacks before: [584, 196]
+[03:57:49.827] [HAND ] Button player: 0
+[03:57:49.827] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.827] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.827] [HAND ] Pot after blinds: 20
+[03:57:49.827] [HAND ] 
+*** HAND END ***
+[03:57:49.828] [HAND ] Winner: DetailBot1
+[03:57:49.828] [CARDS] Final board: []
+[03:57:49.828] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot size: 20
+[03:57:49.828] [HAND ] Final scores: [6, -6]
+[03:57:49.828] [HAND ] 
+--- HAND #35 ---
+[03:57:49.828] [HAND ] Stacks before: [590, 190]
+[03:57:49.828] [HAND ] Button player: 0
+[03:57:49.828] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot after blinds: 20
+[03:57:49.828] [HAND ] 
+*** HAND END ***
+[03:57:49.828] [HAND ] Winner: DetailBot1
+[03:57:49.828] [CARDS] Final board: []
+[03:57:49.828] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot size: 20
+[03:57:49.828] [HAND ] Final scores: [6, -6]
+[03:57:49.828] [HAND ] 
+--- HAND #36 ---
+[03:57:49.828] [HAND ] Stacks before: [596, 184]
+[03:57:49.828] [HAND ] Button player: 0
+[03:57:49.828] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot after blinds: 20
+[03:57:49.828] [HAND ] 
+*** HAND END ***
+[03:57:49.828] [HAND ] Winner: DetailBot1
+[03:57:49.828] [CARDS] Final board: []
+[03:57:49.828] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot size: 20
+[03:57:49.828] [HAND ] Final scores: [6, -6]
+[03:57:49.828] [HAND ] 
+--- HAND #37 ---
+[03:57:49.828] [HAND ] Stacks before: [602, 178]
+[03:57:49.828] [HAND ] Button player: 0
+[03:57:49.828] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot after blinds: 20
+[03:57:49.828] [HAND ] 
+*** HAND END ***
+[03:57:49.828] [HAND ] Winner: DetailBot1
+[03:57:49.828] [CARDS] Final board: []
+[03:57:49.828] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot size: 20
+[03:57:49.828] [HAND ] Final scores: [6, -6]
+[03:57:49.828] [HAND ] 
+--- HAND #38 ---
+[03:57:49.828] [HAND ] Stacks before: [608, 172]
+[03:57:49.828] [HAND ] Button player: 0
+[03:57:49.828] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot after blinds: 20
+[03:57:49.828] [HAND ] 
+*** HAND END ***
+[03:57:49.828] [HAND ] Winner: DetailBot1
+[03:57:49.828] [CARDS] Final board: []
+[03:57:49.828] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot size: 20
+[03:57:49.828] [HAND ] Final scores: [6, -6]
+[03:57:49.828] [HAND ] 
+--- HAND #39 ---
+[03:57:49.828] [HAND ] Stacks before: [614, 166]
+[03:57:49.828] [HAND ] Button player: 0
+[03:57:49.828] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot after blinds: 20
+[03:57:49.828] [HAND ] 
+*** HAND END ***
+[03:57:49.828] [HAND ] Winner: DetailBot1
+[03:57:49.828] [CARDS] Final board: []
+[03:57:49.828] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot size: 20
+[03:57:49.828] [HAND ] Final scores: [6, -6]
+[03:57:49.828] [HAND ] 
+--- HAND #40 ---
+[03:57:49.828] [HAND ] Stacks before: [620, 160]
+[03:57:49.828] [HAND ] Button player: 0
+[03:57:49.828] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot after blinds: 20
+[03:57:49.828] [HAND ] 
+*** HAND END ***
+[03:57:49.828] [HAND ] Winner: DetailBot1
+[03:57:49.828] [CARDS] Final board: []
+[03:57:49.828] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot size: 20
+[03:57:49.828] [HAND ] Final scores: [6, -6]
+[03:57:49.828] [HAND ] 
+--- HAND #41 ---
+[03:57:49.828] [HAND ] Stacks before: [626, 154]
+[03:57:49.828] [HAND ] Button player: 0
+[03:57:49.828] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot after blinds: 20
+[03:57:49.828] [HAND ] 
+*** HAND END ***
+[03:57:49.828] [HAND ] Winner: DetailBot1
+[03:57:49.828] [CARDS] Final board: []
+[03:57:49.828] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot size: 20
+[03:57:49.828] [HAND ] Final scores: [6, -6]
+[03:57:49.828] [HAND ] 
+--- HAND #42 ---
+[03:57:49.828] [HAND ] Stacks before: [632, 148]
+[03:57:49.828] [HAND ] Button player: 0
+[03:57:49.828] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot after blinds: 20
+[03:57:49.828] [HAND ] 
+*** HAND END ***
+[03:57:49.828] [HAND ] Winner: DetailBot1
+[03:57:49.828] [CARDS] Final board: []
+[03:57:49.828] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot size: 20
+[03:57:49.828] [HAND ] Final scores: [6, -6]
+[03:57:49.828] [HAND ] 
+--- HAND #43 ---
+[03:57:49.828] [HAND ] Stacks before: [638, 142]
+[03:57:49.828] [HAND ] Button player: 0
+[03:57:49.828] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot after blinds: 20
+[03:57:49.828] [HAND ] 
+*** HAND END ***
+[03:57:49.828] [HAND ] Winner: DetailBot1
+[03:57:49.828] [CARDS] Final board: []
+[03:57:49.828] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot size: 20
+[03:57:49.828] [HAND ] Final scores: [6, -6]
+[03:57:49.828] [HAND ] 
+--- HAND #44 ---
+[03:57:49.828] [HAND ] Stacks before: [644, 136]
+[03:57:49.828] [HAND ] Button player: 0
+[03:57:49.828] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot after blinds: 20
+[03:57:49.828] [HAND ] 
+*** HAND END ***
+[03:57:49.828] [HAND ] Winner: DetailBot1
+[03:57:49.828] [CARDS] Final board: []
+[03:57:49.828] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot size: 20
+[03:57:49.828] [HAND ] Final scores: [6, -6]
+[03:57:49.828] [HAND ] 
+--- HAND #45 ---
+[03:57:49.828] [HAND ] Stacks before: [650, 130]
+[03:57:49.828] [HAND ] Button player: 0
+[03:57:49.828] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot after blinds: 20
+[03:57:49.828] [HAND ] 
+*** HAND END ***
+[03:57:49.828] [HAND ] Winner: DetailBot1
+[03:57:49.828] [CARDS] Final board: []
+[03:57:49.828] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot size: 20
+[03:57:49.828] [HAND ] Final scores: [6, -6]
+[03:57:49.828] [HAND ] 
+--- HAND #46 ---
+[03:57:49.828] [HAND ] Stacks before: [656, 124]
+[03:57:49.828] [HAND ] Button player: 0
+[03:57:49.828] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.828] [HAND ] Pot after blinds: 20
+[03:57:49.828] [HAND ] 
+*** HAND END ***
+[03:57:49.828] [HAND ] Winner: DetailBot1
+[03:57:49.828] [CARDS] Final board: []
+[03:57:49.828] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.828] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot size: 20
+[03:57:49.829] [HAND ] Final scores: [6, -6]
+[03:57:49.829] [HAND ] 
+--- HAND #47 ---
+[03:57:49.829] [HAND ] Stacks before: [662, 118]
+[03:57:49.829] [HAND ] Button player: 0
+[03:57:49.829] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot after blinds: 20
+[03:57:49.829] [HAND ] 
+*** HAND END ***
+[03:57:49.829] [HAND ] Winner: DetailBot1
+[03:57:49.829] [CARDS] Final board: []
+[03:57:49.829] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot size: 20
+[03:57:49.829] [HAND ] Final scores: [6, -6]
+[03:57:49.829] [HAND ] 
+--- HAND #48 ---
+[03:57:49.829] [HAND ] Stacks before: [668, 112]
+[03:57:49.829] [HAND ] Button player: 0
+[03:57:49.829] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot after blinds: 20
+[03:57:49.829] [HAND ] 
+*** HAND END ***
+[03:57:49.829] [HAND ] Winner: DetailBot1
+[03:57:49.829] [CARDS] Final board: []
+[03:57:49.829] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot size: 20
+[03:57:49.829] [HAND ] Final scores: [6, -6]
+[03:57:49.829] [HAND ] 
+--- HAND #49 ---
+[03:57:49.829] [HAND ] Stacks before: [674, 106]
+[03:57:49.829] [HAND ] Button player: 0
+[03:57:49.829] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot after blinds: 20
+[03:57:49.829] [HAND ] 
+*** HAND END ***
+[03:57:49.829] [HAND ] Winner: DetailBot1
+[03:57:49.829] [CARDS] Final board: []
+[03:57:49.829] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot size: 20
+[03:57:49.829] [HAND ] Final scores: [6, -6]
+[03:57:49.829] [HAND ] 
+--- HAND #50 ---
+[03:57:49.829] [HAND ] Stacks before: [680, 100]
+[03:57:49.829] [HAND ] Button player: 0
+[03:57:49.829] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot after blinds: 20
+[03:57:49.829] [HAND ] 
+*** HAND END ***
+[03:57:49.829] [HAND ] Winner: DetailBot1
+[03:57:49.829] [CARDS] Final board: []
+[03:57:49.829] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot size: 20
+[03:57:49.829] [HAND ] Final scores: [6, -6]
+[03:57:49.829] [HAND ] 
+--- HAND #51 ---
+[03:57:49.829] [HAND ] Stacks before: [686, 94]
+[03:57:49.829] [HAND ] Button player: 0
+[03:57:49.829] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot after blinds: 20
+[03:57:49.829] [HAND ] 
+*** HAND END ***
+[03:57:49.829] [HAND ] Winner: DetailBot1
+[03:57:49.829] [CARDS] Final board: []
+[03:57:49.829] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot size: 20
+[03:57:49.829] [HAND ] Final scores: [6, -6]
+[03:57:49.829] [HAND ] 
+--- HAND #52 ---
+[03:57:49.829] [HAND ] Stacks before: [692, 88]
+[03:57:49.829] [HAND ] Button player: 0
+[03:57:49.829] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot after blinds: 20
+[03:57:49.829] [HAND ] 
+*** HAND END ***
+[03:57:49.829] [HAND ] Winner: DetailBot1
+[03:57:49.829] [CARDS] Final board: []
+[03:57:49.829] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot size: 20
+[03:57:49.829] [HAND ] Final scores: [6, -6]
+[03:57:49.829] [HAND ] 
+--- HAND #53 ---
+[03:57:49.829] [HAND ] Stacks before: [698, 82]
+[03:57:49.829] [HAND ] Button player: 0
+[03:57:49.829] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot after blinds: 20
+[03:57:49.829] [HAND ] 
+*** HAND END ***
+[03:57:49.829] [HAND ] Winner: DetailBot1
+[03:57:49.829] [CARDS] Final board: []
+[03:57:49.829] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot size: 20
+[03:57:49.829] [HAND ] Final scores: [6, -6]
+[03:57:49.829] [HAND ] 
+--- HAND #54 ---
+[03:57:49.829] [HAND ] Stacks before: [704, 76]
+[03:57:49.829] [HAND ] Button player: 0
+[03:57:49.829] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot after blinds: 20
+[03:57:49.829] [HAND ] 
+*** HAND END ***
+[03:57:49.829] [HAND ] Winner: DetailBot1
+[03:57:49.829] [CARDS] Final board: []
+[03:57:49.829] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot size: 20
+[03:57:49.829] [HAND ] Final scores: [6, -6]
+[03:57:49.829] [HAND ] 
+--- HAND #55 ---
+[03:57:49.829] [HAND ] Stacks before: [710, 70]
+[03:57:49.829] [HAND ] Button player: 0
+[03:57:49.829] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot after blinds: 20
+[03:57:49.829] [HAND ] 
+*** HAND END ***
+[03:57:49.829] [HAND ] Winner: DetailBot1
+[03:57:49.829] [CARDS] Final board: []
+[03:57:49.829] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot size: 20
+[03:57:49.829] [HAND ] Final scores: [6, -6]
+[03:57:49.829] [HAND ] 
+--- HAND #56 ---
+[03:57:49.829] [HAND ] Stacks before: [716, 64]
+[03:57:49.829] [HAND ] Button player: 0
+[03:57:49.829] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot after blinds: 20
+[03:57:49.829] [HAND ] 
+*** HAND END ***
+[03:57:49.829] [HAND ] Winner: DetailBot1
+[03:57:49.829] [CARDS] Final board: []
+[03:57:49.829] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot size: 20
+[03:57:49.829] [HAND ] Final scores: [6, -6]
+[03:57:49.829] [HAND ] 
+--- HAND #57 ---
+[03:57:49.829] [HAND ] Stacks before: [722, 58]
+[03:57:49.829] [HAND ] Button player: 0
+[03:57:49.829] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot after blinds: 20
+[03:57:49.829] [HAND ] 
+*** HAND END ***
+[03:57:49.829] [HAND ] Winner: DetailBot1
+[03:57:49.829] [CARDS] Final board: []
+[03:57:49.829] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot size: 20
+[03:57:49.829] [HAND ] Final scores: [6, -6]
+[03:57:49.829] [HAND ] 
+--- HAND #58 ---
+[03:57:49.829] [HAND ] Stacks before: [728, 52]
+[03:57:49.829] [HAND ] Button player: 0
+[03:57:49.829] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot after blinds: 20
+[03:57:49.829] [HAND ] 
+*** HAND END ***
+[03:57:49.829] [HAND ] Winner: DetailBot1
+[03:57:49.829] [CARDS] Final board: []
+[03:57:49.829] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot size: 20
+[03:57:49.829] [HAND ] Final scores: [6, -6]
+[03:57:49.829] [HAND ] 
+--- HAND #59 ---
+[03:57:49.829] [HAND ] Stacks before: [734, 46]
+[03:57:49.829] [HAND ] Button player: 0
+[03:57:49.829] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot after blinds: 20
+[03:57:49.829] [HAND ] 
+*** HAND END ***
+[03:57:49.829] [HAND ] Winner: DetailBot1
+[03:57:49.829] [CARDS] Final board: []
+[03:57:49.829] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.829] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.829] [HAND ] Pot size: 20
+[03:57:49.829] [HAND ] Final scores: [6, -6]
+[03:57:49.829] [HAND ] 
+--- HAND #60 ---
+[03:57:49.830] [HAND ] Stacks before: [740, 40]
+[03:57:49.830] [HAND ] Button player: 0
+[03:57:49.830] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.830] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.830] [HAND ] Pot after blinds: 20
+[03:57:49.830] [HAND ] 
+*** HAND END ***
+[03:57:49.830] [HAND ] Winner: DetailBot1
+[03:57:49.830] [CARDS] Final board: []
+[03:57:49.830] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.830] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.830] [HAND ] Pot size: 20
+[03:57:49.830] [HAND ] Final scores: [6, -6]
+[03:57:49.830] [HAND ] 
+--- HAND #61 ---
+[03:57:49.830] [HAND ] Stacks before: [746, 34]
+[03:57:49.830] [HAND ] Button player: 0
+[03:57:49.830] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.830] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.830] [HAND ] Pot after blinds: 20
+[03:57:49.830] [HAND ] 
+*** HAND END ***
+[03:57:49.830] [HAND ] Winner: DetailBot1
+[03:57:49.830] [CARDS] Final board: []
+[03:57:49.830] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.830] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.830] [HAND ] Pot size: 20
+[03:57:49.830] [HAND ] Final scores: [6, -6]
+[03:57:49.830] [HAND ] 
+--- HAND #62 ---
+[03:57:49.830] [HAND ] Stacks before: [752, 28]
+[03:57:49.830] [HAND ] Button player: 0
+[03:57:49.830] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.830] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.830] [HAND ] Pot after blinds: 20
+[03:57:49.830] [HAND ] 
+*** HAND END ***
+[03:57:49.830] [HAND ] Winner: DetailBot1
+[03:57:49.830] [CARDS] Final board: []
+[03:57:49.830] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.830] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.830] [HAND ] Pot size: 20
+[03:57:49.830] [HAND ] Final scores: [6, -6]
+[03:57:49.830] [HAND ] 
+--- HAND #63 ---
+[03:57:49.830] [HAND ] Stacks before: [758, 22]
+[03:57:49.830] [HAND ] Button player: 0
+[03:57:49.830] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.830] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.830] [HAND ] Pot after blinds: 20
+[03:57:49.830] [HAND ] 
+*** HAND END ***
+[03:57:49.830] [HAND ] Winner: DetailBot1
+[03:57:49.830] [CARDS] Final board: []
+[03:57:49.830] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.830] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.830] [HAND ] Pot size: 20
+[03:57:49.830] [HAND ] Final scores: [6, -6]
+[03:57:49.830] [HAND ] 
+--- HAND #64 ---
+[03:57:49.830] [HAND ] Stacks before: [764, 16]
+[03:57:49.830] [HAND ] Button player: 0
+[03:57:49.830] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.830] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.830] [HAND ] Pot after blinds: 20
+[03:57:49.830] [HAND ] 
+*** HAND END ***
+[03:57:49.830] [HAND ] Winner: DetailBot1
+[03:57:49.830] [CARDS] Final board: []
+[03:57:49.830] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.830] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.830] [HAND ] Pot size: 20
+[03:57:49.830] [HAND ] Final scores: [6, -6]
+[03:57:49.830] [HAND ] 
+--- HAND #65 ---
+[03:57:49.830] [HAND ] Stacks before: [770, 10]
+[03:57:49.830] [HAND ] Button player: 0
+[03:57:49.830] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.830] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.830] [HAND ] Pot after blinds: 20
+[03:57:49.830] [HAND ] 
+*** HAND END ***
+[03:57:49.830] [HAND ] Winner: DetailBot1
+[03:57:49.830] [CARDS] Final board: []
+[03:57:49.830] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.830] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.830] [HAND ] Pot size: 20
+[03:57:49.830] [HAND ] Final scores: [6, -6]
+[03:57:49.830] [HAND ] 
+--- HAND #66 ---
+[03:57:49.830] [HAND ] Stacks before: [776, 4]
+[03:57:49.830] [HAND ] Button player: 0
+[03:57:49.830] [CARDS] Player 0 hole cards: ['Q♥', '3♦']
+[03:57:49.830] [CARDS] Player 1 hole cards: ['7♠', '6♦']
+[03:57:49.830] [HAND ] Pot after blinds: 20
+[03:57:49.830] [HAND ] 
+*** HAND END ***
+[03:57:49.830] [HAND ] Winner: DetailBot1
+[03:57:49.830] [CARDS] Final board: []
+[03:57:49.830] [CARDS] Player 0 showed: ['Q♥', '3♦']
+[03:57:49.830] [CARDS] Player 1 showed: ['7♠', '6♦']
+[03:57:49.830] [HAND ] Pot size: 20
+[03:57:49.830] [HAND ] Final scores: [6, -6]
+[03:57:49.830] [MATCH] 
+*** MATCH END ***
+[03:57:49.830] [MATCH] Total hands played: 66
+[03:57:49.830] [MATCH] Match winner: DetailBot1
+[03:57:49.830] [MATCH] Final match scores: [396, -396]
+[03:57:49.830] [ANALYSIS] 
+Analysis complete: 66 hands analyzed
+🧹 Cleanup completed
+
+✅ Analysis complete! Detailed log saved to: detailed_poker_analysis_20250811_035749.txt

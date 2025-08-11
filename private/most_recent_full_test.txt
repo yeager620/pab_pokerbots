@@ -1,0 +1,75 @@
+🧪 Poker Bot Infrastructure Test Script
+==================================================
+🔍 Checking dependencies...
+  ✅ FastAPI
+  ✅ SQLAlchemy
+  ✅ Docker
+  ✅ Uvicorn
+✅ All dependencies available
+
+This will:
+• Create 4 sample bots with different strategies
+• Submit them to the platform
+• Run a complete tournament
+• Verify all results
+• Test the entire workflow end-to-end
+
+⚠️  Note: This test uses Docker containers.
+Make sure Docker is running on your system.
+
+Continue? [y/N]: y (auto-proceeding)
+🚀 Running quick infrastructure test...
+🚀 Setting up test environment...
+📁 Test directory: /var/folders/0g/zz7n585d7tvbph3cwhd8b_qw0000gn/T/pokerbots_test_pte_8yjm
+✅ Database initialized
+
+============================================================
+🧪 RUNNING COMPLETE INTEGRATION TEST
+============================================================
+
+📤 STEP 1: Submitting bots...
+  ✅ AliceBot submitted (ID: 1, Status: active)
+  ✅ BobBot submitted (ID: 2, Status: active)
+  ✅ CharlieBot submitted (ID: 3, Status: active)
+  ✅ DianaBot submitted (ID: 4, Status: active)
+
+🏆 STEP 2: Creating tournament...
+  ✅ Tournament created (ID: 1)
+
+📝 STEP 3: Registering bots...
+  ✅ AliceBot registered
+  ✅ BobBot registered
+  ✅ CharlieBot registered
+  ✅ DianaBot registered
+
+🚀 STEP 4: Starting tournament...
+  ✅ Tournament started: Tournament started with 4 participants
+
+⏳ STEP 5: Monitoring tournament progress...
+  🔄 Tournament status: running (waited 0s)
+  🔄 Tournament status: running (waited 5s)
+  🔄 Tournament status: running (waited 10s)
+  🔄 Tournament status: completed (waited 15s)
+  ✅ Tournament completed!
+
+📊 STEP 6: Checking results...
+  🏆 Tournament standings (4 participants):
+    1. CharlieBot - 1 wins, 0 losses
+    2. DianaBot - 1 wins, 0 losses
+    3. AliceBot - 0 wins, 1 losses
+  ⚔️  Matches: 2 completed out of 2 total
+    CharlieBot vs AliceBot → Winner: CharlieBot
+    BobBot vs DianaBot → Winner: DianaBot
+  📈 Updated leaderboard (top 0):
+  📊 Platform stats: 4 bots, 2 matches
+
+============================================================
+✅ INTEGRATION TEST COMPLETED SUCCESSFULLY!
+============================================================
+
+✅ SUCCESS: Infrastructure is working correctly!
+🎯 Ready for production deployment.
+🧹 Cleanup completed
+
+🎉 Infrastructure test completed successfully!
+🚀 You can now deploy to production with confidence.

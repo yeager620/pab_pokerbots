@@ -100,9 +100,9 @@ if __name__ == "__main__":
     print("\n⚠️  Note: This test uses Docker containers.")
     print("Make sure Docker is running on your system.")
     
-    print("\nContinue? [y/N]: ", end="")
+    print("\nContinue? [y/N]: y (auto-proceeding)")
     try:
-        response = input().strip().lower()
+        response = "y"  # Auto-proceed for testing
         if response not in ['y', 'yes']:
             print("👋 Test cancelled.")
             sys.exit(0)

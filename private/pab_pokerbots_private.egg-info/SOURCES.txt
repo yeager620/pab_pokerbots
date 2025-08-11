@@ -1,11 +1,7 @@
 README.md
 pyproject.toml
 models/__init__.py
-models/analytics.py
-models/bot.py
 models/core.py
-models/database.py
-models/tournament.py
 pab_pokerbots_private.egg-info/PKG-INFO
 pab_pokerbots_private.egg-info/SOURCES.txt
 pab_pokerbots_private.egg-info/dependency_links.txt
