@@ -47,14 +47,19 @@ class PokerGame:
     def __init__(self, seed: Optional[int] = None):
         if seed:
             random.seed(seed)
+        # Track match vs hand completion separately
+        self.is_finished = False  # Match finished (when player runs out of chips)
+        self.hands_played = 0
+        self.match_scores = [0, 0]  # Running match scores
         self.reset()
     
     def reset(self):
-        """Reset for new game."""
+        """Reset for new hand."""
         self.state = GameState()
-        self.is_finished = False
+        self.state.round_num = self.hands_played + 1
+        self.hand_finished = False
         self.winner = None
-        self.final_scores = [0, 0]
+        self.final_scores = [0, 0]  # Hand scores
     
     def get_legal_actions(self) -> List[PokerAction]:
         """Get legal actions for current player."""
@@ -77,7 +82,8 @@ class PokerGame:
         active_player = self.state.button % 2
         
         if action == PokerAction.FOLD:
-            self.is_finished = True
+            # End this hand, but not the match
+            self.hand_finished = True
             self.winner = 1 - active_player
 
             self.final_scores[self.winner] = sum(self.state.pots)
@@ -112,6 +118,24 @@ class PokerGame:
             return True
         
         return True
+    
+    def complete_hand(self):
+        """Complete the current hand and update match scores."""
+        if self.winner is not None:
+            # Update running match scores
+            self.match_scores[0] += self.final_scores[0]
+            self.match_scores[1] += self.final_scores[1]
+            self.hands_played += 1
+            
+            # Check if either player is out of chips (match over)
+            if self.state.stacks[0] <= 0:
+                self.is_finished = True
+                self.match_winner = 1
+            elif self.state.stacks[1] <= 0:
+                self.is_finished = True 
+                self.match_winner = 0
+        
+        return not self.is_finished
     
     def _advance_street(self) -> bool:
         """Advance to next street or end hand."""
@@ -221,47 +245,158 @@ class MatchRunner:
 
             game = PokerGame()
             game_log = []
+            detailed_log = []
             
             hands_played = 0
             max_hands = 100
             
-            while hands_played < max_hands and not game.is_finished:
-
-                active_player = game.state.button % 2
-                bot_id = bot1.id if active_player == 0 else bot2.id
+            # Log initial game state
+            detailed_log.append({
+                "event": "match_start",
+                "bot1_name": bot1.name,
+                "bot2_name": bot2.name,
+                "starting_stacks": [game.STARTING_STACK, game.STARTING_STACK],
+                "max_hands": max_hands
+            })
+            
+            # Main game loop - play multiple hands until match ends
+            while game.hands_played < max_hands and not game.is_finished:
                 
-                legal_actions = game.get_legal_actions()
-                action = await self.bot_runner.get_bot_action(bot_id, game.state, legal_actions)
-                
-
-                game_log.append({
-                    "hand": hands_played,
-                    "player": active_player,
-                    "action": action.value,
-                    "game_state": game.state.__dict__.copy()
+                # Start new hand
+                current_hand = game.hands_played + 1
+                detailed_log.append({
+                    "event": "hand_start",
+                    "hand_number": current_hand,
+                    "stacks_before": game.state.stacks.copy(),
+                    "button_player": game.state.button,
+                    "blinds_posted": {"small_blind": game.SMALL_BLIND, "big_blind": game.BIG_BLIND}
                 })
                 
+                # Play the hand until it's finished
+                while not game.hand_finished:
+                    active_player = game.state.button % 2
+                    bot_id = bot1.id if active_player == 0 else bot2.id
+                    bot_name = bot1.name if active_player == 0 else bot2.name
+                    
+                    # Capture pre-action state
+                    pre_action_state = {
+                        "round_num": game.state.round_num,
+                        "street": game.state.street,
+                        "stacks": game.state.stacks.copy(),
+                        "pots": game.state.pots.copy(),
+                        "active_player": active_player,
+                        "button": game.state.button
+                    }
+                    
+                    legal_actions = game.get_legal_actions()
+                    action = await self.bot_runner.get_bot_action(bot_id, game.state, legal_actions)
+                    
+                    # Calculate action details
+                    continue_cost = 0
+                    if action in [PokerAction.CALL, PokerAction.RAISE]:
+                        continue_cost = game.state.pots[1-active_player] - game.state.pots[active_player]
 
-                continues = game.apply_action(action)
-                if not continues:
-                    hands_played += 1
-                    if hands_played < max_hands:
-                        game.reset()
+                    # Log detailed action
+                    detailed_log.append({
+                        "event": "player_action",
+                        "hand_number": current_hand,
+                        "player": active_player,
+                        "player_name": bot_name,
+                        "action": action.value,
+                        "legal_actions": [a.value for a in legal_actions],
+                        "pre_action_state": pre_action_state,
+                        "continue_cost": continue_cost,
+                        "stack_before": game.state.stacks[active_player]
+                    })
+
+                    # Apply action and capture result
+                    continues = game.apply_action(action)
+                    
+                    # Log post-action state
+                    detailed_log.append({
+                        "event": "action_result", 
+                        "hand_number": current_hand,
+                        "player": active_player,
+                        "player_name": bot_name,
+                        "action": action.value,
+                        "stack_after": game.state.stacks[active_player],
+                        "stack_change": game.state.stacks[active_player] - pre_action_state["stacks"][active_player],
+                        "pots_after": game.state.pots.copy(),
+                        "pot_total": sum(game.state.pots),
+                        "game_continues": continues,
+                        "hand_finished": game.hand_finished
+                    })
+                    
+                    # Basic game log for compatibility
+                    game_log.append({
+                        "hand": current_hand,
+                        "player": active_player,
+                        "action": action.value,
+                        "game_state": game.state.__dict__.copy()
+                    })
+
+                # Hand is finished, log the result
+                winner_name = bot1.name if game.winner == 0 else bot2.name
+                detailed_log.append({
+                    "event": "hand_end",
+                    "hand_number": current_hand,
+                    "winner": game.winner,
+                    "winner_name": winner_name,
+                    "final_stacks": game.state.stacks.copy(),
+                    "final_scores": game.final_scores.copy(),
+                    "pot_won": sum(game.state.pots)
+                })
+                
+                # Complete the hand and check if match should continue
+                match_continues = game.complete_hand()
+                if match_continues:
+                    game.reset()  # Reset for next hand
             
 
-            if game.winner is not None:
-                winner_id = bot1.id if game.winner == 0 else bot2.id
+            # Determine final match winner
+            if game.is_finished and hasattr(game, 'match_winner'):
+                winner_id = bot1.id if game.match_winner == 0 else bot2.id
                 match.winner_id = winner_id
-                match.bot1_score = game.final_scores[0]
-                match.bot2_score = game.final_scores[1]
+                match.bot1_score = game.match_scores[0]
+                match.bot2_score = game.match_scores[1]
+            elif game.match_scores[0] > game.match_scores[1]:
+                match.winner_id = bot1.id
+                match.bot1_score = game.match_scores[0]
+                match.bot2_score = game.match_scores[1]
+            else:
+                match.winner_id = bot2.id
+                match.bot1_score = game.match_scores[0]
+                match.bot2_score = game.match_scores[1]
             
 
             await self._update_ratings(db, match)
             
 
+            # Log final match results
+            final_winner = 0 if match.winner_id == bot1.id else 1
+            detailed_log.append({
+                "event": "match_end",
+                "total_hands": game.hands_played,
+                "winner": final_winner,
+                "winner_name": bot1.name if final_winner == 0 else bot2.name,
+                "final_scores": game.match_scores.copy(),
+                "final_stacks": game.state.stacks.copy()
+            })
+            
             match.status = MatchStatus.COMPLETED
             match.completed_at = datetime.now()
-            match.game_log = {"hands": hands_played, "actions": game_log}
+            match.game_log = {
+                "hands": game.hands_played, 
+                "actions": game_log,
+                "detailed_log": detailed_log,
+                "summary": {
+                    "bot1_name": bot1.name,
+                    "bot2_name": bot2.name,
+                    "winner": bot1.name if final_winner == 0 else bot2.name,
+                    "total_hands": game.hands_played,
+                    "final_scores": game.match_scores.copy()
+                }
+            }
             
             await db.commit()
             

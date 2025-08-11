@@ -1,0 +1,1181 @@
+[03:02:57.141] [INFO ] ====================================================================================================
+[03:02:57.141] [INFO ] 🎪 DETAILED POKER BOT GAMEPLAY ANALYSIS
+[03:02:57.142] [INFO ] ====================================================================================================
+[03:02:57.142] [INFO ] 📝 Detailed log file: detailed_poker_log_20250811_030257.txt
+[03:02:57.142] [INFO ] 🕐 Test started: 2025-08-11T03:02:57.142013
+[03:02:57.142] [INFO ] 
+[03:02:57.142] [INFO ] 🎯 POKER ANALYSIS OBJECTIVES:
+[03:02:57.142] [INFO ]   • Log every player action (fold/call/check/raise)
+[03:02:57.142] [INFO ]   • Track chip stacks before and after each action
+[03:02:57.142] [INFO ]   • Monitor pot sizes and betting rounds
+[03:02:57.142] [INFO ]   • Verify Texas Hold'em rules compliance
+[03:02:57.142] [INFO ]   • Capture complete game state transitions
+[03:02:57.142] [INFO ] 
+[03:02:57.148] [INFO ] ✅ Database and environment initialized
+[03:02:57.161] [INFO ] 
+[03:02:57.161] [INFO ] 🤖 CREATING POKER BOTS...
+[03:02:57.161] [INFO ] ------------------------------------------------------------
+[03:02:57.186] [BOT  ] ✅ ConservativeAlice (Player 0) created with starting rating 1200.0
+[03:02:57.206] [BOT  ] ✅ AggressiveBob (Player 1) created with starting rating 1200.0
+[03:02:57.206] [INFO ] 
+[03:02:57.206] [INFO ] 🏆 STARTING TOURNAMENT...
+[03:02:57.207] [TOUR ] 📝 ConservativeAlice registered in tournament
+[03:02:57.208] [TOUR ] 📝 AggressiveBob registered in tournament
+[03:02:57.209] [TOUR ] 🚀 Tournament started - waiting for matches to complete...
+[03:03:15.793] [INFO ] 
+[03:03:15.793] [MATCH] ================================================================================
+[03:03:15.793] [MATCH] ⚔️  MATCH 1: AggressiveBob vs ConservativeAlice
+[03:03:15.793] [MATCH] ================================================================================
+[03:03:15.793] [MATCH] 🏆 Winner: ConservativeAlice
+[03:03:15.793] [MATCH] 🎲 Total Hands: 29
+[03:03:15.793] [MATCH] 📊 Final Scores: [-20, 20]
+[03:03:15.793] [MATCH] 
+[03:03:15.793] [GAME ] 🎮 MATCH STARTING:
+[03:03:15.793] [GAME ]    Players: AggressiveBob (Player 0) vs ConservativeAlice (Player 1)
+[03:03:15.793] [GAME ]    Starting Stacks: [400, 400]
+[03:03:15.793] [GAME ]    Max Hands: 100
+[03:03:15.793] [GAME ] 
+[03:03:15.793] [HAND ] 🃏 ============================================================
+[03:03:15.793] [HAND ] 🃏 HAND #1
+[03:03:15.793] [HAND ] 🃏 ============================================================
+[03:03:15.793] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.793] [HAND ]    Button Player: 0
+[03:03:15.793] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.793] [HAND ] 
+[03:03:15.793] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.793] [ACTION]    💰 Stack: 399 chips
+[03:03:15.793] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.793] [ACTION]    💸 Cost to Continue: 1 chips
+[03:03:15.793] [ACTION]    ✅ ACTION: C
+[03:03:15.793] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.793] [RESULT]    💰 Stack After: 398 chips
+[03:03:15.793] [RESULT]    📊 Stack Change: -1 chips
+[03:03:15.793] [RESULT]    🏆 Total Pot: 4 chips
+[03:03:15.793] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.793] [RESULT] 
+[03:03:15.793] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.793] [ACTION]    💰 Stack: 398 chips
+[03:03:15.793] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.793] [ACTION]    ✅ ACTION: K
+[03:03:15.793] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.793] [RESULT]    💰 Stack After: 398 chips
+[03:03:15.793] [RESULT]    🏆 Total Pot: 4 chips
+[03:03:15.793] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.793] [RESULT] 
+[03:03:15.793] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.793] [ACTION]    💰 Stack: 398 chips
+[03:03:15.793] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.793] [ACTION]    ✅ ACTION: F
+[03:03:15.793] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.793] [RESULT]    💰 Stack After: 398 chips
+[03:03:15.793] [RESULT]    🏆 Total Pot: 4 chips
+[03:03:15.793] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.793] [RESULT] 
+[03:03:15.793] [HAND ] 🏁 HAND RESULT:
+[03:03:15.793] [HAND ]    🏆 Winner: ConservativeAlice (Player 1)
+[03:03:15.793] [HAND ]    💰 Pot Won: 4 chips
+[03:03:15.793] [HAND ]    📊 Final Stacks: Player 0: 398, Player 1: 398
+[03:03:15.793] [HAND ] 
+[03:03:15.793] [HAND ] 🃏 ============================================================
+[03:03:15.793] [HAND ] 🃏 HAND #2
+[03:03:15.793] [HAND ] 🃏 ============================================================
+[03:03:15.793] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.793] [HAND ]    Button Player: 0
+[03:03:15.793] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.793] [HAND ] 
+[03:03:15.793] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.793] [ACTION]    💰 Stack: 399 chips
+[03:03:15.793] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.793] [ACTION]    💸 Cost to Continue: 1 chips
+[03:03:15.793] [ACTION]    ✅ ACTION: R
+[03:03:15.793] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.793] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.793] [RESULT]    📊 Stack Change: +1 chips
+[03:03:15.793] [RESULT]    🏆 Total Pot: 2 chips
+[03:03:15.793] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.793] [RESULT] 
+[03:03:15.793] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.793] [ACTION]    💰 Stack: 398 chips
+[03:03:15.793] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.793] [ACTION]    ✅ ACTION: R
+[03:03:15.793] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.793] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.793] [RESULT]    📊 Stack Change: +2 chips
+[03:03:15.793] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.793] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.793] [RESULT] 
+[03:03:15.793] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.793] [ACTION]    💰 Stack: 400 chips
+[03:03:15.793] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.793] [ACTION]    ✅ ACTION: R
+[03:03:15.793] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.793] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.793] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.793] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.793] [RESULT] 
+[03:03:15.793] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.793] [ACTION]    💰 Stack: 400 chips
+[03:03:15.793] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.793] [ACTION]    ✅ ACTION: F
+[03:03:15.793] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.793] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.793] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.793] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.793] [RESULT] 
+[03:03:15.793] [HAND ] 🏁 HAND RESULT:
+[03:03:15.793] [HAND ]    🏆 Winner: AggressiveBob (Player 0)
+[03:03:15.793] [HAND ]    💰 Pot Won: 0 chips
+[03:03:15.793] [HAND ]    📊 Final Stacks: Player 0: 400, Player 1: 400
+[03:03:15.793] [HAND ] 
+[03:03:15.793] [HAND ] 🃏 ============================================================
+[03:03:15.793] [HAND ] 🃏 HAND #3
+[03:03:15.793] [HAND ] 🃏 ============================================================
+[03:03:15.793] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.793] [HAND ]    Button Player: 0
+[03:03:15.793] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.793] [HAND ] 
+[03:03:15.793] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.793] [ACTION]    💰 Stack: 399 chips
+[03:03:15.793] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.793] [ACTION]    💸 Cost to Continue: 1 chips
+[03:03:15.793] [ACTION]    ✅ ACTION: R
+[03:03:15.793] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.793] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.793] [RESULT]    📊 Stack Change: +1 chips
+[03:03:15.793] [RESULT]    🏆 Total Pot: 2 chips
+[03:03:15.793] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.793] [RESULT] 
+[03:03:15.793] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.793] [ACTION]    💰 Stack: 398 chips
+[03:03:15.793] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.793] [ACTION]    ✅ ACTION: F
+[03:03:15.793] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.793] [RESULT]    💰 Stack After: 398 chips
+[03:03:15.793] [RESULT]    🏆 Total Pot: 2 chips
+[03:03:15.793] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.793] [RESULT] 
+[03:03:15.793] [HAND ] 🏁 HAND RESULT:
+[03:03:15.793] [HAND ]    🏆 Winner: AggressiveBob (Player 0)
+[03:03:15.793] [HAND ]    💰 Pot Won: 2 chips
+[03:03:15.793] [HAND ]    📊 Final Stacks: Player 0: 400, Player 1: 398
+[03:03:15.793] [HAND ] 
+[03:03:15.793] [HAND ] 🃏 ============================================================
+[03:03:15.793] [HAND ] 🃏 HAND #4
+[03:03:15.793] [HAND ] 🃏 ============================================================
+[03:03:15.793] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.793] [HAND ]    Button Player: 0
+[03:03:15.793] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.793] [HAND ] 
+[03:03:15.793] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.793] [ACTION]    💰 Stack: 399 chips
+[03:03:15.793] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.793] [ACTION]    💸 Cost to Continue: 1 chips
+[03:03:15.793] [ACTION]    ✅ ACTION: C
+[03:03:15.793] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.793] [RESULT]    💰 Stack After: 398 chips
+[03:03:15.793] [RESULT]    📊 Stack Change: -1 chips
+[03:03:15.793] [RESULT]    🏆 Total Pot: 4 chips
+[03:03:15.793] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.793] [RESULT] 
+[03:03:15.793] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.793] [ACTION]    💰 Stack: 398 chips
+[03:03:15.793] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.793] [ACTION]    ✅ ACTION: K
+[03:03:15.793] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.793] [RESULT]    💰 Stack After: 398 chips
+[03:03:15.793] [RESULT]    🏆 Total Pot: 4 chips
+[03:03:15.793] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.793] [RESULT] 
+[03:03:15.793] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.793] [ACTION]    💰 Stack: 398 chips
+[03:03:15.793] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.793] [ACTION]    ✅ ACTION: R
+[03:03:15.793] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.793] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.793] [RESULT]    📊 Stack Change: +2 chips
+[03:03:15.793] [RESULT]    🏆 Total Pot: 2 chips
+[03:03:15.793] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.793] [RESULT] 
+[03:03:15.793] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.793] [ACTION]    💰 Stack: 398 chips
+[03:03:15.793] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.793] [ACTION]    ✅ ACTION: F
+[03:03:15.793] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.793] [RESULT]    💰 Stack After: 398 chips
+[03:03:15.793] [RESULT]    🏆 Total Pot: 2 chips
+[03:03:15.793] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.793] [RESULT] 
+[03:03:15.793] [HAND ] 🏁 HAND RESULT:
+[03:03:15.793] [HAND ]    🏆 Winner: AggressiveBob (Player 0)
+[03:03:15.793] [HAND ]    💰 Pot Won: 2 chips
+[03:03:15.793] [HAND ]    📊 Final Stacks: Player 0: 400, Player 1: 398
+[03:03:15.793] [HAND ] 
+[03:03:15.793] [HAND ] 🃏 ============================================================
+[03:03:15.793] [HAND ] 🃏 HAND #5
+[03:03:15.793] [HAND ] 🃏 ============================================================
+[03:03:15.793] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.793] [HAND ]    Button Player: 0
+[03:03:15.793] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.793] [HAND ] 
+[03:03:15.793] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.793] [ACTION]    💰 Stack: 399 chips
+[03:03:15.793] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.793] [ACTION]    ✅ ACTION: F
+[03:03:15.793] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.793] [RESULT]    💰 Stack After: 399 chips
+[03:03:15.793] [RESULT]    🏆 Total Pot: 3 chips
+[03:03:15.793] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.793] [RESULT] 
+[03:03:15.793] [HAND ] 🏁 HAND RESULT:
+[03:03:15.793] [HAND ]    🏆 Winner: ConservativeAlice (Player 1)
+[03:03:15.794] [HAND ]    💰 Pot Won: 3 chips
+[03:03:15.794] [HAND ]    📊 Final Stacks: Player 0: 399, Player 1: 398
+[03:03:15.794] [HAND ] 
+[03:03:15.794] [HAND ] 🃏 ============================================================
+[03:03:15.794] [HAND ] 🃏 HAND #6
+[03:03:15.794] [HAND ] 🃏 ============================================================
+[03:03:15.794] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.794] [HAND ]    Button Player: 0
+[03:03:15.794] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.794] [HAND ] 
+[03:03:15.794] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.794] [ACTION]    💰 Stack: 399 chips
+[03:03:15.794] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.794] [ACTION]    ✅ ACTION: F
+[03:03:15.794] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.794] [RESULT]    💰 Stack After: 399 chips
+[03:03:15.794] [RESULT]    🏆 Total Pot: 3 chips
+[03:03:15.794] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.794] [RESULT] 
+[03:03:15.794] [HAND ] 🏁 HAND RESULT:
+[03:03:15.794] [HAND ]    🏆 Winner: ConservativeAlice (Player 1)
+[03:03:15.794] [HAND ]    💰 Pot Won: 3 chips
+[03:03:15.794] [HAND ]    📊 Final Stacks: Player 0: 399, Player 1: 398
+[03:03:15.794] [HAND ] 
+[03:03:15.794] [HAND ] 🃏 ============================================================
+[03:03:15.794] [HAND ] 🃏 HAND #7
+[03:03:15.794] [HAND ] 🃏 ============================================================
+[03:03:15.794] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.794] [HAND ]    Button Player: 0
+[03:03:15.794] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.794] [HAND ] 
+[03:03:15.794] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.794] [ACTION]    💰 Stack: 399 chips
+[03:03:15.794] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.794] [ACTION]    ✅ ACTION: F
+[03:03:15.794] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.794] [RESULT]    💰 Stack After: 399 chips
+[03:03:15.794] [RESULT]    🏆 Total Pot: 3 chips
+[03:03:15.794] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.794] [RESULT] 
+[03:03:15.794] [HAND ] 🏁 HAND RESULT:
+[03:03:15.794] [HAND ]    🏆 Winner: ConservativeAlice (Player 1)
+[03:03:15.794] [HAND ]    💰 Pot Won: 3 chips
+[03:03:15.794] [HAND ]    📊 Final Stacks: Player 0: 399, Player 1: 398
+[03:03:15.794] [HAND ] 
+[03:03:15.794] [HAND ] 🃏 ============================================================
+[03:03:15.794] [HAND ] 🃏 HAND #8
+[03:03:15.794] [HAND ] 🃏 ============================================================
+[03:03:15.794] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.794] [HAND ]    Button Player: 0
+[03:03:15.794] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.794] [HAND ] 
+[03:03:15.794] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.794] [ACTION]    💰 Stack: 399 chips
+[03:03:15.794] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.794] [ACTION]    💸 Cost to Continue: 1 chips
+[03:03:15.794] [ACTION]    ✅ ACTION: C
+[03:03:15.794] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.794] [RESULT]    💰 Stack After: 398 chips
+[03:03:15.794] [RESULT]    📊 Stack Change: -1 chips
+[03:03:15.794] [RESULT]    🏆 Total Pot: 4 chips
+[03:03:15.794] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.794] [RESULT] 
+[03:03:15.794] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.794] [ACTION]    💰 Stack: 398 chips
+[03:03:15.794] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.794] [ACTION]    ✅ ACTION: K
+[03:03:15.794] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.794] [RESULT]    💰 Stack After: 398 chips
+[03:03:15.794] [RESULT]    🏆 Total Pot: 4 chips
+[03:03:15.794] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.794] [RESULT] 
+[03:03:15.794] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.794] [ACTION]    💰 Stack: 398 chips
+[03:03:15.794] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.794] [ACTION]    ✅ ACTION: R
+[03:03:15.794] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.794] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.794] [RESULT]    📊 Stack Change: +2 chips
+[03:03:15.794] [RESULT]    🏆 Total Pot: 2 chips
+[03:03:15.794] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.794] [RESULT] 
+[03:03:15.794] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.794] [ACTION]    💰 Stack: 398 chips
+[03:03:15.794] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.794] [ACTION]    ✅ ACTION: R
+[03:03:15.794] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.794] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.794] [RESULT]    📊 Stack Change: +2 chips
+[03:03:15.794] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.794] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.794] [RESULT] 
+[03:03:15.794] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.794] [ACTION]    💰 Stack: 400 chips
+[03:03:15.794] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.794] [ACTION]    ✅ ACTION: K
+[03:03:15.794] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.794] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.794] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.794] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.794] [RESULT] 
+[03:03:15.794] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.794] [ACTION]    💰 Stack: 400 chips
+[03:03:15.794] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.794] [ACTION]    ✅ ACTION: R
+[03:03:15.794] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.794] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.794] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.794] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.794] [RESULT] 
+[03:03:15.794] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.794] [ACTION]    💰 Stack: 400 chips
+[03:03:15.794] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.794] [ACTION]    ✅ ACTION: K
+[03:03:15.794] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.794] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.794] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.794] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.794] [RESULT] 
+[03:03:15.794] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.794] [ACTION]    💰 Stack: 400 chips
+[03:03:15.794] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.794] [ACTION]    ✅ ACTION: F
+[03:03:15.794] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.794] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.794] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.794] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.794] [RESULT] 
+[03:03:15.794] [HAND ] 🏁 HAND RESULT:
+[03:03:15.794] [HAND ]    🏆 Winner: AggressiveBob (Player 0)
+[03:03:15.794] [HAND ]    💰 Pot Won: 0 chips
+[03:03:15.794] [HAND ]    📊 Final Stacks: Player 0: 400, Player 1: 400
+[03:03:15.794] [HAND ] 
+[03:03:15.794] [HAND ] 🃏 ============================================================
+[03:03:15.794] [HAND ] 🃏 HAND #9
+[03:03:15.794] [HAND ] 🃏 ============================================================
+[03:03:15.794] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.794] [HAND ]    Button Player: 0
+[03:03:15.794] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.794] [HAND ] 
+[03:03:15.794] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.794] [ACTION]    💰 Stack: 399 chips
+[03:03:15.794] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.794] [ACTION]    ✅ ACTION: F
+[03:03:15.794] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.794] [RESULT]    💰 Stack After: 399 chips
+[03:03:15.794] [RESULT]    🏆 Total Pot: 3 chips
+[03:03:15.794] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.794] [RESULT] 
+[03:03:15.794] [HAND ] 🏁 HAND RESULT:
+[03:03:15.794] [HAND ]    🏆 Winner: ConservativeAlice (Player 1)
+[03:03:15.794] [HAND ]    💰 Pot Won: 3 chips
+[03:03:15.794] [HAND ]    📊 Final Stacks: Player 0: 399, Player 1: 398
+[03:03:15.794] [HAND ] 
+[03:03:15.794] [HAND ] 🃏 ============================================================
+[03:03:15.794] [HAND ] 🃏 HAND #10
+[03:03:15.794] [HAND ] 🃏 ============================================================
+[03:03:15.794] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.794] [HAND ]    Button Player: 0
+[03:03:15.794] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.794] [HAND ] 
+[03:03:15.794] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.794] [ACTION]    💰 Stack: 399 chips
+[03:03:15.794] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.794] [ACTION]    💸 Cost to Continue: 1 chips
+[03:03:15.794] [ACTION]    ✅ ACTION: R
+[03:03:15.794] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.794] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.794] [RESULT]    📊 Stack Change: +1 chips
+[03:03:15.794] [RESULT]    🏆 Total Pot: 2 chips
+[03:03:15.794] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.794] [RESULT] 
+[03:03:15.794] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.794] [ACTION]    💰 Stack: 398 chips
+[03:03:15.794] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.794] [ACTION]    ✅ ACTION: F
+[03:03:15.794] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.794] [RESULT]    💰 Stack After: 398 chips
+[03:03:15.794] [RESULT]    🏆 Total Pot: 2 chips
+[03:03:15.794] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.794] [RESULT] 
+[03:03:15.794] [HAND ] 🏁 HAND RESULT:
+[03:03:15.794] [HAND ]    🏆 Winner: AggressiveBob (Player 0)
+[03:03:15.794] [HAND ]    💰 Pot Won: 2 chips
+[03:03:15.794] [HAND ]    📊 Final Stacks: Player 0: 400, Player 1: 398
+[03:03:15.794] [HAND ] 
+[03:03:15.794] [HAND ] 🃏 ============================================================
+[03:03:15.794] [HAND ] 🃏 HAND #11
+[03:03:15.794] [HAND ] 🃏 ============================================================
+[03:03:15.794] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.794] [HAND ]    Button Player: 0
+[03:03:15.794] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.794] [HAND ] 
+[03:03:15.794] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.794] [ACTION]    💰 Stack: 399 chips
+[03:03:15.794] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.794] [ACTION]    💸 Cost to Continue: 1 chips
+[03:03:15.794] [ACTION]    ✅ ACTION: R
+[03:03:15.794] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.794] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.794] [RESULT]    📊 Stack Change: +1 chips
+[03:03:15.794] [RESULT]    🏆 Total Pot: 2 chips
+[03:03:15.794] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.794] [RESULT] 
+[03:03:15.794] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.794] [ACTION]    💰 Stack: 398 chips
+[03:03:15.794] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.794] [ACTION]    ✅ ACTION: R
+[03:03:15.794] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.794] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.794] [RESULT]    📊 Stack Change: +2 chips
+[03:03:15.794] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.794] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.794] [RESULT] 
+[03:03:15.794] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.794] [ACTION]    💰 Stack: 400 chips
+[03:03:15.794] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.794] [ACTION]    ✅ ACTION: K
+[03:03:15.794] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.794] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.794] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.794] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.794] [RESULT] 
+[03:03:15.794] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.794] [ACTION]    💰 Stack: 400 chips
+[03:03:15.794] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.794] [ACTION]    ✅ ACTION: F
+[03:03:15.794] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.794] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.794] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.794] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.794] [RESULT] 
+[03:03:15.794] [HAND ] 🏁 HAND RESULT:
+[03:03:15.794] [HAND ]    🏆 Winner: AggressiveBob (Player 0)
+[03:03:15.794] [HAND ]    💰 Pot Won: 0 chips
+[03:03:15.794] [HAND ]    📊 Final Stacks: Player 0: 400, Player 1: 400
+[03:03:15.794] [HAND ] 
+[03:03:15.794] [HAND ] 🃏 ============================================================
+[03:03:15.794] [HAND ] 🃏 HAND #12
+[03:03:15.794] [HAND ] 🃏 ============================================================
+[03:03:15.794] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.794] [HAND ]    Button Player: 0
+[03:03:15.794] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.794] [HAND ] 
+[03:03:15.794] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.794] [ACTION]    💰 Stack: 399 chips
+[03:03:15.794] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.794] [ACTION]    💸 Cost to Continue: 1 chips
+[03:03:15.794] [ACTION]    ✅ ACTION: C
+[03:03:15.794] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.794] [RESULT]    💰 Stack After: 398 chips
+[03:03:15.794] [RESULT]    📊 Stack Change: -1 chips
+[03:03:15.794] [RESULT]    🏆 Total Pot: 4 chips
+[03:03:15.794] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.794] [RESULT] 
+[03:03:15.794] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.794] [ACTION]    💰 Stack: 398 chips
+[03:03:15.794] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.794] [ACTION]    ✅ ACTION: F
+[03:03:15.794] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.794] [RESULT]    💰 Stack After: 398 chips
+[03:03:15.794] [RESULT]    🏆 Total Pot: 4 chips
+[03:03:15.794] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.794] [RESULT] 
+[03:03:15.794] [HAND ] 🏁 HAND RESULT:
+[03:03:15.794] [HAND ]    🏆 Winner: AggressiveBob (Player 0)
+[03:03:15.794] [HAND ]    💰 Pot Won: 4 chips
+[03:03:15.794] [HAND ]    📊 Final Stacks: Player 0: 398, Player 1: 398
+[03:03:15.794] [HAND ] 
+[03:03:15.794] [HAND ] 🃏 ============================================================
+[03:03:15.794] [HAND ] 🃏 HAND #13
+[03:03:15.794] [HAND ] 🃏 ============================================================
+[03:03:15.794] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.794] [HAND ]    Button Player: 0
+[03:03:15.794] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.794] [HAND ] 
+[03:03:15.794] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.794] [ACTION]    💰 Stack: 399 chips
+[03:03:15.794] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.794] [ACTION]    💸 Cost to Continue: 1 chips
+[03:03:15.794] [ACTION]    ✅ ACTION: R
+[03:03:15.794] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.794] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.794] [RESULT]    📊 Stack Change: +1 chips
+[03:03:15.794] [RESULT]    🏆 Total Pot: 2 chips
+[03:03:15.794] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.794] [RESULT] 
+[03:03:15.795] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.795] [ACTION]    💰 Stack: 398 chips
+[03:03:15.795] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.795] [ACTION]    ✅ ACTION: C
+[03:03:15.795] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.795] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.795] [RESULT]    📊 Stack Change: +2 chips
+[03:03:15.795] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.795] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.795] [RESULT] 
+[03:03:15.795] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.795] [ACTION]    💰 Stack: 400 chips
+[03:03:15.795] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.795] [ACTION]    ✅ ACTION: F
+[03:03:15.795] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.795] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.795] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.795] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.795] [RESULT] 
+[03:03:15.795] [HAND ] 🏁 HAND RESULT:
+[03:03:15.795] [HAND ]    🏆 Winner: ConservativeAlice (Player 1)
+[03:03:15.795] [HAND ]    💰 Pot Won: 0 chips
+[03:03:15.795] [HAND ]    📊 Final Stacks: Player 0: 400, Player 1: 400
+[03:03:15.795] [HAND ] 
+[03:03:15.795] [HAND ] 🃏 ============================================================
+[03:03:15.795] [HAND ] 🃏 HAND #14
+[03:03:15.795] [HAND ] 🃏 ============================================================
+[03:03:15.795] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.795] [HAND ]    Button Player: 0
+[03:03:15.795] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.795] [HAND ] 
+[03:03:15.795] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.795] [ACTION]    💰 Stack: 399 chips
+[03:03:15.795] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.795] [ACTION]    ✅ ACTION: F
+[03:03:15.795] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.795] [RESULT]    💰 Stack After: 399 chips
+[03:03:15.795] [RESULT]    🏆 Total Pot: 3 chips
+[03:03:15.795] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.795] [RESULT] 
+[03:03:15.795] [HAND ] 🏁 HAND RESULT:
+[03:03:15.795] [HAND ]    🏆 Winner: ConservativeAlice (Player 1)
+[03:03:15.795] [HAND ]    💰 Pot Won: 3 chips
+[03:03:15.795] [HAND ]    📊 Final Stacks: Player 0: 399, Player 1: 398
+[03:03:15.795] [HAND ] 
+[03:03:15.795] [HAND ] 🃏 ============================================================
+[03:03:15.795] [HAND ] 🃏 HAND #15
+[03:03:15.795] [HAND ] 🃏 ============================================================
+[03:03:15.795] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.795] [HAND ]    Button Player: 0
+[03:03:15.795] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.795] [HAND ] 
+[03:03:15.795] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.795] [ACTION]    💰 Stack: 399 chips
+[03:03:15.795] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.795] [ACTION]    ✅ ACTION: F
+[03:03:15.795] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.795] [RESULT]    💰 Stack After: 399 chips
+[03:03:15.795] [RESULT]    🏆 Total Pot: 3 chips
+[03:03:15.795] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.795] [RESULT] 
+[03:03:15.795] [HAND ] 🏁 HAND RESULT:
+[03:03:15.795] [HAND ]    🏆 Winner: ConservativeAlice (Player 1)
+[03:03:15.795] [HAND ]    💰 Pot Won: 3 chips
+[03:03:15.795] [HAND ]    📊 Final Stacks: Player 0: 399, Player 1: 398
+[03:03:15.795] [HAND ] 
+[03:03:15.795] [HAND ] 🃏 ============================================================
+[03:03:15.795] [HAND ] 🃏 HAND #16
+[03:03:15.795] [HAND ] 🃏 ============================================================
+[03:03:15.795] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.795] [HAND ]    Button Player: 0
+[03:03:15.795] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.795] [HAND ] 
+[03:03:15.795] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.795] [ACTION]    💰 Stack: 399 chips
+[03:03:15.795] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.795] [ACTION]    ✅ ACTION: F
+[03:03:15.795] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.795] [RESULT]    💰 Stack After: 399 chips
+[03:03:15.795] [RESULT]    🏆 Total Pot: 3 chips
+[03:03:15.795] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.795] [RESULT] 
+[03:03:15.795] [HAND ] 🏁 HAND RESULT:
+[03:03:15.795] [HAND ]    🏆 Winner: ConservativeAlice (Player 1)
+[03:03:15.795] [HAND ]    💰 Pot Won: 3 chips
+[03:03:15.795] [HAND ]    📊 Final Stacks: Player 0: 399, Player 1: 398
+[03:03:15.795] [HAND ] 
+[03:03:15.795] [HAND ] 🃏 ============================================================
+[03:03:15.795] [HAND ] 🃏 HAND #17
+[03:03:15.795] [HAND ] 🃏 ============================================================
+[03:03:15.795] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.795] [HAND ]    Button Player: 0
+[03:03:15.795] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.795] [HAND ] 
+[03:03:15.795] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.795] [ACTION]    💰 Stack: 399 chips
+[03:03:15.795] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.795] [ACTION]    ✅ ACTION: F
+[03:03:15.795] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.795] [RESULT]    💰 Stack After: 399 chips
+[03:03:15.795] [RESULT]    🏆 Total Pot: 3 chips
+[03:03:15.795] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.795] [RESULT] 
+[03:03:15.795] [HAND ] 🏁 HAND RESULT:
+[03:03:15.795] [HAND ]    🏆 Winner: ConservativeAlice (Player 1)
+[03:03:15.795] [HAND ]    💰 Pot Won: 3 chips
+[03:03:15.795] [HAND ]    📊 Final Stacks: Player 0: 399, Player 1: 398
+[03:03:15.795] [HAND ] 
+[03:03:15.795] [HAND ] 🃏 ============================================================
+[03:03:15.795] [HAND ] 🃏 HAND #18
+[03:03:15.795] [HAND ] 🃏 ============================================================
+[03:03:15.795] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.795] [HAND ]    Button Player: 0
+[03:03:15.795] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.795] [HAND ] 
+[03:03:15.795] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.795] [ACTION]    💰 Stack: 399 chips
+[03:03:15.795] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.795] [ACTION]    ✅ ACTION: F
+[03:03:15.795] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.795] [RESULT]    💰 Stack After: 399 chips
+[03:03:15.795] [RESULT]    🏆 Total Pot: 3 chips
+[03:03:15.795] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.795] [RESULT] 
+[03:03:15.795] [HAND ] 🏁 HAND RESULT:
+[03:03:15.795] [HAND ]    🏆 Winner: ConservativeAlice (Player 1)
+[03:03:15.795] [HAND ]    💰 Pot Won: 3 chips
+[03:03:15.795] [HAND ]    📊 Final Stacks: Player 0: 399, Player 1: 398
+[03:03:15.795] [HAND ] 
+[03:03:15.795] [HAND ] 🃏 ============================================================
+[03:03:15.795] [HAND ] 🃏 HAND #19
+[03:03:15.795] [HAND ] 🃏 ============================================================
+[03:03:15.795] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.795] [HAND ]    Button Player: 0
+[03:03:15.795] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.795] [HAND ] 
+[03:03:15.795] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.795] [ACTION]    💰 Stack: 399 chips
+[03:03:15.795] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.795] [ACTION]    💸 Cost to Continue: 1 chips
+[03:03:15.795] [ACTION]    ✅ ACTION: C
+[03:03:15.795] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.795] [RESULT]    💰 Stack After: 398 chips
+[03:03:15.795] [RESULT]    📊 Stack Change: -1 chips
+[03:03:15.795] [RESULT]    🏆 Total Pot: 4 chips
+[03:03:15.795] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.795] [RESULT] 
+[03:03:15.795] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.795] [ACTION]    💰 Stack: 398 chips
+[03:03:15.795] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.795] [ACTION]    ✅ ACTION: K
+[03:03:15.795] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.795] [RESULT]    💰 Stack After: 398 chips
+[03:03:15.795] [RESULT]    🏆 Total Pot: 4 chips
+[03:03:15.795] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.795] [RESULT] 
+[03:03:15.795] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.795] [ACTION]    💰 Stack: 398 chips
+[03:03:15.795] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.795] [ACTION]    ✅ ACTION: K
+[03:03:15.795] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.795] [RESULT]    💰 Stack After: 398 chips
+[03:03:15.795] [RESULT]    🏆 Total Pot: 4 chips
+[03:03:15.795] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.795] [RESULT] 
+[03:03:15.795] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.795] [ACTION]    💰 Stack: 398 chips
+[03:03:15.795] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.795] [ACTION]    ✅ ACTION: F
+[03:03:15.795] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.795] [RESULT]    💰 Stack After: 398 chips
+[03:03:15.795] [RESULT]    🏆 Total Pot: 4 chips
+[03:03:15.795] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.795] [RESULT] 
+[03:03:15.795] [HAND ] 🏁 HAND RESULT:
+[03:03:15.795] [HAND ]    🏆 Winner: AggressiveBob (Player 0)
+[03:03:15.795] [HAND ]    💰 Pot Won: 4 chips
+[03:03:15.795] [HAND ]    📊 Final Stacks: Player 0: 398, Player 1: 398
+[03:03:15.795] [HAND ] 
+[03:03:15.795] [HAND ] 🃏 ============================================================
+[03:03:15.795] [HAND ] 🃏 HAND #20
+[03:03:15.795] [HAND ] 🃏 ============================================================
+[03:03:15.795] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.795] [HAND ]    Button Player: 0
+[03:03:15.795] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.795] [HAND ] 
+[03:03:15.795] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.795] [ACTION]    💰 Stack: 399 chips
+[03:03:15.795] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.795] [ACTION]    💸 Cost to Continue: 1 chips
+[03:03:15.795] [ACTION]    ✅ ACTION: R
+[03:03:15.795] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.795] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.795] [RESULT]    📊 Stack Change: +1 chips
+[03:03:15.795] [RESULT]    🏆 Total Pot: 2 chips
+[03:03:15.795] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.795] [RESULT] 
+[03:03:15.795] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.795] [ACTION]    💰 Stack: 398 chips
+[03:03:15.795] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.795] [ACTION]    ✅ ACTION: F
+[03:03:15.795] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.795] [RESULT]    💰 Stack After: 398 chips
+[03:03:15.795] [RESULT]    🏆 Total Pot: 2 chips
+[03:03:15.795] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.795] [RESULT] 
+[03:03:15.795] [HAND ] 🏁 HAND RESULT:
+[03:03:15.795] [HAND ]    🏆 Winner: AggressiveBob (Player 0)
+[03:03:15.795] [HAND ]    💰 Pot Won: 2 chips
+[03:03:15.795] [HAND ]    📊 Final Stacks: Player 0: 400, Player 1: 398
+[03:03:15.795] [HAND ] 
+[03:03:15.795] [HAND ] 🃏 ============================================================
+[03:03:15.795] [HAND ] 🃏 HAND #21
+[03:03:15.795] [HAND ] 🃏 ============================================================
+[03:03:15.795] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.795] [HAND ]    Button Player: 0
+[03:03:15.795] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.795] [HAND ] 
+[03:03:15.795] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.795] [ACTION]    💰 Stack: 399 chips
+[03:03:15.795] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.795] [ACTION]    ✅ ACTION: F
+[03:03:15.795] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.795] [RESULT]    💰 Stack After: 399 chips
+[03:03:15.795] [RESULT]    🏆 Total Pot: 3 chips
+[03:03:15.795] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.795] [RESULT] 
+[03:03:15.795] [HAND ] 🏁 HAND RESULT:
+[03:03:15.795] [HAND ]    🏆 Winner: ConservativeAlice (Player 1)
+[03:03:15.795] [HAND ]    💰 Pot Won: 3 chips
+[03:03:15.795] [HAND ]    📊 Final Stacks: Player 0: 399, Player 1: 398
+[03:03:15.795] [HAND ] 
+[03:03:15.795] [HAND ] 🃏 ============================================================
+[03:03:15.795] [HAND ] 🃏 HAND #22
+[03:03:15.795] [HAND ] 🃏 ============================================================
+[03:03:15.795] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.795] [HAND ]    Button Player: 0
+[03:03:15.795] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.795] [HAND ] 
+[03:03:15.795] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.795] [ACTION]    💰 Stack: 399 chips
+[03:03:15.795] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.795] [ACTION]    💸 Cost to Continue: 1 chips
+[03:03:15.795] [ACTION]    ✅ ACTION: R
+[03:03:15.795] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.795] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.795] [RESULT]    📊 Stack Change: +1 chips
+[03:03:15.795] [RESULT]    🏆 Total Pot: 2 chips
+[03:03:15.795] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.795] [RESULT] 
+[03:03:15.795] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.795] [ACTION]    💰 Stack: 398 chips
+[03:03:15.795] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.795] [ACTION]    ✅ ACTION: R
+[03:03:15.795] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.795] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.795] [RESULT]    📊 Stack Change: +2 chips
+[03:03:15.795] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.795] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.795] [RESULT] 
+[03:03:15.795] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.795] [ACTION]    💰 Stack: 400 chips
+[03:03:15.795] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.795] [ACTION]    ✅ ACTION: F
+[03:03:15.795] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.795] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.795] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.795] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.795] [RESULT] 
+[03:03:15.795] [HAND ] 🏁 HAND RESULT:
+[03:03:15.795] [HAND ]    🏆 Winner: ConservativeAlice (Player 1)
+[03:03:15.795] [HAND ]    💰 Pot Won: 0 chips
+[03:03:15.795] [HAND ]    📊 Final Stacks: Player 0: 400, Player 1: 400
+[03:03:15.795] [HAND ] 
+[03:03:15.795] [HAND ] 🃏 ============================================================
+[03:03:15.795] [HAND ] 🃏 HAND #23
+[03:03:15.796] [HAND ] 🃏 ============================================================
+[03:03:15.796] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.796] [HAND ]    Button Player: 0
+[03:03:15.796] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.796] [HAND ] 
+[03:03:15.796] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.796] [ACTION]    💰 Stack: 399 chips
+[03:03:15.796] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.796] [ACTION]    ✅ ACTION: F
+[03:03:15.796] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.796] [RESULT]    💰 Stack After: 399 chips
+[03:03:15.796] [RESULT]    🏆 Total Pot: 3 chips
+[03:03:15.796] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.796] [RESULT] 
+[03:03:15.796] [HAND ] 🏁 HAND RESULT:
+[03:03:15.796] [HAND ]    🏆 Winner: ConservativeAlice (Player 1)
+[03:03:15.796] [HAND ]    💰 Pot Won: 3 chips
+[03:03:15.796] [HAND ]    📊 Final Stacks: Player 0: 399, Player 1: 398
+[03:03:15.796] [HAND ] 
+[03:03:15.796] [HAND ] 🃏 ============================================================
+[03:03:15.796] [HAND ] 🃏 HAND #24
+[03:03:15.796] [HAND ] 🃏 ============================================================
+[03:03:15.796] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.796] [HAND ]    Button Player: 0
+[03:03:15.796] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.796] [HAND ] 
+[03:03:15.796] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.796] [ACTION]    💰 Stack: 399 chips
+[03:03:15.796] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.796] [ACTION]    💸 Cost to Continue: 1 chips
+[03:03:15.796] [ACTION]    ✅ ACTION: R
+[03:03:15.796] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.796] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.796] [RESULT]    📊 Stack Change: +1 chips
+[03:03:15.796] [RESULT]    🏆 Total Pot: 2 chips
+[03:03:15.796] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.796] [RESULT] 
+[03:03:15.796] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.796] [ACTION]    💰 Stack: 398 chips
+[03:03:15.796] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.796] [ACTION]    ✅ ACTION: F
+[03:03:15.796] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.796] [RESULT]    💰 Stack After: 398 chips
+[03:03:15.796] [RESULT]    🏆 Total Pot: 2 chips
+[03:03:15.796] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.796] [RESULT] 
+[03:03:15.796] [HAND ] 🏁 HAND RESULT:
+[03:03:15.796] [HAND ]    🏆 Winner: AggressiveBob (Player 0)
+[03:03:15.796] [HAND ]    💰 Pot Won: 2 chips
+[03:03:15.796] [HAND ]    📊 Final Stacks: Player 0: 400, Player 1: 398
+[03:03:15.796] [HAND ] 
+[03:03:15.796] [HAND ] 🃏 ============================================================
+[03:03:15.796] [HAND ] 🃏 HAND #25
+[03:03:15.796] [HAND ] 🃏 ============================================================
+[03:03:15.796] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.796] [HAND ]    Button Player: 0
+[03:03:15.796] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.796] [HAND ] 
+[03:03:15.796] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.796] [ACTION]    💰 Stack: 399 chips
+[03:03:15.796] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.796] [ACTION]    💸 Cost to Continue: 1 chips
+[03:03:15.796] [ACTION]    ✅ ACTION: C
+[03:03:15.796] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.796] [RESULT]    💰 Stack After: 398 chips
+[03:03:15.796] [RESULT]    📊 Stack Change: -1 chips
+[03:03:15.796] [RESULT]    🏆 Total Pot: 4 chips
+[03:03:15.796] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.796] [RESULT] 
+[03:03:15.796] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.796] [ACTION]    💰 Stack: 398 chips
+[03:03:15.796] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.796] [ACTION]    ✅ ACTION: K
+[03:03:15.796] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.796] [RESULT]    💰 Stack After: 398 chips
+[03:03:15.796] [RESULT]    🏆 Total Pot: 4 chips
+[03:03:15.796] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.796] [RESULT] 
+[03:03:15.796] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.796] [ACTION]    💰 Stack: 398 chips
+[03:03:15.796] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.796] [ACTION]    ✅ ACTION: R
+[03:03:15.796] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.796] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.796] [RESULT]    📊 Stack Change: +2 chips
+[03:03:15.796] [RESULT]    🏆 Total Pot: 2 chips
+[03:03:15.796] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.796] [RESULT] 
+[03:03:15.796] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.796] [ACTION]    💰 Stack: 398 chips
+[03:03:15.796] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.796] [ACTION]    ✅ ACTION: R
+[03:03:15.796] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.796] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.796] [RESULT]    📊 Stack Change: +2 chips
+[03:03:15.796] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.796] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.796] [RESULT] 
+[03:03:15.796] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.796] [ACTION]    💰 Stack: 400 chips
+[03:03:15.796] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.796] [ACTION]    ✅ ACTION: F
+[03:03:15.796] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.796] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.796] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.796] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.796] [RESULT] 
+[03:03:15.796] [HAND ] 🏁 HAND RESULT:
+[03:03:15.796] [HAND ]    🏆 Winner: ConservativeAlice (Player 1)
+[03:03:15.796] [HAND ]    💰 Pot Won: 0 chips
+[03:03:15.796] [HAND ]    📊 Final Stacks: Player 0: 400, Player 1: 400
+[03:03:15.796] [HAND ] 
+[03:03:15.796] [HAND ] 🃏 ============================================================
+[03:03:15.796] [HAND ] 🃏 HAND #26
+[03:03:15.796] [HAND ] 🃏 ============================================================
+[03:03:15.796] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.796] [HAND ]    Button Player: 0
+[03:03:15.796] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.796] [HAND ] 
+[03:03:15.796] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.796] [ACTION]    💰 Stack: 399 chips
+[03:03:15.796] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.796] [ACTION]    ✅ ACTION: F
+[03:03:15.796] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.796] [RESULT]    💰 Stack After: 399 chips
+[03:03:15.796] [RESULT]    🏆 Total Pot: 3 chips
+[03:03:15.796] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.796] [RESULT] 
+[03:03:15.796] [HAND ] 🏁 HAND RESULT:
+[03:03:15.796] [HAND ]    🏆 Winner: ConservativeAlice (Player 1)
+[03:03:15.796] [HAND ]    💰 Pot Won: 3 chips
+[03:03:15.796] [HAND ]    📊 Final Stacks: Player 0: 399, Player 1: 398
+[03:03:15.796] [HAND ] 
+[03:03:15.796] [HAND ] 🃏 ============================================================
+[03:03:15.796] [HAND ] 🃏 HAND #27
+[03:03:15.796] [HAND ] 🃏 ============================================================
+[03:03:15.796] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.796] [HAND ]    Button Player: 0
+[03:03:15.796] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.796] [HAND ] 
+[03:03:15.796] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.796] [ACTION]    💰 Stack: 399 chips
+[03:03:15.796] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.796] [ACTION]    💸 Cost to Continue: 1 chips
+[03:03:15.796] [ACTION]    ✅ ACTION: R
+[03:03:15.796] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.796] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.796] [RESULT]    📊 Stack Change: +1 chips
+[03:03:15.796] [RESULT]    🏆 Total Pot: 2 chips
+[03:03:15.796] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.796] [RESULT] 
+[03:03:15.796] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.796] [ACTION]    💰 Stack: 398 chips
+[03:03:15.796] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.796] [ACTION]    ✅ ACTION: F
+[03:03:15.796] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.796] [RESULT]    💰 Stack After: 398 chips
+[03:03:15.796] [RESULT]    🏆 Total Pot: 2 chips
+[03:03:15.796] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.796] [RESULT] 
+[03:03:15.796] [HAND ] 🏁 HAND RESULT:
+[03:03:15.796] [HAND ]    🏆 Winner: AggressiveBob (Player 0)
+[03:03:15.796] [HAND ]    💰 Pot Won: 2 chips
+[03:03:15.796] [HAND ]    📊 Final Stacks: Player 0: 400, Player 1: 398
+[03:03:15.796] [HAND ] 
+[03:03:15.796] [HAND ] 🃏 ============================================================
+[03:03:15.796] [HAND ] 🃏 HAND #28
+[03:03:15.796] [HAND ] 🃏 ============================================================
+[03:03:15.796] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.796] [HAND ]    Button Player: 0
+[03:03:15.796] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.796] [HAND ] 
+[03:03:15.796] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.796] [ACTION]    💰 Stack: 399 chips
+[03:03:15.796] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.796] [ACTION]    💸 Cost to Continue: 1 chips
+[03:03:15.796] [ACTION]    ✅ ACTION: R
+[03:03:15.796] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.796] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.796] [RESULT]    📊 Stack Change: +1 chips
+[03:03:15.796] [RESULT]    🏆 Total Pot: 2 chips
+[03:03:15.796] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.796] [RESULT] 
+[03:03:15.796] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.796] [ACTION]    💰 Stack: 398 chips
+[03:03:15.796] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.796] [ACTION]    ✅ ACTION: C
+[03:03:15.796] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.796] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.796] [RESULT]    📊 Stack Change: +2 chips
+[03:03:15.796] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.796] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.796] [RESULT] 
+[03:03:15.796] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.796] [ACTION]    💰 Stack: 400 chips
+[03:03:15.796] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.796] [ACTION]    ✅ ACTION: F
+[03:03:15.796] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.796] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.796] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.796] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.796] [RESULT] 
+[03:03:15.796] [HAND ] 🏁 HAND RESULT:
+[03:03:15.796] [HAND ]    🏆 Winner: ConservativeAlice (Player 1)
+[03:03:15.796] [HAND ]    💰 Pot Won: 0 chips
+[03:03:15.796] [HAND ]    📊 Final Stacks: Player 0: 400, Player 1: 400
+[03:03:15.796] [HAND ] 
+[03:03:15.796] [HAND ] 🃏 ============================================================
+[03:03:15.796] [HAND ] 🃏 HAND #29
+[03:03:15.796] [HAND ] 🃏 ============================================================
+[03:03:15.796] [HAND ]    Stacks Before: Player 0: 399, Player 1: 398
+[03:03:15.796] [HAND ]    Button Player: 0
+[03:03:15.796] [HAND ]    Blinds: Small=1, Big=2
+[03:03:15.796] [HAND ] 
+[03:03:15.796] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.796] [ACTION]    💰 Stack: 399 chips
+[03:03:15.796] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.796] [ACTION]    💸 Cost to Continue: 1 chips
+[03:03:15.796] [ACTION]    ✅ ACTION: R
+[03:03:15.796] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.796] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.796] [RESULT]    📊 Stack Change: +1 chips
+[03:03:15.796] [RESULT]    🏆 Total Pot: 2 chips
+[03:03:15.796] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.796] [RESULT] 
+[03:03:15.796] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.796] [ACTION]    💰 Stack: 398 chips
+[03:03:15.796] [ACTION]    🎯 Legal Actions: ['F', 'C', 'R']
+[03:03:15.796] [ACTION]    ✅ ACTION: C
+[03:03:15.796] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.796] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.796] [RESULT]    📊 Stack Change: +2 chips
+[03:03:15.796] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.796] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.796] [RESULT] 
+[03:03:15.796] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.796] [ACTION]    💰 Stack: 400 chips
+[03:03:15.796] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.796] [ACTION]    ✅ ACTION: R
+[03:03:15.796] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.796] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.796] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.796] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.796] [RESULT] 
+[03:03:15.796] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.796] [ACTION]    💰 Stack: 400 chips
+[03:03:15.796] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.796] [ACTION]    ✅ ACTION: R
+[03:03:15.796] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.796] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.796] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.796] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.796] [RESULT] 
+[03:03:15.796] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.796] [ACTION]    💰 Stack: 400 chips
+[03:03:15.796] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.796] [ACTION]    ✅ ACTION: R
+[03:03:15.796] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.796] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.796] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.796] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.796] [RESULT] 
+[03:03:15.796] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.796] [ACTION]    💰 Stack: 400 chips
+[03:03:15.796] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.796] [ACTION]    ✅ ACTION: K
+[03:03:15.796] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.796] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.796] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.796] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.796] [RESULT] 
+[03:03:15.796] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.796] [ACTION]    💰 Stack: 400 chips
+[03:03:15.796] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.797] [ACTION]    ✅ ACTION: K
+[03:03:15.797] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.797] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.797] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.797] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.797] [RESULT] 
+[03:03:15.797] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.797] [ACTION]    💰 Stack: 400 chips
+[03:03:15.797] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.797] [ACTION]    ✅ ACTION: K
+[03:03:15.797] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.797] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.797] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.797] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.797] [RESULT] 
+[03:03:15.797] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.797] [ACTION]    💰 Stack: 400 chips
+[03:03:15.797] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.797] [ACTION]    ✅ ACTION: K
+[03:03:15.797] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.797] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.797] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.797] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.797] [RESULT] 
+[03:03:15.797] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.797] [ACTION]    💰 Stack: 400 chips
+[03:03:15.797] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.797] [ACTION]    ✅ ACTION: K
+[03:03:15.797] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.797] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.797] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.797] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.797] [RESULT] 
+[03:03:15.797] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.797] [ACTION]    💰 Stack: 400 chips
+[03:03:15.797] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.797] [ACTION]    ✅ ACTION: K
+[03:03:15.797] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.797] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.797] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.797] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.797] [RESULT] 
+[03:03:15.797] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.797] [ACTION]    💰 Stack: 400 chips
+[03:03:15.797] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.797] [ACTION]    ✅ ACTION: R
+[03:03:15.797] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.797] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.797] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.797] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.797] [RESULT] 
+[03:03:15.797] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.797] [ACTION]    💰 Stack: 400 chips
+[03:03:15.797] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.797] [ACTION]    ✅ ACTION: R
+[03:03:15.797] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.797] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.797] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.797] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.797] [RESULT] 
+[03:03:15.797] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.797] [ACTION]    💰 Stack: 400 chips
+[03:03:15.797] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.797] [ACTION]    ✅ ACTION: R
+[03:03:15.797] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.797] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.797] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.797] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.797] [RESULT] 
+[03:03:15.797] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.797] [ACTION]    💰 Stack: 400 chips
+[03:03:15.797] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.797] [ACTION]    ✅ ACTION: K
+[03:03:15.797] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.797] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.797] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.797] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.797] [RESULT] 
+[03:03:15.797] [ACTION] 👤 ConservativeAlice (Player 1):
+[03:03:15.797] [ACTION]    💰 Stack: 400 chips
+[03:03:15.797] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.797] [ACTION]    ✅ ACTION: R
+[03:03:15.797] [RESULT] 📈 Result for ConservativeAlice:
+[03:03:15.797] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.797] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.797] [RESULT]    ⏭️  Game Continues: True
+[03:03:15.797] [RESULT] 
+[03:03:15.797] [ACTION] 👤 AggressiveBob (Player 0):
+[03:03:15.797] [ACTION]    💰 Stack: 400 chips
+[03:03:15.797] [ACTION]    🎯 Legal Actions: ['K', 'R', 'F']
+[03:03:15.797] [ACTION]    ✅ ACTION: F
+[03:03:15.797] [RESULT] 📈 Result for AggressiveBob:
+[03:03:15.797] [RESULT]    💰 Stack After: 400 chips
+[03:03:15.797] [RESULT]    🏆 Total Pot: 0 chips
+[03:03:15.797] [RESULT]    ⏭️  Game Continues: False
+[03:03:15.797] [RESULT] 
+[03:03:15.797] [HAND ] 🏁 HAND RESULT:
+[03:03:15.797] [HAND ]    🏆 Winner: ConservativeAlice (Player 1)
+[03:03:15.797] [HAND ]    💰 Pot Won: 0 chips
+[03:03:15.797] [HAND ]    📊 Final Stacks: Player 0: 400, Player 1: 400
+[03:03:15.797] [HAND ] 
+[03:03:15.797] [MATCH] 🏁 MATCH COMPLETE:
+[03:03:15.797] [MATCH]    🏆 Winner: ConservativeAlice (Player 1)
+[03:03:15.797] [MATCH]    🎲 Total Hands Played: 29
+[03:03:15.797] [MATCH]    📊 Final Scores: [-20, 20]
+[03:03:15.797] [MATCH] 
+[03:03:15.797] [MATCH] ================================================================================
+[03:03:15.797] [MATCH] ✅ Match 1 analysis complete
+[03:03:15.797] [MATCH] ================================================================================
+[03:03:15.797] [INFO ] 
+[03:03:15.797] [INFO ] ====================================================================================================
+[03:03:15.797] [INFO ] ✅ DETAILED POKER ANALYSIS COMPLETED
+[03:03:15.797] [INFO ] 📝 Complete gameplay log saved to: detailed_poker_log_20250811_030257.txt
+[03:03:15.797] [INFO ] ====================================================================================================

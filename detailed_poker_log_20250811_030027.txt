@@ -1,0 +1,29 @@
+[03:00:27.168] [INFO ] ====================================================================================================
+[03:00:27.168] [INFO ] 🎪 DETAILED POKER BOT GAMEPLAY ANALYSIS
+[03:00:27.168] [INFO ] ====================================================================================================
+[03:00:27.168] [INFO ] 📝 Detailed log file: detailed_poker_log_20250811_030027.txt
+[03:00:27.168] [INFO ] 🕐 Test started: 2025-08-11T03:00:27.168903
+[03:00:27.168] [INFO ] 
+[03:00:27.168] [INFO ] 🎯 POKER ANALYSIS OBJECTIVES:
+[03:00:27.168] [INFO ]   • Log every player action (fold/call/check/raise)
+[03:00:27.168] [INFO ]   • Track chip stacks before and after each action
+[03:00:27.168] [INFO ]   • Monitor pot sizes and betting rounds
+[03:00:27.168] [INFO ]   • Verify Texas Hold'em rules compliance
+[03:00:27.168] [INFO ]   • Capture complete game state transitions
+[03:00:27.168] [INFO ] 
+[03:00:27.175] [INFO ] ✅ Database and environment initialized
+[03:00:27.180] [INFO ] 
+[03:00:27.180] [INFO ] 🤖 CREATING POKER BOTS...
+[03:00:27.180] [INFO ] ------------------------------------------------------------
+[03:00:27.205] [BOT  ] ✅ ConservativeAlice (Player 0) created with starting rating 1200.0
+[03:00:27.224] [BOT  ] ✅ AggressiveBob (Player 1) created with starting rating 1200.0
+[03:00:27.224] [INFO ] 
+[03:00:27.224] [INFO ] 🏆 STARTING TOURNAMENT...
+[03:00:27.226] [TOUR ] 📝 ConservativeAlice registered in tournament
+[03:00:27.226] [TOUR ] 📝 AggressiveBob registered in tournament
+[03:00:27.227] [TOUR ] 🚀 Tournament started - waiting for matches to complete...
+[03:02:33.779] [INFO ] 
+[03:02:33.779] [INFO ] ====================================================================================================
+[03:02:33.779] [INFO ] ✅ DETAILED POKER ANALYSIS COMPLETED
+[03:02:33.779] [INFO ] 📝 Complete gameplay log saved to: detailed_poker_log_20250811_030027.txt
+[03:02:33.779] [INFO ] ====================================================================================================
