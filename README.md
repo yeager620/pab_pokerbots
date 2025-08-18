@@ -1,5 +1,5 @@
 # Poker at Berkeley PokerBots Competition
-## [EY] updated 8/11/25
+## [EY] updated 8/18/25
 
 Infra for running a poker bot competition;
 participants can create and submit bots that compete against each other in poker tournaments
@@ -96,6 +96,8 @@ class MyPokerBot(BaseBot):
 ### TODO: add testing docs
 
 ## Infra and API usage:
+
+### TODO: replace localhost / get actual address
 
 ### bot submission 
 ```bash
